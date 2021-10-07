@@ -1,0 +1,11 @@
+1  oui
+2  non
+3  oui
+4  oui
+5  non
+6  non
+7  non
+8  non
+9  non -> clé étrangère donc oui
+10 oui
+11 un laboratoire ne distriburait qu'un ou pas de médicament

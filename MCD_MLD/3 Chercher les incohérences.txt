@@ -1,0 +1,8 @@
+entitée Chercheur: il manque anneeNaissance
+entitée Laboratoire: directeur est une clé étrangère donc n'a rien à faire ici et il manque une relation entre Chercheur et Laboratoire avec la cardinalité contraignante sur le Laboratoire (et pas de n - n)
+entitée Mission: dateRetour dout etre renomée en dateArrivée
+relations EstMembre devrait etre une seule relation ternaire EstMembre avec comme cardinalité 0,n - 0,n - 0,n
+relation EstRataché: la cardinalité 1,1 devrait être 1,n et il manque dateEmbauche dans la relation
+relation AConventionAvec: il manque depuis dans la relation
+relation Effectue: doit etre une ternaire entre Chercheur, Projet, et Mission avec comme cardinalité 0,n - 0,n - 0,n
+relation Appartient: la cardinalité 0,n proche de Chercheur devrait être 0,1
