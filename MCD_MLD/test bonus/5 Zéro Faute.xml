@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Database>
+   <Name>5 Z&#233;ro Faute</Name>
+   <Table>
+      <Name>Categories</Name>
+      <Column>
+         <Name>IdCategorie</Name>
+         <Type>INT AUTO_INCREMENT</Type>
+      </Column>
+      <Column>
+         <Name>nom</Name>
+         <Type>VARCHAR(50) </Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <Column>
+         <Name>description</Name>
+         <Type>VARCHAR(511) </Type>
+      </Column>
+      <PK>
+         <Key>IdCategorie</Key>
+      </PK>
+   </Table>
+   <Table>
+      <Name>SousCategories</Name>
+      <Column>
+         <Name>IdSousCategorie</Name>
+         <Type>INT AUTO_INCREMENT</Type>
+      </Column>
+      <Column>
+         <Name>nom</Name>
+         <Type>VARCHAR(50) </Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <Column>
+         <Name>description</Name>
+         <Type>VARCHAR(511) </Type>
+      </Column>
+      <Column>
+         <Name>IdCategorie</Name>
+         <Type>INT AUTO_INCREMENT</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <PK>
+         <Key>IdSousCategorie</Key>
+      </PK>
+      <FK>
+         <Key>IdCategorie</Key>
+         <Reference>Categories(IdCategorie)</Reference>
+      </FK>
+   </Table>
+   <Table>
+      <Name>Modeles</Name>
+      <Column>
+         <Name>codeModele</Name>
+         <Type>INT</Type>
+      </Column>
+      <Column>
+         <Name>nom</Name>
+         <Type>VARCHAR(50) </Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <Column>
+         <Name>dateDeMiseSurLeMarche</Name>
+         <Type>DATE</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <PK>
+         <Key>codeModele</Key>
+      </PK>
+   </Table>
+   <Table>
+      <Name>Produits</Name>
+      <Column>
+         <Name>numeroSerie</Name>
+         <Type>TEXT</Type>
+      </Column>
+      <Column>
+         <Name>numeroProduit</Name>
+         <Type>INT</Type>
+      </Column>
+      <Column>
+         <Name>anneeProduction</Name>
+         <Type>SMALLINT</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <Column>
+         <Name>codeModele</Name>
+         <Type>INT</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <PK>
+         <Key>numeroSerie, numeroProduit</Key>
+      </PK>
+      <FK>
+         <Key>codeModele</Key>
+         <Reference>Modeles(codeModele)</Reference>
+      </FK>
+   </Table>
+   <Table>
+      <Name>Fautes</Name>
+      <Column>
+         <Name>codeFaute</Name>
+         <Type>INT</Type>
+      </Column>
+      <Column>
+         <Name>titre</Name>
+         <Type>VARCHAR(50) </Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <Column>
+         <Name>dateDetection</Name>
+         <Type>DATE</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <Column>
+         <Name>commentaire</Name>
+         <Type>VARCHAR(511) </Type>
+      </Column>
+      <Column>
+         <Name>dateReparation</Name>
+         <Type>VARCHAR(50) </Type>
+      </Column>
+      <Column>
+         <Name>numeroSerie</Name>
+         <Type>TEXT</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <Column>
+         <Name>numeroProduit</Name>
+         <Type>INT</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <PK>
+         <Key>codeFaute</Key>
+      </PK>
+      <FK>
+         <Key>numeroSerie, numeroProduit</Key>
+         <Reference>Produits(numeroSerie, numeroProduit)</Reference>
+      </FK>
+   </Table>
+   <Table>
+      <Name>classifie</Name>
+      <Column>
+         <Name>IdSousCategorie</Name>
+         <Type>INT AUTO_INCREMENT</Type>
+      </Column>
+      <Column>
+         <Name>codeFaute</Name>
+         <Type>INT</Type>
+      </Column>
+      <PK>
+         <Key>IdSousCategorie, codeFaute</Key>
+      </PK>
+      <FK>
+         <Key>IdSousCategorie</Key>
+         <Reference>SousCategories(IdSousCategorie)</Reference>
+      </FK>
+      <FK>
+         <Key>codeFaute</Key>
+         <Reference>Fautes(codeFaute)</Reference>
+      </FK>
+   </Table>
+</Database>

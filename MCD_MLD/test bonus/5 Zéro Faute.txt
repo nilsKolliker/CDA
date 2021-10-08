@@ -1,0 +1,66 @@
+Drop DATABASE IF EXISTS [Nom_Fichier];
+Create DATABASE [Nom_Fichier];
+USE [Nom_Fichier];
+Drop TABLE IF EXISTS Categories;
+CREATE TABLE Categories(
+   IdCategorie INT AUTO_INCREMENT,
+   nom VARCHAR(50)  NOT NULL,
+   description VARCHAR(511) ,
+   PRIMARY KEY(IdCategorie)
+);
+ALTER TABLE Categories ENGINE=InnoDB;
+
+Drop TABLE IF EXISTS SousCategories;
+CREATE TABLE SousCategories(
+   IdSousCategorie INT AUTO_INCREMENT,
+   nom VARCHAR(50)  NOT NULL,
+   description VARCHAR(511) ,
+   IdCategorie INT NOT NULL,
+   PRIMARY KEY(IdSousCategorie),
+   FOREIGN KEY(IdCategorie) REFERENCES Categories(IdCategorie)
+);
+ALTER TABLE SousCategories ENGINE=InnoDB;
+
+Drop TABLE IF EXISTS Modeles;
+CREATE TABLE Modeles(
+   codeModele INT,
+   nom VARCHAR(50)  NOT NULL,
+   dateDeMiseSurLeMarche DATE NOT NULL,
+   PRIMARY KEY(codeModele)
+);
+ALTER TABLE Modeles ENGINE=InnoDB;
+
+Drop TABLE IF EXISTS Produits;
+CREATE TABLE Produits(
+   numeroSerie TEXT,
+   numeroProduit INT,
+   anneeProduction SMALLINT NOT NULL,
+   codeModele INT NOT NULL,
+   PRIMARY KEY(numeroSerie, numeroProduit),
+   FOREIGN KEY(codeModele) REFERENCES Modeles(codeModele)
+);
+ALTER TABLE Produits ENGINE=InnoDB;
+
+Drop TABLE IF EXISTS Fautes;
+CREATE TABLE Fautes(
+   codeFaute INT,
+   titre VARCHAR(50)  NOT NULL,
+   dateDetection DATE NOT NULL,
+   commentaire VARCHAR(511) ,
+   dateReparation VARCHAR(50) ,
+   numeroSerie TEXT NOT NULL,
+   numeroProduit INT NOT NULL,
+   PRIMARY KEY(codeFaute),
+   FOREIGN KEY(numeroSerie, numeroProduit) REFERENCES Produits(numeroSerie, numeroProduit)
+);
+ALTER TABLE Fautes ENGINE=InnoDB;
+
+Drop TABLE IF EXISTS classifie;
+CREATE TABLE classifie(
+   IdSousCategorie INT,
+   codeFaute INT,
+   PRIMARY KEY(IdSousCategorie, codeFaute),
+   FOREIGN KEY(IdSousCategorie) REFERENCES SousCategories(IdSousCategorie),
+   FOREIGN KEY(codeFaute) REFERENCES Fautes(codeFaute)
+);
+ALTER TABLE classifie ENGINE=InnoDB;
