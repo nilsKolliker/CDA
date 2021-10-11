@@ -31,7 +31,7 @@ CREATE TABLE Produits(
 )ENGINE=InnoDB;
 
 CREATE TABLE Fautes(
-   idFaute INT NOT NULL PRIMARY KEY,
+   idFaute INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
    codeFaute INT NOT NULL,
    titre VARCHAR(50)  NOT NULL,
    dateDetection DATE NOT NULL,
@@ -41,7 +41,7 @@ CREATE TABLE Fautes(
 )ENGINE=InnoDB;
 
 CREATE TABLE Classifications(
-   idClassification INT NOT NULL PRIMARY KEY,
+   idClassification INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
    IdSousCategorie INT NOT NULL,
    idFaute INT NOT NULL
 )ENGINE=InnoDB;
