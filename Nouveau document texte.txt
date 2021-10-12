@@ -1,0 +1,20 @@
+https://openclassrooms.com/fr/courses/4462426-maitrisez-les-bases-de-donnees-nosql/4462433-choisissez-votre-famille-nosql
+Que signifie le terme NoSQL ?
+Not Only SQL
+
+Pourquoi parle-t-on de "non relationnel" ?
+on se passe des contraintes
+
+Comment sont nées les bases NoSQL ?
+(https://fr.wikipedia.org/wiki/NoSQL)
+google/amazon/facebook avaient des bdd trop grosse et trop solocité
+
+Y-a-t-il un seul type de base NoSQL ?
+les 4 plusrépendu:
+-clé-valeur
+-stockage orienté colonne
+-bases orientées documents
+-bases orientées Graphe
+
+Dans quel cas utiliser une base NoSQL ?
+Volume, Velocity, Variety
