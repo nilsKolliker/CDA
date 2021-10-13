@@ -7,7 +7,7 @@ on se passe des contraintes
 
 Comment sont nées les bases NoSQL ?
 (https://fr.wikipedia.org/wiki/NoSQL)
-google/amazon/facebook avaient des bdd trop grosse et trop solocité
+google/amazon/facebook avaient des bdd trop grosse et trop sollicité
 
 Y-a-t-il un seul type de base NoSQL ?
 les 4 plusrépendu:
