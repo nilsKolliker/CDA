@@ -24,7 +24,7 @@ Select nom, noemp, nodep from employe where titre="Secrétaire"
 
 --7. Afficher le nom et le numéro de département dont le numéro de département est supérieur à 40.
 
-Select nom, nodep from employe where nodep>40
+Select nom, nodept from dept where nodept>40
 
 --8. Afficher le nom et le prénom des employés dont le nom est alphabétiquement antérieur au prénom.
 
@@ -96,11 +96,11 @@ Select nom, salaire, tauxcom, titre from employe where tauxcom >15
 
 --26. Afficher le nom, le salaire, le taux de commission et la commission des employés dont le taux de commission n'est pas nul. (la commission est calculée en multipliant le salaire par le taux de commission)
 
-Select nom, salaire, tauxcom, salaire*tauxcom as commission from employe where tauxcom is not null
+Select nom, salaire, tauxcom, salaire*tauxcom/100 as commission from employe where tauxcom is not null
 
 --27. Afficher le nom, le salaire, le taux de commission, la commission des employés dont le taux de commission n'est pas nul, classé par taux de commission croissant.
 
-Select nom, salaire, tauxcom, salaire*tauxcom as commission from employe where tauxcom is not null ORDER BY tauxcom
+Select nom, salaire, tauxcom, salaire*tauxcom/100 as commission from employe where tauxcom is not null ORDER BY tauxcom
 
 --28. Afficher le nom et le prénom (concaténés) des employés. Renommer les colonnes 
 
@@ -131,9 +131,9 @@ from employe inner join dept on employe.nodep=dept.nodept
 
 --Rechercher le numéro du département, le nom du département, le nom des employés classés par numéro de département (renommer les tables utilisées).
 
-Select dept.nodept as "Numéro de dp", dept.nom as "Nom de dp", employe.nom as "Nom employe"
-from employe inner join dept on employe.nodep=dept.nodept
-ORDER BY dept.nodept
+Select D.nodept as "Numéro de dp", D.nom as "Nom de dp", E.nom as "Nom employe"
+from employe as E inner join dept as D on E.nodep=D.nodept
+ORDER BY D.nodept
 
 --Rechercher le nom des employés du département Distribution.
 
@@ -189,7 +189,7 @@ where nodep=31 and titre not in(Select titre
                                 from employe
                                 where nodep=32)
 
---Rechercher le nom, le titre et le salaire des employés qui ont le même titre et le même salaire que Fairant. 
+--Rechercher le nom, le titre et le salaire des employés qui ont le même titre et le même salaire que Fairent. 
 
 Select nom, titre, salaire
 from employe
@@ -205,4 +205,61 @@ ORDER BY dept.nodept
 
 --1. Calculer le nombre d'employés de chaque titre.
 
-Select titre, count
+Select titre, count(*)
+from employe
+GROUP BY titre
+
+--2. Calculer la moyenne des salaires et leur somme, par région.
+
+Select avg(salaire), sum(salaire)
+from employe inner join dept on employe.nodep=dept.nodept
+GROUP BY noregion
+
+--3. Afficher les numéros des départements ayant au moins 3 employés.
+
+Select nodep
+from employe
+GROUP BY nodep
+HAVING count(*)>2
+
+--4. Afficher les lettres qui sont l'initiale d'au moins trois employés.
+
+Select substring(nom,1,1) as initiale
+from employe
+GROUP BY initiale
+HAVING count(*)>2
+
+--5. Rechercher le salaire maximum et le salaire minimum parmi tous les salariés et l'écart entre les deux.
+Select max(salaire), min(salaire), max(salaire)-min(salaire)
+from employe
+
+--6. Rechercher le nombre de titres différents
+
+Select count(distinct titre) from employe
+
+--7. Pour chaque titre, compter le nombre d'employés possédant ce titre. 
+
+Select titre, count(*)
+from employe
+GROUP BY titre
+
+--8. Pour chaque nom de département, afficher le nom du département et le nombre d'employés.
+
+Select dept.nom, count(*)
+from dept inner join employe on dept.nodept=employe.nodep
+GROUP BY dept.nom
+
+--9. Rechercher les titres et la moyenne des salaires par titre dont la moyenne est supérieure à la moyenne des salaires des Représentants.
+
+Select titre, avg(salaire)
+from employe
+GROUP BY titre
+HAVING avg(salaire)>(Select avg(salaire)
+                     from employe
+                     GROUP BY titre
+                     HAVING titre="Représentant")
+                    
+--10. Rechercher le nombre de salaires renseignés et le nombre de taux de commission renseignés
+
+select count(salaire), count(tauxcom)
+from employe
