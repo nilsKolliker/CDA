@@ -251,13 +251,12 @@ GROUP BY dept.nom
 
 --9. Rechercher les titres et la moyenne des salaires par titre dont la moyenne est supérieure à la moyenne des salaires des Représentants.
 
-Select titre, avg(salaire)
+Select titre, avg(salaire) as moyenne
 from employe
 GROUP BY titre
-HAVING avg(salaire)>(Select avg(salaire)
-                     from employe
-                     GROUP BY titre
-                     HAVING titre="Représentant")
+HAVING moyenne>(Select avg(salaire)
+                from employe
+                where titre="Représentant")
                     
 --10. Rechercher le nombre de salaires renseignés et le nombre de taux de commission renseignés
 
