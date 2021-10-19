@@ -83,3 +83,31 @@ where numfou = (select numfou
                 from entcom
                 where numcom = 70210)
 and numcom <> 70210;
+
+--14. Dans les articles susceptibles d’être vendus, lister les articles moins chers (basés sur Prix1) que le moins cher des rubans (article dont le premier caractère commence par R). On affichera le libellé de l’article et prix1 
+
+select libart, prix1
+from vente inner join produit on vente.codart=produit.codart
+where prix1< (select min(prix1)
+              from vente inner join produit on vente.codart=produit.codart
+              where libart Like "r%")
+
+--15. Editer la liste des fournisseurs susceptibles de livrer les produits dont le stock est inférieur ou égal à 150 % du stock d'alerte. La liste est triée par produit puis fournisseur
+
+select libart, nomfou
+from fournis
+     inner join entcom on fournis.numfou=entcom.numfou
+     inner join ligcom on entcom.numcom=ligcom.numcom
+     inner join produit on produit.codart=ligcom.codart
+where stkphy<1.5*stkale
+order by libart,nomfou
+
+--16. Éditer la liste des fournisseurs susceptibles de livrer les produit dont le stock est inférieur ou égal à 150 % du stock d'alerte et un délai de livraison d'au plus 30 jours. La liste est triée par fournisseur puis produit
+
+select libart, nomfou
+from fournis
+     inner join entcom on fournis.numfou=entcom.numfou
+     inner join ligcom on entcom.numcom=ligcom.numcom
+     inner join produit on produit.codart=ligcom.codart
+where stkphy<1.5*stkale and DATEDIFF(,)
+order by nomfou,libart
