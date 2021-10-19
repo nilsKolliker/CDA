@@ -82,4 +82,4 @@ from entcom
 where numfou = (select numfou
                 from entcom
                 where numcom = 70210)
-and numcom <> 70210
+and numcom <> 70210;
