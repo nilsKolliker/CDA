@@ -67,13 +67,9 @@ where entcom.obscom = "Commande urgente"
 --12. Coder de 2 manières différentes la requête suivante :  Lister le nom des fournisseurs susceptibles de livrer au moins un article
 
 select distinct fournis.nomfou
-from fournis inner join entcom on fournis.numfou=entcom.numfou
-             inner join ligcom on ligcom.numcom = entcom.numcom
-             inner join produit on produit.codart = ligcom.codart
-
-select distinct fournis.nomfou
 from fournis inner join vente on fournis.numfou=vente.numfou
              inner join produit on produit.codart=vente.codart
+where qte1+qte2+qte3>0
 
 --13. Coder de 2 manières différentes la requête suivante Lister les commandes (Numéro et date) dont le fournisseur est celui de la commande 70210 :
 
@@ -106,8 +102,79 @@ order by libart,nomfou
 
 select libart, nomfou
 from fournis
-     inner join entcom on fournis.numfou=entcom.numfou
-     inner join ligcom on entcom.numcom=ligcom.numcom
-     inner join produit on produit.codart=ligcom.codart
-where stkphy<1.5*stkale and DATEDIFF(,)
+     inner join vente on fournis.numfou=vente.numfou
+     inner join produit on vente.codart=produit.codart
+where stkphy<1.5*stkale and delliv<=30
 order by nomfou,libart
+
+--17. Avec le même type de sélection que ci-dessus, sortir un total des stocks par fournisseur trié par total décroissant
+
+select nomfou, sum(stkphy) as stockTotal
+from fournis
+     inner join vente on fournis.numfou=vente.numfou
+     inner join produit on vente.codart=produit.codart
+group by fournis.numfou
+order by stockTotal DESC
+
+--18. En fin d'année, sortir la liste des produits dont la quantité réellement commandée dépasse 90% de la quantité annuelle prévue.
+
+select libart
+from(select libart, sum(qtecde) as totalCommande, qteann
+     from ligcom inner join produit on produit.codart=ligcom.codart
+     group by libart) as toto
+where totalCommande>0.9*qteann
+
+--19. Calculer le chiffre d'affaire par fournisseur pour l'année 18 sachant que les prix indiqués sont hors taxes et que le taux de TVA est 20%.
+
+select sum(qtecde*priuni*1.20)
+from ligcom inner join entcom on ligcom.numcom=entcom.numcom
+where YEAR(entcom.datcom)=2018
+group by numfou
+
+--20. Existe-t-il des lignes de commande non cohérentes avec les produits vendus par les fournisseurs ?
+
+--OUI !
+
+select codart,numfou
+from ligcom inner join entcom on ligcom.numcom=entcom.numcom
+order by codart,numfou;
+
+select codart,numfou
+from vente
+order by codart,numfou
+
+--maj
+--1. Application d'une augmentation de tarif de 4% pour le prix 1, 2% pour le prix2 pour le fournisseur 9180 
+
+update vente
+set prix1=prix1*1.04,prix2=prix2*1.02
+where numfou=9180
+
+--2. Dans la table vente, mettre à jour le prix2 des articles dont le prix2 est null, en affectant a valeur de prix1.
+
+update vente
+set prix2=prix1
+where prix2=0
+
+--3. Mettre à jour le champ obscom en positionnant  '*****' pour toutes les commandes dont le fournisseur a un indice de satisfaction <5
+
+update entcom
+set obscom = '*****'
+where numfou in(select numfou
+                from fournis
+                where satisf<5)
+
+--4. Suppression du produit I110
+
+DELETE FROM vente
+WHERE codart="I110";
+DELETE FROM ligcom
+WHERE codart="I110";
+DELETE FROM produit
+WHERE codart="I110"
+
+--5. Suppression des entête de commande qui n'ont aucune ligne 
+
+DELETE FROM entcom
+WHERE numcom not in (SELECT numcom 
+                     FROM ligcom)
