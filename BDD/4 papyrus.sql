@@ -62,14 +62,17 @@ select entcom.numcom, fournis.nomfou, produit.libart, ligcom.priuni*ligcom.qtecd
 from fournis inner join entcom on fournis.numfou=entcom.numfou
              inner join ligcom on ligcom.numcom = entcom.numcom
              inner join produit on produit.codart = ligcom.codart
-where entcom.obscom = "Commande urgente"
+where entcom.obscom Like "%urgent%"
 
 --12. Coder de 2 manières différentes la requête suivante :  Lister le nom des fournisseurs susceptibles de livrer au moins un article
 
 select distinct fournis.nomfou
-from fournis inner join vente on fournis.numfou=vente.numfou
-             inner join produit on produit.codart=vente.codart
-where qte1+qte2+qte3>0
+from fournis inner join vente on fournis.numfou=vente.numfou 
+
+select distinct nomfou
+from fournis
+where numfou in (select numfou
+                 from vente)
 
 --13. Coder de 2 manières différentes la requête suivante Lister les commandes (Numéro et date) dont le fournisseur est celui de la commande 70210 :
 
@@ -85,16 +88,15 @@ and numcom <> 70210;
 select libart, prix1
 from vente inner join produit on vente.codart=produit.codart
 where prix1< (select min(prix1)
-              from vente inner join produit on vente.codart=produit.codart
-              where libart Like "r%")
+              from vente
+              where codart Like "r%")
 
 --15. Editer la liste des fournisseurs susceptibles de livrer les produits dont le stock est inférieur ou égal à 150 % du stock d'alerte. La liste est triée par produit puis fournisseur
 
 select libart, nomfou
 from fournis
-     inner join entcom on fournis.numfou=entcom.numfou
-     inner join ligcom on entcom.numcom=ligcom.numcom
-     inner join produit on produit.codart=ligcom.codart
+     inner join vente on fournis.numfou=vente.numfou
+     inner join produit on vente.codart=produit.codart
 where stkphy<1.5*stkale
 order by libart,nomfou
 
@@ -123,6 +125,11 @@ from(select libart, sum(qtecde) as totalCommande, qteann
      from ligcom inner join produit on produit.codart=ligcom.codart
      group by libart) as toto
 where totalCommande>0.9*qteann
+
+select libart, sum(qtecde),qteann
+from ligcom inner join produit on ligcom.codart = produit.codart
+group by produit.codart
+having sum(qtecde) > qteann*0.90
 
 --19. Calculer le chiffre d'affaire par fournisseur pour l'année 18 sachant que les prix indiqués sont hors taxes et que le taux de TVA est 20%.
 
@@ -176,5 +183,5 @@ WHERE codart="I110"
 --5. Suppression des entête de commande qui n'ont aucune ligne 
 
 DELETE FROM entcom
-WHERE numcom not in (SELECT numcom 
+WHERE numcom not in (SELECT distinct numcom 
                      FROM ligcom)

@@ -185,9 +185,16 @@ where fonction="directeur" OR sala>2500
 
 --8.Donner la liste des noms, numéros de département des directeurs et des ouvriers du département 10
 
-
+select nomemp, nodep
+from EMPLOYE
+where nodep=10 AND fonction IN ("ouvrier","directeur")
 
 --9.Donner la liste des noms, fonctions et numéros de département des employés du département 10 qui ne sont ni ouvrier ni directeur
+
+select
+from
+where
+
 --10.Donner la liste des noms, fonctions et numéros de département des directeurs qui ne sont pas directeur dans le département 30
 --11.Donner la liste des noms, fonctions et salaires des employés qui gagnent entre 1200 € et 1300 €
 --12.Donner la liste des noms, numéros de département et fonctions des employés« ouvrier », « analyste » ou « vendeur »
