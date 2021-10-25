@@ -1,0 +1,14 @@
+U:\59011-07-07\CDA_nils\init C#\test1\test1\bin\Debug\netcoreapp3.1\test1.exe
+U:\59011-07-07\CDA_nils\init C#\test1\test1\bin\Debug\netcoreapp3.1\test1.deps.json
+U:\59011-07-07\CDA_nils\init C#\test1\test1\bin\Debug\netcoreapp3.1\test1.runtimeconfig.json
+U:\59011-07-07\CDA_nils\init C#\test1\test1\bin\Debug\netcoreapp3.1\test1.runtimeconfig.dev.json
+U:\59011-07-07\CDA_nils\init C#\test1\test1\bin\Debug\netcoreapp3.1\test1.dll
+U:\59011-07-07\CDA_nils\init C#\test1\test1\bin\Debug\netcoreapp3.1\test1.pdb
+U:\59011-07-07\CDA_nils\init C#\test1\test1\obj\Debug\netcoreapp3.1\test1.csproj.AssemblyReference.cache
+U:\59011-07-07\CDA_nils\init C#\test1\test1\obj\Debug\netcoreapp3.1\test1.GeneratedMSBuildEditorConfig.editorconfig
+U:\59011-07-07\CDA_nils\init C#\test1\test1\obj\Debug\netcoreapp3.1\test1.AssemblyInfoInputs.cache
+U:\59011-07-07\CDA_nils\init C#\test1\test1\obj\Debug\netcoreapp3.1\test1.AssemblyInfo.cs
+U:\59011-07-07\CDA_nils\init C#\test1\test1\obj\Debug\netcoreapp3.1\test1.csproj.CoreCompileInputs.cache
+U:\59011-07-07\CDA_nils\init C#\test1\test1\obj\Debug\netcoreapp3.1\test1.dll
+U:\59011-07-07\CDA_nils\init C#\test1\test1\obj\Debug\netcoreapp3.1\test1.pdb
+U:\59011-07-07\CDA_nils\init C#\test1\test1\obj\Debug\netcoreapp3.1\test1.genruntimeconfig.cache
