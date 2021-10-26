@@ -1,0 +1,14 @@
+U:\59011-07-07\CDA_nils\init C#\Traitements conditionnels\Traitements conditionnels\bin\Debug\netcoreapp3.1\Traitements conditionnels.exe
+U:\59011-07-07\CDA_nils\init C#\Traitements conditionnels\Traitements conditionnels\bin\Debug\netcoreapp3.1\Traitements conditionnels.deps.json
+U:\59011-07-07\CDA_nils\init C#\Traitements conditionnels\Traitements conditionnels\bin\Debug\netcoreapp3.1\Traitements conditionnels.runtimeconfig.json
+U:\59011-07-07\CDA_nils\init C#\Traitements conditionnels\Traitements conditionnels\bin\Debug\netcoreapp3.1\Traitements conditionnels.runtimeconfig.dev.json
+U:\59011-07-07\CDA_nils\init C#\Traitements conditionnels\Traitements conditionnels\bin\Debug\netcoreapp3.1\Traitements conditionnels.dll
+U:\59011-07-07\CDA_nils\init C#\Traitements conditionnels\Traitements conditionnels\bin\Debug\netcoreapp3.1\Traitements conditionnels.pdb
+U:\59011-07-07\CDA_nils\init C#\Traitements conditionnels\Traitements conditionnels\obj\Debug\netcoreapp3.1\Traitements conditionnels.GeneratedMSBuildEditorConfig.editorconfig
+U:\59011-07-07\CDA_nils\init C#\Traitements conditionnels\Traitements conditionnels\obj\Debug\netcoreapp3.1\Traitements conditionnels.AssemblyInfoInputs.cache
+U:\59011-07-07\CDA_nils\init C#\Traitements conditionnels\Traitements conditionnels\obj\Debug\netcoreapp3.1\Traitements conditionnels.AssemblyInfo.cs
+U:\59011-07-07\CDA_nils\init C#\Traitements conditionnels\Traitements conditionnels\obj\Debug\netcoreapp3.1\Traitements conditionnels.csproj.CoreCompileInputs.cache
+U:\59011-07-07\CDA_nils\init C#\Traitements conditionnels\Traitements conditionnels\obj\Debug\netcoreapp3.1\Traitements conditionnels.dll
+U:\59011-07-07\CDA_nils\init C#\Traitements conditionnels\Traitements conditionnels\obj\Debug\netcoreapp3.1\Traitements conditionnels.pdb
+U:\59011-07-07\CDA_nils\init C#\Traitements conditionnels\Traitements conditionnels\obj\Debug\netcoreapp3.1\Traitements conditionnels.genruntimeconfig.cache
+U:\59011-07-07\CDA_nils\init C#\Traitements conditionnels\Traitements conditionnels\obj\Debug\netcoreapp3.1\Traitements conditionnels.csproj.AssemblyReference.cache

@@ -1,0 +1,14 @@
+U:\59011-07-07\CDA_nils\init C#\1.4\1.4\bin\Debug\netcoreapp3.1\1.4.exe
+U:\59011-07-07\CDA_nils\init C#\1.4\1.4\bin\Debug\netcoreapp3.1\1.4.deps.json
+U:\59011-07-07\CDA_nils\init C#\1.4\1.4\bin\Debug\netcoreapp3.1\1.4.runtimeconfig.json
+U:\59011-07-07\CDA_nils\init C#\1.4\1.4\bin\Debug\netcoreapp3.1\1.4.runtimeconfig.dev.json
+U:\59011-07-07\CDA_nils\init C#\1.4\1.4\bin\Debug\netcoreapp3.1\1.4.dll
+U:\59011-07-07\CDA_nils\init C#\1.4\1.4\bin\Debug\netcoreapp3.1\1.4.pdb
+U:\59011-07-07\CDA_nils\init C#\1.4\1.4\obj\Debug\netcoreapp3.1\1.4.csproj.AssemblyReference.cache
+U:\59011-07-07\CDA_nils\init C#\1.4\1.4\obj\Debug\netcoreapp3.1\1.4.GeneratedMSBuildEditorConfig.editorconfig
+U:\59011-07-07\CDA_nils\init C#\1.4\1.4\obj\Debug\netcoreapp3.1\1.4.AssemblyInfoInputs.cache
+U:\59011-07-07\CDA_nils\init C#\1.4\1.4\obj\Debug\netcoreapp3.1\1.4.AssemblyInfo.cs
+U:\59011-07-07\CDA_nils\init C#\1.4\1.4\obj\Debug\netcoreapp3.1\1.4.csproj.CoreCompileInputs.cache
+U:\59011-07-07\CDA_nils\init C#\1.4\1.4\obj\Debug\netcoreapp3.1\1.4.dll
+U:\59011-07-07\CDA_nils\init C#\1.4\1.4\obj\Debug\netcoreapp3.1\1.4.pdb
+U:\59011-07-07\CDA_nils\init C#\1.4\1.4\obj\Debug\netcoreapp3.1\1.4.genruntimeconfig.cache

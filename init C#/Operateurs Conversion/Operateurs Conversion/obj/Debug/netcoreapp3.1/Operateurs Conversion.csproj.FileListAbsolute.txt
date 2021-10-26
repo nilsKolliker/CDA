@@ -1,0 +1,13 @@
+U:\59011-07-07\CDA_nils\init C#\Operateurs Conversion\Operateurs Conversion\bin\Debug\netcoreapp3.1\Operateurs Conversion.exe
+U:\59011-07-07\CDA_nils\init C#\Operateurs Conversion\Operateurs Conversion\bin\Debug\netcoreapp3.1\Operateurs Conversion.deps.json
+U:\59011-07-07\CDA_nils\init C#\Operateurs Conversion\Operateurs Conversion\bin\Debug\netcoreapp3.1\Operateurs Conversion.runtimeconfig.json
+U:\59011-07-07\CDA_nils\init C#\Operateurs Conversion\Operateurs Conversion\bin\Debug\netcoreapp3.1\Operateurs Conversion.runtimeconfig.dev.json
+U:\59011-07-07\CDA_nils\init C#\Operateurs Conversion\Operateurs Conversion\bin\Debug\netcoreapp3.1\Operateurs Conversion.dll
+U:\59011-07-07\CDA_nils\init C#\Operateurs Conversion\Operateurs Conversion\bin\Debug\netcoreapp3.1\Operateurs Conversion.pdb
+U:\59011-07-07\CDA_nils\init C#\Operateurs Conversion\Operateurs Conversion\obj\Debug\netcoreapp3.1\Operateurs Conversion.GeneratedMSBuildEditorConfig.editorconfig
+U:\59011-07-07\CDA_nils\init C#\Operateurs Conversion\Operateurs Conversion\obj\Debug\netcoreapp3.1\Operateurs Conversion.AssemblyInfoInputs.cache
+U:\59011-07-07\CDA_nils\init C#\Operateurs Conversion\Operateurs Conversion\obj\Debug\netcoreapp3.1\Operateurs Conversion.AssemblyInfo.cs
+U:\59011-07-07\CDA_nils\init C#\Operateurs Conversion\Operateurs Conversion\obj\Debug\netcoreapp3.1\Operateurs Conversion.csproj.CoreCompileInputs.cache
+U:\59011-07-07\CDA_nils\init C#\Operateurs Conversion\Operateurs Conversion\obj\Debug\netcoreapp3.1\Operateurs Conversion.dll
+U:\59011-07-07\CDA_nils\init C#\Operateurs Conversion\Operateurs Conversion\obj\Debug\netcoreapp3.1\Operateurs Conversion.pdb
+U:\59011-07-07\CDA_nils\init C#\Operateurs Conversion\Operateurs Conversion\obj\Debug\netcoreapp3.1\Operateurs Conversion.genruntimeconfig.cache
