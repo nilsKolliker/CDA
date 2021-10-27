@@ -82,11 +82,11 @@ namespace Traitements_conditionnels
             //petit2 = float.Parse(Console.ReadLine());
             //Console.WriteLine("3eme saisie :");
             //petit3 = float.Parse(Console.ReadLine());
-            //if(petit1 < petit2 && petit1 < petit3)
+            //if (petit1 < petit2 && petit1 < petit3)
             //{
             //    Console.WriteLine("le plus petit c'est " + petit1);
             //}
-            //else if(petit2<petit3)
+            //else if (petit2 < petit3)
             //{
             //    Console.WriteLine("le plus petit c'est " + petit2);
             //}
@@ -119,7 +119,14 @@ namespace Traitements_conditionnels
             //        Console.WriteLine(a * b);
             //        break;
             //    case '/':
-            //        Console.WriteLine((float)a / (float)b);
+            //        if (b != 0)
+            //        {
+            //            Console.WriteLine((float)a / (float)b);
+            //        }
+            //        else
+            //        {
+            //            Console.WriteLine("impossible");
+            //        }
             //        break;
             //    default:
             //        Console.WriteLine("issue d'un opérateur inconnue");
@@ -166,75 +173,75 @@ namespace Traitements_conditionnels
             //    Console.WriteLine("incorrect.");
             //}
 
-            //10
-            //int i;
-            //int j;
-            //int iprime;
-            //int jprime;
-            //int piece;
-            //Console.WriteLine("1ere coordonnée de départ :");
-            //i = int.Parse(Console.ReadLine());
-            //Console.WriteLine("2eme coordonnée de départ:");
-            //j = int.Parse(Console.ReadLine());
-            //Console.WriteLine("1ere coordonnée d'arrivé:");
-            //iprime = int.Parse(Console.ReadLine());
-            //Console.WriteLine("2eme coordonnée d'arrivé:");
-            //jprime = int.Parse(Console.ReadLine());
-            //Console.WriteLine("Quelle pièce souhaitez-vous déplacer ?\n0 = cavalier\n1 = Tour\n2 = Fou\n3 = Dame\n4 = Roi");
-            //piece = int.Parse(Console.ReadLine());
-            //switch (piece)
-            //{
-            //    case 0:
-            //        if ((Math.Abs(i - iprime) == 1 && Math.Abs(j - jprime) == 2) || (Math.Abs(i - iprime) == 2 && Math.Abs(j - jprime) == 1))
-            //        {
-            //            Console.WriteLine("Déplacement du cavalier de(" + i + ", " + j + ") vers(" + iprime+", "+ jprime+ ") correct.");
-            //        }
-            //        else
-            //        {
-            //            Console.WriteLine("Déplacement du cavalier de(" + i + ", " + j + ") vers(" + iprime + ", " + jprime + ") incorrect.");
-            //        }
-            //        break;
-            //    case 1:
-            //        if (i == iprime ^ j == jprime)
-            //        {
-            //            Console.WriteLine("Déplacement de la tour de(" + i + ", " + j + ") vers(" + iprime + ", " + jprime + ") correct.");
-            //        }
-            //        else
-            //        {
-            //            Console.WriteLine("Déplacement de la tour de(" + i + ", " + j + ") vers(" + iprime + ", " + jprime + ") incorrect.");
-            //        }
-            //        break;
-            //    case 2:
-            //        if (Math.Abs(i - iprime)== Math.Abs(j - jprime)&&i!=iprime)
-            //        {
-            //            Console.WriteLine("Déplacement du fou de(" + i + ", " + j + ") vers(" + iprime + ", " + jprime + ") correct.");
-            //        }
-            //        else
-            //        {
-            //            Console.WriteLine("Déplacement du fou de(" + i + ", " + j + ") vers(" + iprime + ", " + jprime + ") incorrect.");
-            //        }
-            //        break;
-            //    case 3:
-            //        if ((Math.Abs(i - iprime) == Math.Abs(j - jprime) && i != iprime) ||(i == iprime ^ j == jprime))
-            //        {
-            //            Console.WriteLine("Déplacement de la dame de(" + i + ", " + j + ") vers(" + iprime + ", " + jprime + ") correct.");
-            //        }
-            //        else
-            //        {
-            //            Console.WriteLine("Déplacement de la dame de(" + i + ", " + j + ") vers(" + iprime + ", " + jprime + ") incorrect.");
-            //        }
-            //        break;
-            //    case 4:
-            //        if (Math.Abs(i - iprime)==1|| Math.Abs(j - jprime)==1)
-            //        {
-            //            Console.WriteLine("Déplacement du roi de(" + i + ", " + j + ") vers(" + iprime + ", " + jprime + ") correct.");
-            //        }
-            //        else
-            //        {
-            //            Console.WriteLine("Déplacement du roi de(" + i + ", " + j + ") vers(" + iprime + ", " + jprime + ") incorrect.");
-            //        }
-            //        break;
-            //}
+            10
+            int i;
+            int j;
+            int iprime;
+            int jprime;
+            int piece;
+            Console.WriteLine("1ere coordonnée de départ :");
+            i = int.Parse(Console.ReadLine());
+            Console.WriteLine("2eme coordonnée de départ:");
+            j = int.Parse(Console.ReadLine());
+            Console.WriteLine("1ere coordonnée d'arrivé:");
+            iprime = int.Parse(Console.ReadLine());
+            Console.WriteLine("2eme coordonnée d'arrivé:");
+            jprime = int.Parse(Console.ReadLine());
+            Console.WriteLine("Quelle pièce souhaitez-vous déplacer ?\n0 = cavalier\n1 = Tour\n2 = Fou\n3 = Dame\n4 = Roi");
+            piece = int.Parse(Console.ReadLine());
+            switch (piece)
+            {
+                case 0:
+                    if ((Math.Abs(i - iprime) == 1 && Math.Abs(j - jprime) == 2) || (Math.Abs(i - iprime) == 2 && Math.Abs(j - jprime) == 1))
+                    {
+                        Console.WriteLine("Déplacement du cavalier de(" + i + ", " + j + ") vers(" + iprime + ", " + jprime + ") correct.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Déplacement du cavalier de(" + i + ", " + j + ") vers(" + iprime + ", " + jprime + ") incorrect.");
+                    }
+                    break;
+                case 1:
+                    if (i == iprime || j == jprime)
+                    {
+                        Console.WriteLine("Déplacement de la tour de(" + i + ", " + j + ") vers(" + iprime + ", " + jprime + ") correct.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Déplacement de la tour de(" + i + ", " + j + ") vers(" + iprime + ", " + jprime + ") incorrect.");
+                    }
+                    break;
+                case 2:
+                    if (Math.Abs(i - iprime) == Math.Abs(j - jprime))
+                    {
+                        Console.WriteLine("Déplacement du fou de(" + i + ", " + j + ") vers(" + iprime + ", " + jprime + ") correct.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Déplacement du fou de(" + i + ", " + j + ") vers(" + iprime + ", " + jprime + ") incorrect.");
+                    }
+                    break;
+                case 3:
+                    if (Math.Abs(i - iprime) == Math.Abs(j - jprime) || (i == iprime ||j == jprime))
+                    {
+                        Console.WriteLine("Déplacement de la dame de(" + i + ", " + j + ") vers(" + iprime + ", " + jprime + ") correct.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Déplacement de la dame de(" + i + ", " + j + ") vers(" + iprime + ", " + jprime + ") incorrect.");
+                    }
+                    break;
+                case 4:
+                    if (Math.Abs(i - iprime) < 2 && Math.Abs(j - jprime) < 2)
+                    {
+                        Console.WriteLine("Déplacement du roi de(" + i + ", " + j + ") vers(" + iprime + ", " + jprime + ") correct.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Déplacement du roi de(" + i + ", " + j + ") vers(" + iprime + ", " + jprime + ") incorrect.");
+                    }
+                    break;
+            }
 
             //3.4
             //11
@@ -335,33 +342,49 @@ namespace Traitements_conditionnels
             //}
 
             //15
-            double xHautGauche;
-            double yHautGauche;
-            double xBasDroite;
-            double yBasDroite;
-            double temp;
-            Console.WriteLine("saisir la coordonnée en x du point en haut à gauche :");
-            xHautGauche = double.Parse(Console.ReadLine());
-            Console.WriteLine("saisir la coordonnée en y du point en haut à gauche :");
-            yHautGauche = double.Parse(Console.ReadLine());
-            Console.WriteLine("saisir la coordonnée en x du point en bas à droite :");
-            xBasDroite = double.Parse(Console.ReadLine());
-            Console.WriteLine("saisir la coordonnée en x du point en bas à droite :");
-            yBasDroite = double.Parse(Console.ReadLine());
-            if (xHautGauche> xBasDroite)
-            {
-                temp = xHautGauche;
-                xHautGauche = xBasDroite;
-                xBasDroite = temp;
-                Console.WriteLine("Comme vous confondez votre gauche et votre droite, nous avons effectuer la correction suivante:\nla coordonnée en x du point en haut à gauche est " + xHautGauche + "\nla coordonnée en x du point en bas à droite est " + xBasDroite);
-            }
-            if (yHautGauche< yBasDroite)
-            {
-                temp = yHautGauche;
-                yHautGauche = yBasDroite;
-                yBasDroite = temp;
-                Console.WriteLine("Comme vous confondez le haut et le bas, nous avons effectuer la correction suivante:\nla coordonnée en y du point en haut à gauche est " + yHautGauche + "\nla coordonnée en y du point en bas à droite est " + yBasDroite);
-            }
+            //double xHautGauche;
+            //double yHautGauche;
+            //double xBasDroite;
+            //double yBasDroite;
+            //double temp;
+            //Console.WriteLine("saisir la coordonnée en x du point en haut à gauche :");
+            //xHautGauche = double.Parse(Console.ReadLine());
+            //Console.WriteLine("saisir la coordonnée en y du point en haut à gauche :");
+            //yHautGauche = double.Parse(Console.ReadLine());
+            //Console.WriteLine("saisir la coordonnée en x du point en bas à droite :");
+            //xBasDroite = double.Parse(Console.ReadLine());
+            //Console.WriteLine("saisir la coordonnée en x du point en bas à droite :");
+            //yBasDroite = double.Parse(Console.ReadLine());
+            //if (xHautGauche> xBasDroite)
+            //{
+            //    temp = xHautGauche;
+            //    xHautGauche = xBasDroite;
+            //    xBasDroite = temp;
+            //    Console.WriteLine("Comme vous confondez votre gauche et votre droite, nous avons effectuer la correction suivante:\nla coordonnée en x du point en haut à gauche est " + xHautGauche + "\nla coordonnée en x du point en bas à droite est " + xBasDroite);
+            //}
+            //if (yHautGauche< yBasDroite)
+            //{
+            //    temp = yHautGauche;
+            //    yHautGauche = yBasDroite;
+            //    yBasDroite = temp;
+            //    Console.WriteLine("Comme vous confondez le haut et le bas, nous avons effectuer la correction suivante:\nla coordonnée en y du point en haut à gauche est " + yHautGauche + "\nla coordonnée en y du point en bas à droite est " + yBasDroite);
+            //}
+
+            ////16
+            //double x;
+            //double y;
+            //Console.WriteLine("saisir une coordonnée en x :");
+            //x = double.Parse(Console.ReadLine());
+            //Console.WriteLine("saisir une coordonnée en y :");
+            //y = double.Parse(Console.ReadLine());
+            //if (x< xHautGauche||x> xBasDroite||y< yBasDroite||y> yHautGauche)
+            //{
+            //    Console.WriteLine("ce point n'est pas dans le rectangle");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("ce point est dans le rectangle");
+            //}
         }
     }
 }

@@ -28,7 +28,7 @@ namespace Operateurs_Conversion
             //Console.WriteLine("Charge max du camion ? (en kg) :");
             //saisie = Console.ReadLine();
             //M = float.Parse(saisie);
-            //Console.WriteLine("Vous pouvez charger jusqu'à " + Math.Truncate(M / k) + " cartons");
+            //Console.WriteLine("Vous pouvez charger jusqu'à " + Math.Truncate(M / k) + " cartons");//div entiere en castant
 
             Console.ReadLine();
         }
