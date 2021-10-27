@@ -239,7 +239,129 @@ namespace Traitements_conditionnels
             //3.4
             //11
 
+            //int heureDebut;
+            //int minuteDebut;
+            //int heureFin;
+            //int minuteFin;
+            //int heureDEcart;
+            //int minuteDEcart;
+            //Console.WriteLine("heure de début :");
+            //heureDebut = int.Parse(Console.ReadLine());
+            //Console.WriteLine("minutes de début :");
+            //minuteDebut = int.Parse(Console.ReadLine());
+            //Console.WriteLine("heure de fin :");
+            //heureFin = int.Parse(Console.ReadLine());
+            //Console.WriteLine("minutes de fin :");
+            //minuteFin = int.Parse(Console.ReadLine());
+            //if (minuteDebut > minuteFin)
+            //{
+            //    minuteDEcart = 60 - minuteDebut + minuteFin;
+            //    heureDEcart = -1;
+            //}
+            //else
+            //{
+            //    minuteDEcart = minuteFin - minuteDebut;
+            //    heureDEcart = 0;
+            //}
+            //if (heureFin > heureDebut||(heureFin==heureDebut&&heureDEcart==0))
+            //{
+            //    heureDEcart += heureFin - heureDebut;
+            //    Console.WriteLine("L'écart entre "+heureDebut+"h"+minuteDebut+" et "+heureFin+"h"+minuteFin+" est de "+heureDEcart+"h"+minuteDEcart);
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Erreur. L'heure de début est après celle de fin.");
+            //}
 
+            //12
+            //int jour;
+            //int mois;
+            //int annee;
+            //Console.WriteLine("jour :");
+            //jour = int.Parse(Console.ReadLine());
+            //Console.WriteLine("mois :");
+            //mois = int.Parse(Console.ReadLine());
+            //Console.WriteLine("année :");
+            //annee = int.Parse(Console.ReadLine());
+            //if(jour==31||(jour==30&&(mois==4||mois==6 || mois ==9 || mois == 11)) || (mois == 2 && (jour == 29 || (jour == 28 && annee % 400 != 0 && (annee % 4 != 0 || annee % 100 == 0)))))
+            //{
+            //    jour = 1;
+            //    if (mois == 12)
+            //    {
+            //        mois = 1;
+            //        annee++;
+            //    }
+            //    else
+            //    {
+            //        mois++;
+            //    }
+            //}
+            //else
+            //{
+            //    jour++;
+            //}
+            //Console.WriteLine("Demain nous serons le "+jour+"/"+mois+"/"+annee+ ". Nous vous souhaitons une joyeuse saint glinglin.");
+
+            //3.5
+            //13
+            //double a;
+            //double b;
+            //double c;
+            //Console.WriteLine("saisir la borne ouvrante de l'intervalle :");
+            //a = double.Parse(Console.ReadLine());
+            //Console.WriteLine("saisir la borne fermante de l'intervalle :");
+            //b = double.Parse(Console.ReadLine());
+            //if (a > b)
+            //{
+            //    c = a;
+            //    a = b;
+            //    b = c;
+            //    Console.WriteLine("Vous avez inversé les bornes... Après correction,\nla borne ouvrante est " + a + " et\nla borne fermante est " + b);
+            //}
+            //Console.WriteLine("L'intervalle est [" + a + ";" + b + "]");
+
+            ////14
+
+            //double x;
+            //Console.WriteLine("saisir une valeur x :");
+            //x = double.Parse(Console.ReadLine());
+            //if (x < a || x > b)
+            //{
+            //    Console.WriteLine("x n'appartient pas à [a,b]");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("x appartient à [a,b]");
+            //}
+
+            //15
+            double xHautGauche;
+            double yHautGauche;
+            double xBasDroite;
+            double yBasDroite;
+            double temp;
+            Console.WriteLine("saisir la coordonnée en x du point en haut à gauche :");
+            xHautGauche = double.Parse(Console.ReadLine());
+            Console.WriteLine("saisir la coordonnée en y du point en haut à gauche :");
+            yHautGauche = double.Parse(Console.ReadLine());
+            Console.WriteLine("saisir la coordonnée en x du point en bas à droite :");
+            xBasDroite = double.Parse(Console.ReadLine());
+            Console.WriteLine("saisir la coordonnée en x du point en bas à droite :");
+            yBasDroite = double.Parse(Console.ReadLine());
+            if (xHautGauche> xBasDroite)
+            {
+                temp = xHautGauche;
+                xHautGauche = xBasDroite;
+                xBasDroite = temp;
+                Console.WriteLine("Comme vous confondez votre gauche et votre droite, nous avons effectuer la correction suivante:\nla coordonnée en x du point en haut à gauche est " + xHautGauche + "\nla coordonnée en x du point en bas à droite est " + xBasDroite);
+            }
+            if (yHautGauche< yBasDroite)
+            {
+                temp = yHautGauche;
+                yHautGauche = yBasDroite;
+                yBasDroite = temp;
+                Console.WriteLine("Comme vous confondez le haut et le bas, nous avons effectuer la correction suivante:\nla coordonnée en y du point en haut à gauche est " + yHautGauche + "\nla coordonnée en y du point en bas à droite est " + yBasDroite);
+            }
         }
     }
 }
