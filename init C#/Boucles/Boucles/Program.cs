@@ -182,10 +182,8 @@ namespace Boucles
             //}
 
             //10
-            float a;
-            float b;
+            float a, b, result;
             string op;
-            float result;
             bool erreur;
             result = 0;//on initalise plus par sécurité qu"autre chose
             Console.WriteLine("1er nombre :");
