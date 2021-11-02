@@ -182,70 +182,99 @@ namespace Boucles
             //}
 
             //10
-            float a, b, result;
+            double a, b;
             string op;
-            bool erreur;
-            result = 0;//on initalise plus par sécurité qu"autre chose
-            Console.WriteLine("1er nombre :");
-            erreur = !float.TryParse(Console.ReadLine(), out a);
-            while (!erreur)
+            bool erreur, calculeEnCour;
+            calculeEnCour = true;
+            do
             {
-                Console.WriteLine("nombre suivant:");
-                erreur = !float.TryParse(Console.ReadLine(), out b);
-                if (!erreur)
+                Console.WriteLine("1er nombre :");
+                erreur = !double.TryParse(Console.ReadLine(), out a);
+            } while (erreur);
+            do
+            {
+                do
                 {
                     Console.WriteLine("opérateur :");
                     op = Console.ReadLine();
                     switch (op)
                     {
+                        case "=":
+                            calculeEnCour = false;
+                            erreur = false;
+                            break;
                         case "+":
-                            result = a + b;
+                            do
+                            {
+                                Console.WriteLine("nombre suivant:");//vivement les fonctions !
+                                erreur = !double.TryParse(Console.ReadLine(), out b);
+                            } while (erreur);
+                            a = a + b;
                             break;
                         case "-":
-                            result = a - b;
+                            do
+                            {
+                                Console.WriteLine("nombre suivant:");//vivement les fonctions !
+                                erreur = !double.TryParse(Console.ReadLine(), out b);
+                            } while (erreur);
+                            a -= b;
                             break;
                         case "*":
-                            result = a * b;
+                            do
+                            {
+                                Console.WriteLine("nombre suivant:");//vivement les fonctions !
+                                erreur = !double.TryParse(Console.ReadLine(), out b);
+                            } while (erreur);
+                            a *= b;
                             break;
                         case "/":
-                            if (b == 0)
+                            do
                             {
-                                erreur = true;
-                            }
-                            else
-                            {
-                                result = (float)a / (float)b;
-                            }
+                                Console.WriteLine("nombre suivant:");//vivement les fonctions !
+                                erreur = !double.TryParse(Console.ReadLine(), out b);
+                            } while (erreur||b==0);
+                            a /= b;
                             break;
-
-                            //11
                         case "$":
-                            if (b < 0 || (int)b!=b)
+                            do
                             {
-                                erreur = true;
+                                Console.WriteLine("nombre suivant:");//vivement les fonctions !
+                                erreur = !double.TryParse(Console.ReadLine(), out b);
+                            } while (erreur || b < 0|| b!=(int)b);
+                            double resultat;
+                            resultat = 1;                            
+                            for (int i = 0; i < b; i++)
+                            {
+                                resultat *= a;
+                            }
+                            a = resultat;
+                            break;
+                        case "sqrt":
+                            a = Math.Sqrt(a);
+                            break;
+                        case "!":
+                            if (a==(int)a&&a>=0)
+                            {
+                                int facto;
+                                facto = 1;
+                                for (int i = 1; i <= a; i++)
+                                {
+                                    facto *= i;
+                                }
+                                a = facto;
                             }
                             else
                             {
-                                result = 1;
-                                for (int i = 0; i < b; i++)
-                                {
-                                    result *= a;
-                                }
+                                erreur = true;
                             }
                             break;
                         default:
                             erreur = true;
                             break;
                     }
-                }
-                if (!erreur)
-                {
-                    Console.WriteLine("Le résultat est :\n" + result);
-                    a = result;
-                }
-            }
-            Console.WriteLine("Calcul impossible !");
-
+                } while (erreur);
+                Console.WriteLine("Le résultat est :\n" + a);
+            } while (calculeEnCour);
         }
     }
 }
