@@ -182,100 +182,246 @@ namespace Boucles
             //}
 
             //10
-            double a, b;
-            string op;
-            bool erreur, calculeEnCour;
-            calculeEnCour = true;
-            do
+            //double a, b;
+            //string op;
+            //bool erreur, calculeEnCour;
+            //calculeEnCour = true;
+            //do
+            //{
+            //    Console.WriteLine("1er nombre :");
+            //    erreur = !double.TryParse(Console.ReadLine(), out a);
+            //} while (erreur);
+            //do
+            //{
+            //    do
+            //    {
+            //        Console.WriteLine("opérateur :");
+            //        op = Console.ReadLine();
+            //        switch (op)
+            //        {
+            //            case "=":
+            //                calculeEnCour = false;
+            //                erreur = false;
+            //                break;
+            //            case "+":
+            //                do
+            //                {
+            //                    Console.WriteLine("nombre suivant:");//vivement les fonctions !
+            //                    erreur = !double.TryParse(Console.ReadLine(), out b);
+            //                } while (erreur);
+            //                a = a + b;
+            //                break;
+            //            case "-":
+            //                do
+            //                {
+            //                    Console.WriteLine("nombre suivant:");//vivement les fonctions !
+            //                    erreur = !double.TryParse(Console.ReadLine(), out b);
+            //                } while (erreur);
+            //                a -= b;
+            //                break;
+            //            case "*":
+            //                do
+            //                {
+            //                    Console.WriteLine("nombre suivant:");//vivement les fonctions !
+            //                    erreur = !double.TryParse(Console.ReadLine(), out b);
+            //                } while (erreur);
+            //                a *= b;
+            //                break;
+            //            case "/":
+            //                do
+            //                {
+            //                    Console.WriteLine("nombre suivant:");//vivement les fonctions !
+            //                    erreur = !double.TryParse(Console.ReadLine(), out b);
+            //                } while (erreur || b == 0);
+            //                a /= b;
+            //                break;
+            //            case "$":
+            //                do
+            //                {
+            //                    Console.WriteLine("nombre suivant:");//vivement les fonctions !
+            //                    erreur = !double.TryParse(Console.ReadLine(), out b);
+            //                } while (erreur || b < 0 || b != (int)b);
+            //                double resultat;
+            //                resultat = 1;
+            //                for (int i = 0; i < b; i++)
+            //                {
+            //                    resultat *= a;
+            //                }
+            //                a = resultat;
+            //                break;
+            //            case "sqrt":
+            //                a = Math.Sqrt(a);
+            //                break;
+            //            case "!":
+            //                if (a == (int)a && a >= 0)
+            //                {
+            //                    int facto;
+            //                    facto = 1;
+            //                    for (int i = 1; i <= a; i++)
+            //                    {
+            //                        facto *= i;
+            //                    }
+            //                    a = facto;
+            //                }
+            //                else
+            //                {
+            //                    erreur = true;
+            //                }
+            //                break;
+            //            default:
+            //                erreur = true;
+            //                break;
+            //        }
+            //    } while (erreur);
+            //    Console.WriteLine("Le résultat est :\n" + a);
+            //} while (calculeEnCour);
+
+            //10 avec fonctions
+
+            static int dessineMoiUnEntierPositif()
             {
-                Console.WriteLine("1er nombre :");
-                erreur = !double.TryParse(Console.ReadLine(), out a);
-            } while (erreur);
-            do
-            {
+                int entierPositif;
+                bool cEstEntier;
                 do
                 {
-                    Console.WriteLine("opérateur :");
-                    op = Console.ReadLine();
-                    switch (op)
+                    Console.WriteLine("saisir un entier positif:");
+                    cEstEntier = int.TryParse(Console.ReadLine(), out entierPositif);
+                } while (!cEstEntier||entierPositif<=0);
+                return entierPositif;
+            }
+            static double dessineMoiUnDouble()
+            {
+                double nombreAVirgule;
+                bool cEstAVirgule;
+                do
+                {
+                    Console.WriteLine("saisir un nombre:");
+                    cEstAVirgule = double.TryParse(Console.ReadLine(), out nombreAVirgule);
+                } while (!cEstAVirgule);
+                return nombreAVirgule;
+            }
+            static double dessineMoiUnDoubleNonNull()
+            {
+                double nombreAVirgule;
+                bool cEstAVirgule;
+                do
+                {
+                    Console.WriteLine("saisir un nombre:");
+                    cEstAVirgule = double.TryParse(Console.ReadLine(), out nombreAVirgule);
+                } while (!cEstAVirgule|| nombreAVirgule == 0);
+                return nombreAVirgule;
+            }
+            static string dessineMoiUnOperateur(double nombre)
+            {
+                string operateur;
+                bool ilExiste;
+                do
+                {
+                    Console.WriteLine("saisir un operateur:");
+                    operateur = Console.ReadLine();
+                    switch (operateur)
                     {
                         case "=":
-                            calculeEnCour = false;
-                            erreur = false;
-                            break;
                         case "+":
-                            do
-                            {
-                                Console.WriteLine("nombre suivant:");//vivement les fonctions !
-                                erreur = !double.TryParse(Console.ReadLine(), out b);
-                            } while (erreur);
-                            a = a + b;
-                            break;
                         case "-":
-                            do
-                            {
-                                Console.WriteLine("nombre suivant:");//vivement les fonctions !
-                                erreur = !double.TryParse(Console.ReadLine(), out b);
-                            } while (erreur);
-                            a -= b;
-                            break;
                         case "*":
-                            do
-                            {
-                                Console.WriteLine("nombre suivant:");//vivement les fonctions !
-                                erreur = !double.TryParse(Console.ReadLine(), out b);
-                            } while (erreur);
-                            a *= b;
-                            break;
                         case "/":
-                            do
-                            {
-                                Console.WriteLine("nombre suivant:");//vivement les fonctions !
-                                erreur = !double.TryParse(Console.ReadLine(), out b);
-                            } while (erreur || b == 0);
-                            a /= b;
-                            break;
                         case "$":
-                            do
-                            {
-                                Console.WriteLine("nombre suivant:");//vivement les fonctions !
-                                erreur = !double.TryParse(Console.ReadLine(), out b);
-                            } while (erreur || b < 0 || b != (int)b);
-                            double resultat;
-                            resultat = 1;
-                            for (int i = 0; i < b; i++)
-                            {
-                                resultat *= a;
-                            }
-                            a = resultat;
+                            ilExiste = true;
                             break;
                         case "sqrt":
-                            a = Math.Sqrt(a);
+                            ilExiste = nombre < 0 ? false : true;
                             break;
                         case "!":
-                            if (a == (int)a && a >= 0)
-                            {
-                                int facto;
-                                facto = 1;
-                                for (int i = 1; i <= a; i++)
-                                {
-                                    facto *= i;
-                                }
-                                a = facto;
-                            }
-                            else
-                            {
-                                erreur = true;
-                            }
+                            ilExiste = nombre == (int)nombre ? true : false;
                             break;
                         default:
-                            erreur = true;
+                            ilExiste = false;
                             break;
                     }
-                } while (erreur);
-                Console.WriteLine("Le résultat est :\n" + a);
+                } while (!ilExiste);
+                return operateur;
+            }
+            static double calculUnaire(double valeur, string operateur)
+            {
+                double resultat=1;//initialisé ici si pb ds swich
+                switch (operateur)
+                {
+                    case "!":
+                        for (int i = 1; i <= valeur; i++)
+                        {
+                            resultat *= i;
+                        }
+                        break;
+                    case "sqrt":
+                        resultat= Math.Sqrt(valeur);
+                        break;
+                }
+                return resultat;
+            }
+            static double calcul(double valeur1, double valeur2, string operateur)
+            {
+                double resultat = 1;//initialisé ici si pb ds swich
+                switch (operateur)
+                {
+                    case "+":
+                        resultat = valeur1 + valeur2;
+                        break;
+                    case "-":
+                        resultat = valeur1 - valeur2;
+                        break;
+                    case "*":
+                        resultat = valeur1 * valeur2;
+                        break;
+                    case "/":
+                        resultat = valeur1 / valeur2;
+                        break;
+                    case "$":
+                        for (int i = 0; i < valeur2; i++)
+                        {
+                        resultat *= valeur1;
+                        }
+                        break;
+                }
+                return resultat;
+            }
+            bool calculeEnCour = true;
+            double a,b;
+            string operateur;
+            a=dessineMoiUnDouble();
+            do
+            {
+                operateur = dessineMoiUnOperateur(a);
+                if (operateur=="=")
+                {
+                    calculeEnCour = false;
+                }
+                else
+                {
+                    switch (operateur)
+                    {
+                        case "+":
+                        case "-":
+                        case "*":
+                            b = dessineMoiUnDouble();
+                            a = calcul(a, b, operateur);
+                            break;
+                        case "/":
+                            b = dessineMoiUnDoubleNonNull();
+                            a = calcul(a, b, operateur);
+                            break;
+                        case "$":
+                            b = dessineMoiUnEntierPositif();
+                            a= calcul(a, b, operateur);
+                            break;
+                        case "sqrt":
+                        case "!":
+                            a = calculUnaire(a, operateur);
+                            break;
+                    }
+                    Console.WriteLine(a);
+                }
             } while (calculeEnCour);
-
         }
     }
 }
