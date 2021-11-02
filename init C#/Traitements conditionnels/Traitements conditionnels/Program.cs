@@ -259,39 +259,39 @@ namespace Traitements_conditionnels
             //3.4
             //11
 
-            //int heureDebut;
-            //int minuteDebut;
-            //int heureFin;
-            //int minuteFin;
-            //int heureDEcart;
-            //int minuteDEcart;
-            //Console.WriteLine("heure de début :");
-            //heureDebut = int.Parse(Console.ReadLine());
-            //Console.WriteLine("minutes de début :");
-            //minuteDebut = int.Parse(Console.ReadLine());
-            //Console.WriteLine("heure de fin :");
-            //heureFin = int.Parse(Console.ReadLine());
-            //Console.WriteLine("minutes de fin :");
-            //minuteFin = int.Parse(Console.ReadLine());
-            //if (minuteDebut > minuteFin)
-            //{
-            //    minuteDEcart = 60 - minuteDebut + minuteFin;
-            //    heureDEcart = -1;
-            //}
-            //else
-            //{
-            //    minuteDEcart = minuteFin - minuteDebut;
-            //    heureDEcart = 0;
-            //}
-            //if (heureFin > heureDebut||(heureFin==heureDebut&&heureDEcart==0))
-            //{
-            //    heureDEcart += heureFin - heureDebut;
-            //    Console.WriteLine("L'écart entre "+heureDebut+"h"+minuteDebut+" et "+heureFin+"h"+minuteFin+" est de "+heureDEcart+"h"+minuteDEcart);
-            //}
-            //else
-            //{
-            //    Console.WriteLine("Erreur. L'heure de début est après celle de fin.");
-            //}
+            int heureDebut;
+            int minuteDebut;
+            int heureFin;
+            int minuteFin;
+            int heureDEcart;
+            int minuteDEcart;
+            Console.WriteLine("heure de début :");
+            heureDebut = int.Parse(Console.ReadLine());
+            Console.WriteLine("minutes de début :");
+            minuteDebut = int.Parse(Console.ReadLine());
+            Console.WriteLine("heure de fin :");
+            heureFin = int.Parse(Console.ReadLine());
+            Console.WriteLine("minutes de fin :");
+            minuteFin = int.Parse(Console.ReadLine());
+            if (minuteDebut > minuteFin)
+            {
+                minuteDEcart = 60 - minuteDebut + minuteFin;
+                heureDEcart = -1;
+            }
+            else
+            {
+                minuteDEcart = minuteFin - minuteDebut;
+                heureDEcart = 0;
+            }
+            if (heureFin > heureDebut || (heureFin == heureDebut && heureDEcart == 0))
+            {
+                heureDEcart += heureFin - heureDebut;
+                Console.WriteLine("L'écart entre " + heureDebut + "h" + minuteDebut + " et " + heureFin + "h" + minuteFin + " est de " + heureDEcart + "h" + minuteDEcart);
+            }
+            else
+            {
+                Console.WriteLine("Erreur. L'heure de début est après celle de fin.");
+            }
 
             //12
             //int jour;
