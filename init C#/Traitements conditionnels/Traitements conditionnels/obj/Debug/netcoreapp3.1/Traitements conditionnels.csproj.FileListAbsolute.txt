@@ -12,3 +12,17 @@ U:\59011-07-07\CDA_nils\init C#\Traitements conditionnels\Traitements conditionn
 U:\59011-07-07\CDA_nils\init C#\Traitements conditionnels\Traitements conditionnels\obj\Debug\netcoreapp3.1\Traitements conditionnels.pdb
 U:\59011-07-07\CDA_nils\init C#\Traitements conditionnels\Traitements conditionnels\obj\Debug\netcoreapp3.1\Traitements conditionnels.genruntimeconfig.cache
 U:\59011-07-07\CDA_nils\init C#\Traitements conditionnels\Traitements conditionnels\obj\Debug\netcoreapp3.1\Traitements conditionnels.csproj.AssemblyReference.cache
+C:\repo local\CDA_nils\init C#\Traitements conditionnels\Traitements conditionnels\bin\Debug\netcoreapp3.1\Traitements conditionnels.exe
+C:\repo local\CDA_nils\init C#\Traitements conditionnels\Traitements conditionnels\bin\Debug\netcoreapp3.1\Traitements conditionnels.deps.json
+C:\repo local\CDA_nils\init C#\Traitements conditionnels\Traitements conditionnels\bin\Debug\netcoreapp3.1\Traitements conditionnels.runtimeconfig.json
+C:\repo local\CDA_nils\init C#\Traitements conditionnels\Traitements conditionnels\bin\Debug\netcoreapp3.1\Traitements conditionnels.runtimeconfig.dev.json
+C:\repo local\CDA_nils\init C#\Traitements conditionnels\Traitements conditionnels\bin\Debug\netcoreapp3.1\Traitements conditionnels.dll
+C:\repo local\CDA_nils\init C#\Traitements conditionnels\Traitements conditionnels\bin\Debug\netcoreapp3.1\Traitements conditionnels.pdb
+C:\repo local\CDA_nils\init C#\Traitements conditionnels\Traitements conditionnels\obj\Debug\netcoreapp3.1\Traitements conditionnels.csproj.AssemblyReference.cache
+C:\repo local\CDA_nils\init C#\Traitements conditionnels\Traitements conditionnels\obj\Debug\netcoreapp3.1\Traitements conditionnels.GeneratedMSBuildEditorConfig.editorconfig
+C:\repo local\CDA_nils\init C#\Traitements conditionnels\Traitements conditionnels\obj\Debug\netcoreapp3.1\Traitements conditionnels.AssemblyInfoInputs.cache
+C:\repo local\CDA_nils\init C#\Traitements conditionnels\Traitements conditionnels\obj\Debug\netcoreapp3.1\Traitements conditionnels.AssemblyInfo.cs
+C:\repo local\CDA_nils\init C#\Traitements conditionnels\Traitements conditionnels\obj\Debug\netcoreapp3.1\Traitements conditionnels.csproj.CoreCompileInputs.cache
+C:\repo local\CDA_nils\init C#\Traitements conditionnels\Traitements conditionnels\obj\Debug\netcoreapp3.1\Traitements conditionnels.dll
+C:\repo local\CDA_nils\init C#\Traitements conditionnels\Traitements conditionnels\obj\Debug\netcoreapp3.1\Traitements conditionnels.pdb
+C:\repo local\CDA_nils\init C#\Traitements conditionnels\Traitements conditionnels\obj\Debug\netcoreapp3.1\Traitements conditionnels.genruntimeconfig.cache

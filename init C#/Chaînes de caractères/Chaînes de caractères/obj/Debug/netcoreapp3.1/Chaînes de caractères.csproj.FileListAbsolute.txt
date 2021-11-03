@@ -1,0 +1,14 @@
+C:\repo local\CDA_nils\init C#\Chaînes de caractères\Chaînes de caractères\bin\Debug\netcoreapp3.1\Chaînes de caractères.exe
+C:\repo local\CDA_nils\init C#\Chaînes de caractères\Chaînes de caractères\bin\Debug\netcoreapp3.1\Chaînes de caractères.deps.json
+C:\repo local\CDA_nils\init C#\Chaînes de caractères\Chaînes de caractères\bin\Debug\netcoreapp3.1\Chaînes de caractères.runtimeconfig.json
+C:\repo local\CDA_nils\init C#\Chaînes de caractères\Chaînes de caractères\bin\Debug\netcoreapp3.1\Chaînes de caractères.runtimeconfig.dev.json
+C:\repo local\CDA_nils\init C#\Chaînes de caractères\Chaînes de caractères\bin\Debug\netcoreapp3.1\Chaînes de caractères.dll
+C:\repo local\CDA_nils\init C#\Chaînes de caractères\Chaînes de caractères\bin\Debug\netcoreapp3.1\Chaînes de caractères.pdb
+C:\repo local\CDA_nils\init C#\Chaînes de caractères\Chaînes de caractères\obj\Debug\netcoreapp3.1\Chaînes de caractères.csproj.AssemblyReference.cache
+C:\repo local\CDA_nils\init C#\Chaînes de caractères\Chaînes de caractères\obj\Debug\netcoreapp3.1\Chaînes de caractères.GeneratedMSBuildEditorConfig.editorconfig
+C:\repo local\CDA_nils\init C#\Chaînes de caractères\Chaînes de caractères\obj\Debug\netcoreapp3.1\Chaînes de caractères.AssemblyInfoInputs.cache
+C:\repo local\CDA_nils\init C#\Chaînes de caractères\Chaînes de caractères\obj\Debug\netcoreapp3.1\Chaînes de caractères.AssemblyInfo.cs
+C:\repo local\CDA_nils\init C#\Chaînes de caractères\Chaînes de caractères\obj\Debug\netcoreapp3.1\Chaînes de caractères.csproj.CoreCompileInputs.cache
+C:\repo local\CDA_nils\init C#\Chaînes de caractères\Chaînes de caractères\obj\Debug\netcoreapp3.1\Chaînes de caractères.dll
+C:\repo local\CDA_nils\init C#\Chaînes de caractères\Chaînes de caractères\obj\Debug\netcoreapp3.1\Chaînes de caractères.pdb
+C:\repo local\CDA_nils\init C#\Chaînes de caractères\Chaînes de caractères\obj\Debug\netcoreapp3.1\Chaînes de caractères.genruntimeconfig.cache
