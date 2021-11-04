@@ -48,62 +48,63 @@ namespace Tableaux
 
             //4
             //int[] T = new int[10] {1,2,3,4,5,6,7,8,9,10};
-
-
-            ////5
-            //int[] T = new int[10];
-            //for (int i = 0; i < T.Length; i++)
-            //    T[i] = i + 1;
             //foreach (int p in T)
             //    Console.WriteLine(p);
-            //Console.WriteLine();
 
-            ////6
-            //int somme = 0;
-            //for (int i = 0; i < T.Length; i++)
-            //    somme += T[i];
-            //Console.WriteLine(somme);
-            //Console.WriteLine();
+            //5
+            int[] T = new int[10];
+            for (int i = 0; i < T.Length; i++)
+                T[i] = i + 1;
+            foreach (int p in T)
+                Console.WriteLine(p);
+            Console.WriteLine();
 
-            ////7
-            //int valUtilisayeur;
-            //bool estUnInt;
-            //do
-            //{
-            //    Console.WriteLine("saisir un INT");
-            //    estUnInt = int.TryParse(Console.ReadLine(), out valUtilisayeur);
-            //} while (!estUnInt);
-            //if (Array.IndexOf(T, valUtilisayeur)==-1)
-            //    Console.WriteLine("Ce INT n'est pas dans le tableau");
-            //else
-            //    Console.WriteLine("Ce INT est dans le tableau");
-            //Console.WriteLine();
+            //6
+            int somme = 0;
+            for (int i = 0; i < T.Length; i++)
+                somme += T[i];
+            Console.WriteLine(somme);
+            Console.WriteLine();
 
-            ////8
-            //int[] tableauCirculezYaRienAVoir = new int[10];
-            //for (int i = 0; i < T.Length; i++)
-            //    tableauCirculezYaRienAVoir[(i+1) % T.Length] = T[i];
-            //foreach (int p in tableauCirculezYaRienAVoir)
-            //    Console.WriteLine(p);
-            //Console.WriteLine();
-            ////9
-            //int temp=T[T.Length-1];
-            //for (int i = T.Length - 1; i > 0; i--)
-            //    T[i] = T[i - 1];
-            //T[0] = temp;
-            //foreach (int p in T)
-            //    Console.WriteLine(p);
-            //Console.WriteLine();
-            ////10
-            //for (int i = 0; i < T.Length/2; i++)
-            //{
-            //    temp = T[i];
-            //    T[i] = T[T.Length - 1 - i];
-            //    T[T.Length - 1 - i]=temp;
-            //}
-            //foreach (int p in T)
-            //    Console.WriteLine(p);
-            //Console.WriteLine();
+            //7
+            int valUtilisayeur;
+            bool estUnInt;
+            do
+            {
+                Console.WriteLine("saisir un int");
+                estUnInt = int.TryParse(Console.ReadLine(), out valUtilisayeur);
+            } while (!estUnInt);
+            if (Array.IndexOf(T, valUtilisayeur) == -1)
+                Console.WriteLine("Ce int n'est pas dans le tableau");
+            else
+                Console.WriteLine("Ce int est dans le tableau");
+            Console.WriteLine();
+
+            //8
+            int[] tableauCirculezYaRienAVoir = new int[10];
+            for (int i = 0; i < T.Length; i++)
+                tableauCirculezYaRienAVoir[(i + 1) % T.Length] = T[i];
+            foreach (int p in tableauCirculezYaRienAVoir)
+                Console.WriteLine(p);
+            Console.WriteLine();
+            //9
+            int temp = T[T.Length - 1];
+            for (int i = T.Length - 1; i > 0; i--)
+                T[i] = T[i - 1];
+            T[0] = temp;
+            foreach (int p in T)
+                Console.WriteLine(p);
+            Console.WriteLine();
+            //10
+            for (int i = 0; i < T.Length / 2; i++)
+            {
+                temp = T[i];
+                T[i] = T[T.Length - 1 - i];
+                T[T.Length - 1 - i] = temp;
+            }
+            foreach (int p in T)
+                Console.WriteLine(p);
+            Console.WriteLine();
 
 
 
@@ -159,12 +160,36 @@ namespace Tableaux
             //}
 
             //15
-            double[] tabVal = new double[6] { 0.5, 0.2, 0.1, 0.05, 0.02, 0.01 };
-            int[] tabNbrPiece = new int[6];
-            double somme = 0;
-            double valutilisateur;
-            bool cEstUnNombre;
+            //double[] tabVal = new double[6] { 0.5, 0.2, 0.1, 0.05, 0.02, 0.01 };
+            //int[] tabNbrPiece = new int[6];
+            //double somme;
+            //bool cEstEntreZeroEtUn;
+            //do
+            //{
+            //    Console.WriteLine("saisir un nombre entre 0 et 0.99");
+            //    cEstEntreZeroEtUn = double.TryParse(Console.ReadLine(), out somme) && somme <= 0.99 && somme >= 0 && somme * 100 % 1 == 0;
+            //} while (!cEstEntreZeroEtUn);
+            //for (int i = 0; i < tabVal.Length; i++)
+            //{
+            //    while (Math.Round(somme,2) >= tabVal[i])
+            //    //while (somme >= tabVal[i])
+            //        {
+            //        somme -= tabVal[i];
+            //        tabNbrPiece[i]++;
+            //    }
+            //}
+            //foreach (int p in tabNbrPiece)
+            //    Console.Write(" "+p);
+            //Console.WriteLine();
+            ////Console.WriteLine(somme);
 
+            ////16
+            //int[] T = new int[20];
+            //Random dice = new Random();
+            //for (int i = 0; i < T.Length; i++)
+            //{
+            //    T[i]=
+            //}
         }
     }
 }

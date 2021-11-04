@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace Chaînes_de_caractères
 {
@@ -90,11 +91,11 @@ namespace Chaînes_de_caractères
 
             //5
 
-            //string chaine,newChaine="";
+            //StringBuilder chaine;
             //char a, b;
             //bool estUnChar;
             //Console.WriteLine("saisir la chaine");
-            //chaine = Console.ReadLine();
+            //chaine =new StringBuilder( Console.ReadLine());
             //do
             //{
             //    Console.WriteLine("saisir le caractere à remplacer");
@@ -107,9 +108,9 @@ namespace Chaînes_de_caractères
             //} while (!estUnChar);
             //for (int i = 0; i < chaine.Length; i++)
             //{
-            //    newChaine += chaine[i] == a ? b : chaine[i];
+            //    if( chaine[i] == a)chaine[i]=b;
             //}
-            //Console.WriteLine(newChaine);
+            //Console.WriteLine(chaine);
 
             //5.2
 
@@ -121,8 +122,8 @@ namespace Chaînes_de_caractères
             //    Console.WriteLine("saisir le nom du fichier");
             //    fichier = Console.ReadLine();
             //    indice = fichier.LastIndexOf('.');
-            //} while (indice==-1||indice+1==fichier.Length);
-            //Console.WriteLine("le fichier \"" + fichier.Substring(0, indice) + "\" a pour extension \"" + fichier.Substring(indice + 1) + "\"");//IndexOf
+            //} while (indice == -1 || indice + 1 == fichier.Length);
+            //Console.WriteLine("le fichier \"" + fichier.Substring(0, indice) + "\" a pour extension \"" + fichier.Substring(indice + 1) + "\"");
 
             //7
             //string equation;
@@ -157,7 +158,7 @@ namespace Chaînes_de_caractères
             equation = Console.ReadLine();
             for (int i = 0; i < equation.Length; i++)
             {
-                if (equation[i]=='(')
+                if (equation[i] == '(')
                 {
                     compteurDeParentheseOuverte++;
                 }
