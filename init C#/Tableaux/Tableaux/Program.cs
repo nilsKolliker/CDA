@@ -51,113 +51,113 @@ namespace Tableaux
             //foreach (int p in T)
             //    Console.WriteLine(p);
 
-            //5
-            int[] T = new int[10];
-            for (int i = 0; i < T.Length; i++)
-                T[i] = i + 1;
-            foreach (int p in T)
-                Console.WriteLine(p);
-            Console.WriteLine();
 
-            //6
-            int somme = 0;
-            for (int i = 0; i < T.Length; i++)
-                somme += T[i];
-            Console.WriteLine(somme);
-            Console.WriteLine();
-
-            //7
-            int valUtilisayeur;
-            bool estUnInt;
-            do
-            {
-                Console.WriteLine("saisir un int");
-                estUnInt = int.TryParse(Console.ReadLine(), out valUtilisayeur);
-            } while (!estUnInt);
-            if (Array.IndexOf(T, valUtilisayeur) == -1)
-                Console.WriteLine("Ce int n'est pas dans le tableau");
-            else
-                Console.WriteLine("Ce int est dans le tableau");
-            Console.WriteLine();
-
-            //8
-            int[] tableauCirculezYaRienAVoir = new int[10];
-            for (int i = 0; i < T.Length; i++)
-                tableauCirculezYaRienAVoir[(i + 1) % T.Length] = T[i];
-            foreach (int p in tableauCirculezYaRienAVoir)
-                Console.WriteLine(p);
-            Console.WriteLine();
-            //9
-            int temp = T[T.Length - 1];
-            for (int i = T.Length - 1; i > 0; i--)
-                T[i] = T[i - 1];
-            T[0] = temp;
-            foreach (int p in T)
-                Console.WriteLine(p);
-            Console.WriteLine();
-            //10
-            for (int i = 0; i < T.Length / 2; i++)
-            {
-                temp = T[i];
-                T[i] = T[T.Length - 1 - i];
-                T[T.Length - 1 - i] = temp;
-            }
-            foreach (int p in T)
-                Console.WriteLine(p);
-            Console.WriteLine();
-
-
-
-            ////11
-            //int[] T = new int[20];
+            ////5
+            //int[] T = new int[10];
             //for (int i = 0; i < T.Length; i++)
-            //    T[i] = (i * i) % 17;
+            //    T[i] = i + 1;
             //foreach (int p in T)
             //    Console.WriteLine(p);
             //Console.WriteLine();
 
-            ////12
-            //int petit = T[0], gros = T[0];
-            //for (int i = 1; i < T.Length; i++)
-            //{
-            //    if (T[i] < petit) petit = T[i];
-            //    if (T[i] > gros) gros = T[i];
-            //}
-            //Console.WriteLine(petit);
-            //Console.WriteLine(gros);
+            ////6
+            //int somme = 0;
+            //for (int i = 0; i < T.Length; i++)
+            //    somme += T[i];
+            //Console.WriteLine(somme);
             //Console.WriteLine();
 
-            ////13
+            ////7
             //int valUtilisayeur;
             //bool estUnInt;
             //do
             //{
-            //    Console.WriteLine("saisir un INT");
+            //    Console.WriteLine("saisir un int");
             //    estUnInt = int.TryParse(Console.ReadLine(), out valUtilisayeur);
             //} while (!estUnInt);
-            //for (int i = 0; i < T.Length; i++)
-            //{
-            //    if (T[i] == valUtilisayeur) Console.WriteLine(i);
-            //}
-
-            ////14
-            //int nombreDOccurence = 0;
-            //int[] tableauDOccurence = new int[T.Length];//dans le doute, il est au max
-            //do
-            //{
-            //    Console.WriteLine("saisir un INT");
-            //    estUnInt = int.TryParse(Console.ReadLine(), out valUtilisayeur);
-            //} while (!estUnInt);
-            //for (int i = 0; i < T.Length; i++)
-            //    if (T[i] == valUtilisayeur) tableauDOccurence[nombreDOccurence++] = i;
-            //Array.Resize(ref tableauDOccurence, nombreDOccurence);//réduction du tableau
-            //if (nombreDOccurence == 0) Console.WriteLine("La valeur " + valUtilisayeur + " n’a pas été trouvée");
+            //if (Array.IndexOf(T, valUtilisayeur) == -1)
+            //    Console.WriteLine("Ce int n'est pas dans le tableau");
             //else
+            //    Console.WriteLine("Ce int est dans le tableau");
+            //Console.WriteLine();
+
+            ////8
+            //int[] tableauCirculezYaRienAVoir = new int[10];
+            //for (int i = 0; i < T.Length; i++)
+            //    tableauCirculezYaRienAVoir[(i + 1) % T.Length] = T[i];
+            //foreach (int p in tableauCirculezYaRienAVoir)
+            //    Console.WriteLine(p);
+            //Console.WriteLine();
+
+            ////9
+            //int temp = T[T.Length - 1];
+            //for (int i = T.Length - 1; i > 0; i--)
+            //    T[i] = T[i - 1];
+            //T[0] = temp;
+            //foreach (int p in T)
+            //    Console.WriteLine(p);
+            //Console.WriteLine();
+            ////10
+            //for (int i = 0; i < T.Length / 2; i++)
             //{
-            //    Console.Write("La valeur " + valUtilisayeur + " se trouve aux indices suivants:");
-            //    foreach (int p in tableauDOccurence)
-            //        Console.Write(" "+p);
+            //    temp = T[i];
+            //    T[i] = T[T.Length - 1 - i];
+            //    T[T.Length - 1 - i] = temp;
             //}
+            //foreach (int p in T)
+            //    Console.WriteLine(p);
+            //Console.WriteLine();
+
+
+
+            //11
+            int[] T = new int[20];
+            for (int i = 0; i < T.Length; i++)
+                T[i] = (i * i) % 17;
+            foreach (int p in T)
+                Console.WriteLine(p);
+            Console.WriteLine();
+
+            //12
+            int petit = T[0], gros = T[0];
+            for (int i = 1; i < T.Length; i++)
+            {
+                if (T[i] < petit) petit = T[i];
+                if (T[i] > gros) gros = T[i];
+            }
+            Console.WriteLine(petit);
+            Console.WriteLine(gros);
+            Console.WriteLine();
+
+            //13
+            int valUtilisayeur;
+            bool estUnInt;
+            do
+            {
+                Console.WriteLine("saisir un INT");
+                estUnInt = int.TryParse(Console.ReadLine(), out valUtilisayeur);
+            } while (!estUnInt);
+            for (int i = 0; i < T.Length; i++)
+                if (T[i] == valUtilisayeur) Console.WriteLine(i);
+
+            //14
+            int nombreDOccurence = 0;
+            int[] tableauDOccurence = new int[T.Length];//dans le doute, il est au max
+            do
+            {
+                Console.WriteLine("saisir un INT");
+                estUnInt = int.TryParse(Console.ReadLine(), out valUtilisayeur);
+            } while (!estUnInt);
+            for (int i = 0; i < T.Length; i++)
+                if (T[i] == valUtilisayeur) tableauDOccurence[nombreDOccurence++] = i;
+            Array.Resize(ref tableauDOccurence, nombreDOccurence);//réduction du tableau
+            if (nombreDOccurence == 0) Console.WriteLine("La valeur " + valUtilisayeur + " n’a pas été trouvée");
+            else
+            {
+                Console.Write("La valeur " + valUtilisayeur + " se trouve aux indices suivants:");
+                foreach (int p in tableauDOccurence)
+                    Console.Write(" " + p);
+            }
 
             //15
             //double[] tabVal = new double[6] { 0.5, 0.2, 0.1, 0.05, 0.02, 0.01 };
@@ -172,8 +172,7 @@ namespace Tableaux
             //for (int i = 0; i < tabVal.Length; i++)
             //{
             //    while (Math.Round(somme,2) >= tabVal[i])
-            //    //while (somme >= tabVal[i])
-            //        {
+            //    {
             //        somme -= tabVal[i];
             //        tabNbrPiece[i]++;
             //    }
@@ -181,15 +180,118 @@ namespace Tableaux
             //foreach (int p in tabNbrPiece)
             //    Console.Write(" "+p);
             //Console.WriteLine();
-            ////Console.WriteLine(somme);
 
-            ////16
+            //16
             //int[] T = new int[20];
+            //int minim, tranche;
             //Random dice = new Random();
             //for (int i = 0; i < T.Length; i++)
             //{
-            //    T[i]=
+            //    T[i] = dice.Next(-20, 21);
             //}
+            //minim = T[0];
+            //foreach (int p in T)
+            //    Console.Write(" " + p);
+            //Console.WriteLine();
+            //for (int i = 0; i < T.Length; i++)//longueur de la tranche
+            //{
+            //    for (int j = 0; j < T.Length - i; j++)//création des tranches
+            //    {
+            //        tranche = 0;
+            //        for (int k = j; k <= j + i; k++)//valeur de la tranche
+            //        {
+            //            tranche += T[k];
+            //        }
+            //        if (minim > tranche) minim = tranche;
+            //    }
+
+            //}
+            //Console.WriteLine(minim);
+            //Console.WriteLine();
+
+            //17
+            //int[] T = new int[20];
+            //int minim, tranche;
+            //Random dice = new Random();
+            //for (int i = 0; i < T.Length; i++)
+            //{
+            //    T[i] = dice.Next(-20, 21);
+            //}
+            //minim = T[0];
+            //foreach (int p in T)
+            //    Console.Write(" " + p);
+            //Console.WriteLine();
+            //for (int i = 0; i < T.Length; i++)//début de la tranche
+            //{
+            //    tranche = 0;
+            //    for (int j = i; j < T.Length; j++)//fin de la tranche
+            //    {
+            //        tranche += T[j];
+            //        if (minim > tranche) minim = tranche;
+            //    }
+            //}
+            //Console.WriteLine(minim);
+
+            //19
+            //int[] T = new int[20];
+            //int minim, tranche, tj = 5;
+            //Random dice = new Random();
+            //for (int i = 0; i < T.Length; i++)
+            //{
+            //    T[i] = dice.Next(-20, 21);
+            //}
+            //Console.WriteLine(T[tj-1]);
+            //Console.WriteLine(T[tj]);
+            //for (int i = 0; i < T.Length; i++)
+            //    Console.Write(" " + T[i]);
+            //Console.WriteLine();
+            //minim = T[0];
+            //for (int i = 0; i < tj; i++)//début de la tranche
+            //{
+            //    tranche = 0;
+            //    for (int j = i; j < tj; j++)//fin de la tranche
+            //    {
+            //        tranche += T[j];
+            //        if (minim > tranche) minim = tranche;
+            //    }
+            //}
+            //Console.WriteLine(minim);
+            //minim = T[tj];
+            //for (int i = 0; i < tj; i++)//début de la tranche
+            //{
+            //    tranche = 0;
+            //    for (int j = i; j < tj; j++)//fin de la tranche
+            //    {
+            //        tranche += T[j];
+            //    }
+            //    if (minim > tranche) minim = tranche;
+            //}
+            //Console.WriteLine(minim);
+            //minim = T[0];
+            //for (int i = 0; i < tj + 1; i++)//début de la tranche
+            //{
+            //    tranche = 0;
+            //    for (int j = i; j < tj + 1; j++)//fin de la tranche
+            //    {
+            //        tranche += T[j];
+            //        if (minim > tranche) minim = tranche;
+            //    }
+            //}
+            //Console.WriteLine(minim);
+            //minim = T[tj + 1];
+            //for (int i = 0; i < tj + 1; i++)//début de la tranche
+            //{
+            //    tranche = 0;
+            //    for (int j = i; j < tj + 1; j++)//fin de la tranche
+            //    {
+            //        tranche += T[j];
+            //    }
+            //    if (minim > tranche) minim = tranche;
+            //}
+            //Console.WriteLine(minim);
+
+
+
         }
     }
 }
