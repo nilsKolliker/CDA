@@ -1,0 +1,16 @@
+U:\59011-07-07\CDA_nils\init C#\ExerciceClasse\ExerciceClasse\bin\Debug\net5.0\ExerciceClasse.exe
+U:\59011-07-07\CDA_nils\init C#\ExerciceClasse\ExerciceClasse\bin\Debug\net5.0\ExerciceClasse.deps.json
+U:\59011-07-07\CDA_nils\init C#\ExerciceClasse\ExerciceClasse\bin\Debug\net5.0\ExerciceClasse.runtimeconfig.json
+U:\59011-07-07\CDA_nils\init C#\ExerciceClasse\ExerciceClasse\bin\Debug\net5.0\ExerciceClasse.runtimeconfig.dev.json
+U:\59011-07-07\CDA_nils\init C#\ExerciceClasse\ExerciceClasse\bin\Debug\net5.0\ExerciceClasse.dll
+U:\59011-07-07\CDA_nils\init C#\ExerciceClasse\ExerciceClasse\bin\Debug\net5.0\ref\ExerciceClasse.dll
+U:\59011-07-07\CDA_nils\init C#\ExerciceClasse\ExerciceClasse\bin\Debug\net5.0\ExerciceClasse.pdb
+U:\59011-07-07\CDA_nils\init C#\ExerciceClasse\ExerciceClasse\obj\Debug\net5.0\ExerciceClasse.csproj.AssemblyReference.cache
+U:\59011-07-07\CDA_nils\init C#\ExerciceClasse\ExerciceClasse\obj\Debug\net5.0\ExerciceClasse.GeneratedMSBuildEditorConfig.editorconfig
+U:\59011-07-07\CDA_nils\init C#\ExerciceClasse\ExerciceClasse\obj\Debug\net5.0\ExerciceClasse.AssemblyInfoInputs.cache
+U:\59011-07-07\CDA_nils\init C#\ExerciceClasse\ExerciceClasse\obj\Debug\net5.0\ExerciceClasse.AssemblyInfo.cs
+U:\59011-07-07\CDA_nils\init C#\ExerciceClasse\ExerciceClasse\obj\Debug\net5.0\ExerciceClasse.csproj.CoreCompileInputs.cache
+U:\59011-07-07\CDA_nils\init C#\ExerciceClasse\ExerciceClasse\obj\Debug\net5.0\ExerciceClasse.dll
+U:\59011-07-07\CDA_nils\init C#\ExerciceClasse\ExerciceClasse\obj\Debug\net5.0\ref\ExerciceClasse.dll
+U:\59011-07-07\CDA_nils\init C#\ExerciceClasse\ExerciceClasse\obj\Debug\net5.0\ExerciceClasse.pdb
+U:\59011-07-07\CDA_nils\init C#\ExerciceClasse\ExerciceClasse\obj\Debug\net5.0\ExerciceClasse.genruntimeconfig.cache

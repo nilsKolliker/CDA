@@ -1,0 +1,16 @@
+U:\59011-07-07\CDA_nils\init C#\LaClasseCompte\LaClasseCompte\bin\Debug\net5.0\LaClasseCompte.exe
+U:\59011-07-07\CDA_nils\init C#\LaClasseCompte\LaClasseCompte\bin\Debug\net5.0\LaClasseCompte.deps.json
+U:\59011-07-07\CDA_nils\init C#\LaClasseCompte\LaClasseCompte\bin\Debug\net5.0\LaClasseCompte.runtimeconfig.json
+U:\59011-07-07\CDA_nils\init C#\LaClasseCompte\LaClasseCompte\bin\Debug\net5.0\LaClasseCompte.runtimeconfig.dev.json
+U:\59011-07-07\CDA_nils\init C#\LaClasseCompte\LaClasseCompte\bin\Debug\net5.0\LaClasseCompte.dll
+U:\59011-07-07\CDA_nils\init C#\LaClasseCompte\LaClasseCompte\bin\Debug\net5.0\ref\LaClasseCompte.dll
+U:\59011-07-07\CDA_nils\init C#\LaClasseCompte\LaClasseCompte\bin\Debug\net5.0\LaClasseCompte.pdb
+U:\59011-07-07\CDA_nils\init C#\LaClasseCompte\LaClasseCompte\obj\Debug\net5.0\LaClasseCompte.csproj.AssemblyReference.cache
+U:\59011-07-07\CDA_nils\init C#\LaClasseCompte\LaClasseCompte\obj\Debug\net5.0\LaClasseCompte.GeneratedMSBuildEditorConfig.editorconfig
+U:\59011-07-07\CDA_nils\init C#\LaClasseCompte\LaClasseCompte\obj\Debug\net5.0\LaClasseCompte.AssemblyInfoInputs.cache
+U:\59011-07-07\CDA_nils\init C#\LaClasseCompte\LaClasseCompte\obj\Debug\net5.0\LaClasseCompte.AssemblyInfo.cs
+U:\59011-07-07\CDA_nils\init C#\LaClasseCompte\LaClasseCompte\obj\Debug\net5.0\LaClasseCompte.csproj.CoreCompileInputs.cache
+U:\59011-07-07\CDA_nils\init C#\LaClasseCompte\LaClasseCompte\obj\Debug\net5.0\LaClasseCompte.dll
+U:\59011-07-07\CDA_nils\init C#\LaClasseCompte\LaClasseCompte\obj\Debug\net5.0\ref\LaClasseCompte.dll
+U:\59011-07-07\CDA_nils\init C#\LaClasseCompte\LaClasseCompte\obj\Debug\net5.0\LaClasseCompte.pdb
+U:\59011-07-07\CDA_nils\init C#\LaClasseCompte\LaClasseCompte\obj\Debug\net5.0\LaClasseCompte.genruntimeconfig.cache

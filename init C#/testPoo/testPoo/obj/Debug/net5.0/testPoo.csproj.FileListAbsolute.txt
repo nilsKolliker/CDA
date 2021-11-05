@@ -1,0 +1,16 @@
+U:\59011-07-07\CDA_nils\init C#\testPoo\testPoo\bin\Debug\net5.0\testPoo.exe
+U:\59011-07-07\CDA_nils\init C#\testPoo\testPoo\bin\Debug\net5.0\testPoo.deps.json
+U:\59011-07-07\CDA_nils\init C#\testPoo\testPoo\bin\Debug\net5.0\testPoo.runtimeconfig.json
+U:\59011-07-07\CDA_nils\init C#\testPoo\testPoo\bin\Debug\net5.0\testPoo.runtimeconfig.dev.json
+U:\59011-07-07\CDA_nils\init C#\testPoo\testPoo\bin\Debug\net5.0\testPoo.dll
+U:\59011-07-07\CDA_nils\init C#\testPoo\testPoo\bin\Debug\net5.0\ref\testPoo.dll
+U:\59011-07-07\CDA_nils\init C#\testPoo\testPoo\bin\Debug\net5.0\testPoo.pdb
+U:\59011-07-07\CDA_nils\init C#\testPoo\testPoo\obj\Debug\net5.0\testPoo.csproj.AssemblyReference.cache
+U:\59011-07-07\CDA_nils\init C#\testPoo\testPoo\obj\Debug\net5.0\testPoo.GeneratedMSBuildEditorConfig.editorconfig
+U:\59011-07-07\CDA_nils\init C#\testPoo\testPoo\obj\Debug\net5.0\testPoo.AssemblyInfoInputs.cache
+U:\59011-07-07\CDA_nils\init C#\testPoo\testPoo\obj\Debug\net5.0\testPoo.AssemblyInfo.cs
+U:\59011-07-07\CDA_nils\init C#\testPoo\testPoo\obj\Debug\net5.0\testPoo.csproj.CoreCompileInputs.cache
+U:\59011-07-07\CDA_nils\init C#\testPoo\testPoo\obj\Debug\net5.0\testPoo.dll
+U:\59011-07-07\CDA_nils\init C#\testPoo\testPoo\obj\Debug\net5.0\ref\testPoo.dll
+U:\59011-07-07\CDA_nils\init C#\testPoo\testPoo\obj\Debug\net5.0\testPoo.pdb
+U:\59011-07-07\CDA_nils\init C#\testPoo\testPoo\obj\Debug\net5.0\testPoo.genruntimeconfig.cache
