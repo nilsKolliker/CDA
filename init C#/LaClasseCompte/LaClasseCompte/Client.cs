@@ -13,19 +13,19 @@ namespace LaClasseCompte
         public string Prenom { get; set; }
         public string Tel { get; set; }
 
-        public Client(string cIN, string nom, string prenom, string tel)
+        public Client(string CIN, string nom, string prenom, string tel)
         {
-            CIN = cIN;
-            Nom = nom;
-            Prenom = prenom;
-            Tel = tel;
+            this.CIN = CIN;
+            this.Nom = nom;
+            this.Prenom = prenom;
+            this.Tel = tel;
         }
 
-        public Client(string cIN, string nom, string prenom)
+        public Client(string CIN, string nom, string prenom)
         {
-            CIN = cIN;
-            Nom = nom;
-            Prenom = prenom;
+            this.CIN = CIN;
+            this.Nom = nom;
+            this.Prenom = prenom;
         }
 
         public override string ToString()
