@@ -17,7 +17,22 @@ namespace ExerciceClasseEmploye
             {
                 employe.DonnerLaPrime();
             }
-            Console.WriteLine("Le nombre d'employer est " + listeEmploye.Count);
+            Console.WriteLine("Le nombre d'employer est " + listeEmploye.Count+"\n");
+            listeEmploye.Sort(Employe.CompareNomPrenom);
+            foreach (var employe in listeEmploye)
+            {
+                Console.WriteLine(employe+"\n");
+            }
+            listeEmploye.Sort(Employe.CompareServiceNomPrenom);
+            Console.WriteLine("\n\n");
+            foreach (var employe in listeEmploye)
+            {
+                Console.WriteLine(employe + "\n");
+            }
+            foreach (var employe in listeEmploye)
+            {
+                Console.WriteLine(employe);
+            }
 
 
 
