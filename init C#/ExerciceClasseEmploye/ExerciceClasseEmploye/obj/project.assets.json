@@ -8,23 +8,24 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\1701871\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\59011-07-07\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "U:\\GRP-07\\59011-07-07\\CDA_nils\\init C#\\LaClasseCompte\\LaClasseCompte\\LaClasseCompte.csproj",
-      "projectName": "LaClasseCompte",
-      "projectPath": "U:\\GRP-07\\59011-07-07\\CDA_nils\\init C#\\LaClasseCompte\\LaClasseCompte\\LaClasseCompte.csproj",
-      "packagesPath": "C:\\Users\\1701871\\.nuget\\packages\\",
-      "outputPath": "U:\\GRP-07\\59011-07-07\\CDA_nils\\init C#\\LaClasseCompte\\LaClasseCompte\\obj\\",
+      "projectUniqueName": "U:\\59011-07-07\\CDA_nils\\init C#\\ExerciceClasseEmploye\\ExerciceClasseEmploye\\ExerciceClasseEmploye.csproj",
+      "projectName": "ExerciceClasseEmploye",
+      "projectPath": "U:\\59011-07-07\\CDA_nils\\init C#\\ExerciceClasseEmploye\\ExerciceClasseEmploye\\ExerciceClasseEmploye.csproj",
+      "packagesPath": "C:\\Users\\59011-07-07\\.nuget\\packages\\",
+      "outputPath": "U:\\59011-07-07\\CDA_nils\\init C#\\ExerciceClasseEmploye\\ExerciceClasseEmploye\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\1701871\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\59011-07-07\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

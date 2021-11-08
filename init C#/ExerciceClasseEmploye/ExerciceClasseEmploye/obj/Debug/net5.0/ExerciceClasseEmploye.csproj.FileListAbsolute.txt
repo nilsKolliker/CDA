@@ -1,0 +1,16 @@
+U:\59011-07-07\CDA_nils\init C#\ExerciceClasseEmploye\ExerciceClasseEmploye\bin\Debug\net5.0\ExerciceClasseEmploye.exe
+U:\59011-07-07\CDA_nils\init C#\ExerciceClasseEmploye\ExerciceClasseEmploye\bin\Debug\net5.0\ExerciceClasseEmploye.deps.json
+U:\59011-07-07\CDA_nils\init C#\ExerciceClasseEmploye\ExerciceClasseEmploye\bin\Debug\net5.0\ExerciceClasseEmploye.runtimeconfig.json
+U:\59011-07-07\CDA_nils\init C#\ExerciceClasseEmploye\ExerciceClasseEmploye\bin\Debug\net5.0\ExerciceClasseEmploye.runtimeconfig.dev.json
+U:\59011-07-07\CDA_nils\init C#\ExerciceClasseEmploye\ExerciceClasseEmploye\bin\Debug\net5.0\ExerciceClasseEmploye.dll
+U:\59011-07-07\CDA_nils\init C#\ExerciceClasseEmploye\ExerciceClasseEmploye\bin\Debug\net5.0\ref\ExerciceClasseEmploye.dll
+U:\59011-07-07\CDA_nils\init C#\ExerciceClasseEmploye\ExerciceClasseEmploye\bin\Debug\net5.0\ExerciceClasseEmploye.pdb
+U:\59011-07-07\CDA_nils\init C#\ExerciceClasseEmploye\ExerciceClasseEmploye\obj\Debug\net5.0\ExerciceClasseEmploye.csproj.AssemblyReference.cache
+U:\59011-07-07\CDA_nils\init C#\ExerciceClasseEmploye\ExerciceClasseEmploye\obj\Debug\net5.0\ExerciceClasseEmploye.GeneratedMSBuildEditorConfig.editorconfig
+U:\59011-07-07\CDA_nils\init C#\ExerciceClasseEmploye\ExerciceClasseEmploye\obj\Debug\net5.0\ExerciceClasseEmploye.AssemblyInfoInputs.cache
+U:\59011-07-07\CDA_nils\init C#\ExerciceClasseEmploye\ExerciceClasseEmploye\obj\Debug\net5.0\ExerciceClasseEmploye.AssemblyInfo.cs
+U:\59011-07-07\CDA_nils\init C#\ExerciceClasseEmploye\ExerciceClasseEmploye\obj\Debug\net5.0\ExerciceClasseEmploye.csproj.CoreCompileInputs.cache
+U:\59011-07-07\CDA_nils\init C#\ExerciceClasseEmploye\ExerciceClasseEmploye\obj\Debug\net5.0\ExerciceClasseEmploye.dll
+U:\59011-07-07\CDA_nils\init C#\ExerciceClasseEmploye\ExerciceClasseEmploye\obj\Debug\net5.0\ref\ExerciceClasseEmploye.dll
+U:\59011-07-07\CDA_nils\init C#\ExerciceClasseEmploye\ExerciceClasseEmploye\obj\Debug\net5.0\ExerciceClasseEmploye.pdb
+U:\59011-07-07\CDA_nils\init C#\ExerciceClasseEmploye\ExerciceClasseEmploye\obj\Debug\net5.0\ExerciceClasseEmploye.genruntimeconfig.cache
