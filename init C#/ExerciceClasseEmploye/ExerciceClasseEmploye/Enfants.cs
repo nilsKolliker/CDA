@@ -10,6 +10,7 @@ namespace ExerciceClasseEmploye
     {
         public string Prenom { get; set; }
         public DateTime DateDeNaissance { get; set; }
+
         /// <summary>
         /// 
         /// </summary>
@@ -24,6 +25,7 @@ namespace ExerciceClasseEmploye
         {
             return "Age: "+this.Age()+" Prenom: " + this.Prenom + "  Date de naissance: "+ this.DateDeNaissance.ToString("dd/MM/yyyy");
         }
+
         /// <summary>
         /// Calcule l'age de l'enfant
         /// </summary>
@@ -33,6 +35,7 @@ namespace ExerciceClasseEmploye
             DateTime auj = DateTime.Now;
             return (auj.Month > this.DateDeNaissance.Month || (auj.Month == this.DateDeNaissance.Month && auj.Day >= this.DateDeNaissance.Day)) ? auj.Year - this.DateDeNaissance.Year : auj.Year - this.DateDeNaissance.Year - 1;
         }
+
         /// <summary>
         /// Calcul le montant du chèque Noël en fonction de l'age du gamin
         /// 20 euros pour les enfants de 0 à 10 ans

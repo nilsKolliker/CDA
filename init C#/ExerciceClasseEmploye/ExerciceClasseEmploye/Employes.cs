@@ -17,6 +17,7 @@ namespace ExerciceClasseEmploye
         public Agences Agence { get; set; }
         public List<Enfants> ListeEnfants { get; set; } = new List<Enfants>();
         public static DateTime JourDePrime { get; set; } = DateTime.Parse("08/11");//comme ça, on a que là à le changer
+        
         /// <summary>
         /// 
         /// </summary>
@@ -87,7 +88,10 @@ namespace ExerciceClasseEmploye
                 toString += "Oui";
                 foreach (int montantDuCheque in Enum.GetValues(typeof(Ressources.ChequeNoel)))
                 {
-                    if(NombreDeChequeNoel())
+                    if (montantDuCheque>0&& this.NombreDeChequeNoel(montantDuCheque) > 0)
+                    {
+                        toString += "\n\t" + this.NombreDeChequeNoel(montantDuCheque) + " chèque(s) de " + montantDuCheque + " euro";
+                    }
                 }
             } else 
             {
@@ -136,6 +140,7 @@ namespace ExerciceClasseEmploye
             int resultCopare = String.CompareOrdinal(employe1.Service, employe2.Service);
             return (resultCopare == 0) ? CompareNomPrenom(employe1, employe2) : resultCopare;
         }
+
         /// <summary>
         /// permet de savoir si l'employé peut disposer  de  chèques vacances ou non.
         /// </summary>
@@ -144,6 +149,7 @@ namespace ExerciceClasseEmploye
         {
             return Anciennete() > 0;
         }
+
         /// <summary>
         /// permet de savoir si l'employé peut disposer  de  chèques noël ou non.
         /// </summary>
@@ -157,6 +163,7 @@ namespace ExerciceClasseEmploye
             }
             return totalNoel > 0;
         }
+
         /// <summary>
         /// compte le nombre de cheque noel d'un montant fixe
         /// </summary>
