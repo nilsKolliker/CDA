@@ -6,9 +6,12 @@ namespace SpaceInvaders
     {
         static void Main(string[] args)
         {
-            Invaders truc = new Invaders();
-            Space test = new Space(4, 3, truc);
-            Console.WriteLine(test);
+            Invaders mechantEnvahisseur = new Invaders('x');
+            Space niveau1 = new Space(7, 5, mechantEnvahisseur);
+            niveau1.Grille[1, 2] = mechantEnvahisseur;
+            niveau1.Tirer(2);
+            niveau1.Tirer(4);
+            niveau1.Tirer(4);
         }
     }
 }

@@ -10,9 +10,17 @@ namespace SpaceInvaders
     {
         public char Motif { get; set; } = '#';
 
+        public Invaders()
+        {
+        }
+        public Invaders(char motif)
+        {
+            this.Motif = motif;
+        }
+
         public override string ToString()
         {
-            return ""+Motif;//on peut pas caster ou parcer un char en string visiblement.. mais on peut le concaténer à une chaine vide.. bon en vrai, on pourait retourner un char mais.. on nous demande un string.
+            return ""+this.Motif;
         }
     }
 }
