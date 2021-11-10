@@ -1,0 +1,16 @@
+U:\59011-07-07\CDA_nils\init C#\SpaceInvaders\SpaceInvaders\bin\Debug\net5.0\SpaceInvaders.exe
+U:\59011-07-07\CDA_nils\init C#\SpaceInvaders\SpaceInvaders\bin\Debug\net5.0\SpaceInvaders.deps.json
+U:\59011-07-07\CDA_nils\init C#\SpaceInvaders\SpaceInvaders\bin\Debug\net5.0\SpaceInvaders.runtimeconfig.json
+U:\59011-07-07\CDA_nils\init C#\SpaceInvaders\SpaceInvaders\bin\Debug\net5.0\SpaceInvaders.runtimeconfig.dev.json
+U:\59011-07-07\CDA_nils\init C#\SpaceInvaders\SpaceInvaders\bin\Debug\net5.0\SpaceInvaders.dll
+U:\59011-07-07\CDA_nils\init C#\SpaceInvaders\SpaceInvaders\bin\Debug\net5.0\ref\SpaceInvaders.dll
+U:\59011-07-07\CDA_nils\init C#\SpaceInvaders\SpaceInvaders\bin\Debug\net5.0\SpaceInvaders.pdb
+U:\59011-07-07\CDA_nils\init C#\SpaceInvaders\SpaceInvaders\obj\Debug\net5.0\SpaceInvaders.csproj.AssemblyReference.cache
+U:\59011-07-07\CDA_nils\init C#\SpaceInvaders\SpaceInvaders\obj\Debug\net5.0\SpaceInvaders.GeneratedMSBuildEditorConfig.editorconfig
+U:\59011-07-07\CDA_nils\init C#\SpaceInvaders\SpaceInvaders\obj\Debug\net5.0\SpaceInvaders.AssemblyInfoInputs.cache
+U:\59011-07-07\CDA_nils\init C#\SpaceInvaders\SpaceInvaders\obj\Debug\net5.0\SpaceInvaders.AssemblyInfo.cs
+U:\59011-07-07\CDA_nils\init C#\SpaceInvaders\SpaceInvaders\obj\Debug\net5.0\SpaceInvaders.csproj.CoreCompileInputs.cache
+U:\59011-07-07\CDA_nils\init C#\SpaceInvaders\SpaceInvaders\obj\Debug\net5.0\SpaceInvaders.dll
+U:\59011-07-07\CDA_nils\init C#\SpaceInvaders\SpaceInvaders\obj\Debug\net5.0\ref\SpaceInvaders.dll
+U:\59011-07-07\CDA_nils\init C#\SpaceInvaders\SpaceInvaders\obj\Debug\net5.0\SpaceInvaders.pdb
+U:\59011-07-07\CDA_nils\init C#\SpaceInvaders\SpaceInvaders\obj\Debug\net5.0\SpaceInvaders.genruntimeconfig.cache
