@@ -1,0 +1,15 @@
+C:\repo local\CDA_nils\Xaml mise en page\testCalculette\testCalculette\bin\Debug\testCalculette.exe.config
+C:\repo local\CDA_nils\Xaml mise en page\testCalculette\testCalculette\bin\Debug\testCalculette.exe
+C:\repo local\CDA_nils\Xaml mise en page\testCalculette\testCalculette\bin\Debug\testCalculette.pdb
+C:\repo local\CDA_nils\Xaml mise en page\testCalculette\testCalculette\obj\Debug\testCalculette.csproj.AssemblyReference.cache
+C:\repo local\CDA_nils\Xaml mise en page\testCalculette\testCalculette\obj\Debug\MainWindow.g.cs
+C:\repo local\CDA_nils\Xaml mise en page\testCalculette\testCalculette\obj\Debug\App.g.cs
+C:\repo local\CDA_nils\Xaml mise en page\testCalculette\testCalculette\obj\Debug\testCalculette_MarkupCompile.cache
+C:\repo local\CDA_nils\Xaml mise en page\testCalculette\testCalculette\obj\Debug\testCalculette_MarkupCompile.lref
+C:\repo local\CDA_nils\Xaml mise en page\testCalculette\testCalculette\obj\Debug\MainWindow.baml
+C:\repo local\CDA_nils\Xaml mise en page\testCalculette\testCalculette\obj\Debug\testCalculette.g.resources
+C:\repo local\CDA_nils\Xaml mise en page\testCalculette\testCalculette\obj\Debug\testCalculette.Properties.Resources.resources
+C:\repo local\CDA_nils\Xaml mise en page\testCalculette\testCalculette\obj\Debug\testCalculette.csproj.GenerateResource.cache
+C:\repo local\CDA_nils\Xaml mise en page\testCalculette\testCalculette\obj\Debug\testCalculette.csproj.CoreCompileInputs.cache
+C:\repo local\CDA_nils\Xaml mise en page\testCalculette\testCalculette\obj\Debug\testCalculette.exe
+C:\repo local\CDA_nils\Xaml mise en page\testCalculette\testCalculette\obj\Debug\testCalculette.pdb
