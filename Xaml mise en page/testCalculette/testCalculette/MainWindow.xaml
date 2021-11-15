@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:testCalculette"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="450">
-    <Grid Background="LightGray">
+    <Grid Background="{DynamicResource fond}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="3*"/>
@@ -38,35 +38,35 @@
             <RowDefinition Height="2*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <Button Content="0" Grid.Column="1" Grid.Row="14" Background="#FF646464"/>
-        <Button Content="1" Grid.Column="1" Grid.Row="12" Background="#FF646464"/>
-        <Button Content="4" Grid.Column="1" Grid.Row="10" Background="#FF646464"/>
-        <Button Content="7" Grid.Column="1" Grid.Row="8" Background="#FF646464"/>
-        <Button Content="MC" Grid.Column="1" Grid.Row="6" Background="Blue"/>
-        <Button Content="." Grid.Column="3" Grid.Row="14" Background="#FF646464"/>
-        <Button Content="2" Grid.Column="3" Grid.Row="12" Background="#FF646464"/>
-        <Button Content="5" Grid.Column="3" Grid.Row="10" Background="#FF646464"/>
-        <Button Content="8" Grid.Column="3" Grid.Row="8" Background="#FF646464"/>
-        <Button Content="MR" Grid.Column="3" Grid.Row="6" Background="Blue"/>
-        <Button Content="%" Grid.Column="5" Grid.Row="14" Background="#FF646464"/>
-        <Button Content="3" Grid.Column="5" Grid.Row="12" Background="#FF646464"/>
-        <Button Content="6" Grid.Column="5" Grid.Row="10" Background="#FF646464"/>
-        <Button Content="9" Grid.Column="5" Grid.Row="8" Background="#FF646464"/>
-        <Button Content="M-" Grid.Column="5" Grid.Row="6" Background="Blue"/>
-        <Button Content="+" Grid.Column="7" Grid.Row="12" Grid.RowSpan="3" Background="#FF646464"/>
-        <Button Content="-" Grid.Column="7" Grid.Row="10" Background="#FF646464"/>
-        <Button Content="x" Grid.Column="7" Grid.Row="8" Background="#FF646464"/>
-        <Button Content="M+" Grid.Column="7" Grid.Row="6" Background="Blue"/>
-        <Button Content="OFF" Grid.Column="7" Grid.Row="4" Background="#FF646464"/>
-        <Button Content="=" Grid.Column="9" Grid.Row="14" Background="#FF646464"/>
-        <Button Content="+/-" Grid.Column="9" Grid.Row="12" Background="#FF646464"/>
-        <Button Content="√" Grid.Column="9" Grid.Row="10" Background="#FF646464"/>
-        <Button Content="÷" Grid.Column="9" Grid.Row="8" Background="#FF646464"/>
-        <Button Content="CE" Grid.Column="9" Grid.Row="6" Background="#FF646464"/>
-        <Button Content="ON/C" Grid.Column="9" Grid.Row="4" Background="Red"/>
-        <Rectangle Grid.ColumnSpan="4" Grid.Column="1" Fill="Black" Grid.Row="4"/>
-        <Rectangle Grid.ColumnSpan="11" Fill="#FF646464" Grid.RowSpan="3"/>
-        <TextBlock Grid.Column="2" Grid.Row="1" TextWrapping="Wrap" Grid.ColumnSpan="7" Background="White" TextAlignment="Right"/>
+        <Button Content="0" Grid.Column="1" Grid.Row="14" Background="{DynamicResource teteEtTouche}"/>
+        <Button Content="1" Grid.Column="1" Grid.Row="12" Background="{DynamicResource teteEtTouche}"/>
+        <Button Content="4" Grid.Column="1" Grid.Row="10" Background="{DynamicResource teteEtTouche}"/>
+        <Button Content="7" Grid.Column="1" Grid.Row="8" Background="{DynamicResource teteEtTouche}"/>
+        <Button Content="MC" Grid.Column="1" Grid.Row="6" Background="{DynamicResource boutonEntete}"/>
+        <Button Content="." Grid.Column="3" Grid.Row="14" Background="{DynamicResource teteEtTouche}"/>
+        <Button Content="2" Grid.Column="3" Grid.Row="12" Background="{DynamicResource teteEtTouche}"/>
+        <Button Content="5" Grid.Column="3" Grid.Row="10" Background="{DynamicResource teteEtTouche}"/>
+        <Button Content="8" Grid.Column="3" Grid.Row="8" Background="{DynamicResource teteEtTouche}"/>
+        <Button Content="MR" Grid.Column="3" Grid.Row="6" Background="{DynamicResource boutonEntete}"/>
+        <Button Content="%" Grid.Column="5" Grid.Row="14" Background="{DynamicResource teteEtTouche}"/>
+        <Button Content="3" Grid.Column="5" Grid.Row="12" Background="{DynamicResource teteEtTouche}"/>
+        <Button Content="6" Grid.Column="5" Grid.Row="10" Background="{DynamicResource teteEtTouche}"/>
+        <Button Content="9" Grid.Column="5" Grid.Row="8" Background="{DynamicResource teteEtTouche}"/>
+        <Button Content="M-" Grid.Column="5" Grid.Row="6" Background="{DynamicResource boutonEntete}"/>
+        <Button Content="+" Grid.Column="7" Grid.Row="12" Grid.RowSpan="3" Background="{DynamicResource teteEtTouche}"/>
+        <Button Content="-" Grid.Column="7" Grid.Row="10" Background="{DynamicResource teteEtTouche}"/>
+        <Button Content="x" Grid.Column="7" Grid.Row="8" Background="{DynamicResource teteEtTouche}"/>
+        <Button Content="M+" Grid.Column="7" Grid.Row="6" Background="{DynamicResource boutonEntete}"/>
+        <Button Content="OFF" Grid.Column="7" Grid.Row="4" Background="{DynamicResource teteEtTouche}"/>
+        <Button Content="=" Grid.Column="9" Grid.Row="14" Background="{DynamicResource teteEtTouche}"/>
+        <Button Content="+/-" Grid.Column="9" Grid.Row="12" Background="{DynamicResource teteEtTouche}"/>
+        <Button Content="√" Grid.Column="9" Grid.Row="10" Background="{DynamicResource teteEtTouche}"/>
+        <Button Content="÷" Grid.Column="9" Grid.Row="8" Background="{DynamicResource teteEtTouche}"/>
+        <Button Content="CE" Grid.Column="9" Grid.Row="6" Background="{DynamicResource teteEtTouche}"/>
+        <Button Content="ON/C" Grid.Column="9" Grid.Row="4" Background="{DynamicResource onOff}"/>
+        <Rectangle Grid.ColumnSpan="4" Grid.Column="1" Fill="{DynamicResource paneauxSolaire}" Grid.Row="4"/>
+        <Rectangle Grid.ColumnSpan="11" Fill="{DynamicResource teteEtTouche}" Grid.RowSpan="3"/>
+        <TextBlock Grid.Column="2" Grid.Row="1" TextWrapping="Wrap" Grid.ColumnSpan="7" Background="{DynamicResource fontDEcrant}" TextAlignment="Right"/>
 
 
     </Grid>

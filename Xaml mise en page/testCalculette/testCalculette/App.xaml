@@ -4,6 +4,13 @@
              xmlns:local="clr-namespace:testCalculette"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+
+        <SolidColorBrush x:Key="teteEtTouche" Color="#FFCBCBCB"/>
+        <SolidColorBrush x:Key="boutonEntete" Color="#FF7DF9FF"/>
+        <SolidColorBrush x:Key="onOff" Color="#FFFF3535"/>
+        <SolidColorBrush x:Key="paneauxSolaire" Color="#FFFFE800"/>
+        <SolidColorBrush x:Key="fontDEcrant" Color="White"/>
+        <ImageBrush x:Key="fond" ImageSource="schroedingercat.jpg" Stretch="UniformToFill"/>
+
     </Application.Resources>
 </Application>
