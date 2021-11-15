@@ -4,6 +4,14 @@
              xmlns:local="clr-namespace:calendrier"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Grid x:Key="contreIntuitifBouton">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="0" Source="Croix-rouge_qyxybp.png"/>
+            <TextBlock Grid.Column="1" TextWrapping="Wrap" Text="Ok" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
     </Application.Resources>
 </Application>

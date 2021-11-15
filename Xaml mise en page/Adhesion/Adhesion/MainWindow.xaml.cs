@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace calendrier
+namespace Adhesion
 {
     /// <summary>
     /// Logique d'interaction pour MainWindow.xaml
@@ -27,6 +27,7 @@ namespace calendrier
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
+
         }
     }
 }
