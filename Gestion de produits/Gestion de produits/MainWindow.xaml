@@ -10,7 +10,6 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"/>
             <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
             <RowDefinition Height="10*"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="3*"/>
@@ -39,35 +38,15 @@
             <Button Content="_Dupplique" Background="{DynamicResource fondBouton}" Grid.Column="6"/>
             <Button Content="_Vider" Background="{DynamicResource fondBouton}" Grid.Column="8"/>
         </Grid>
-        <Grid Grid.Column="1" Grid.Row="2">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="20"/>
-            </Grid.ColumnDefinitions>
-            <Grid Background="#FFE0E0E0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="5*"/>
-                    <ColumnDefinition Width="2*"/>
-                    <ColumnDefinition Width="2*"/>
-                </Grid.ColumnDefinitions>
-                <TextBlock Text="IdProduit" Padding="5,0,0,0" VerticalAlignment="Center"/>
-                <TextBlock Text="LibelleProduit" Padding="5,0,0,0" VerticalAlignment="Center" Grid.Column="1"/>
-                <TextBlock Text="Catégories" Padding="5,0,0,0" VerticalAlignment="Center" Grid.Column="2"/>
-                <TextBlock Text="Rayons" Padding="5,0,0,0" VerticalAlignment="Center" Grid.Column="3"/>
-            </Grid>
-            <Rectangle Grid.Column="1" Stroke="gray">
-                <Rectangle.Fill>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="Black" Offset="0"/>
-                        <GradientStop Color="gray" Offset="1"/>
-                    </LinearGradientBrush>
-                </Rectangle.Fill>
-            </Rectangle>
-
-        </Grid>
-        <ListBox Grid.Column="1" Grid.Row="3" Background="{DynamicResource fondList}" ScrollViewer.VerticalScrollBarVisibility="Visible"/>
-        <Grid Grid.Column="1" Grid.Row="5">
+        <DataGrid Grid.Column="1" Grid.Row="2" VerticalScrollBarVisibility="Visible" Background="{DynamicResource fondList}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="1*"  Header="idProduit"/>
+                <DataGridTextColumn Width="5*" Header="LibelleProduit"/>
+                <DataGridTextColumn Width="2*" Header="Catégories"/>
+                <DataGridTextColumn Width="2*" Header="Rayons"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Grid Grid.Column="1" Grid.Row="4">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="5*"/>
                 <ColumnDefinition Width="1*"/>
