@@ -100,10 +100,7 @@
                         <RowDefinition Height="1*"/>
                         <RowDefinition Height="6*"/>
                         <RowDefinition Height="1*"/>
-                        <RowDefinition Height="1*"/>
-                        <RowDefinition Height="4*"/>
-                        <RowDefinition Height="4*"/>
-                        <RowDefinition Height="0.5*"/>
+                        <RowDefinition Height="10*"/>
                     </Grid.RowDefinitions>
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -196,7 +193,7 @@
                         <Button Grid.Row="2" Grid.Column="1" Content="-"/>
                         <DataGrid Grid.Column="3" Grid.RowSpan="4">
                             <DataGrid.Columns>
-                                <DataGridTextColumn Width="1*"/>
+                                <DataGridCheckBoxColumn  Width="1*"/>
                                 <DataGridTextColumn Header="Caractéristique" Width="8*"/>
                                 <DataGridTextColumn Header="Valeur" Width="5*"/>
                                 <DataGridTextColumn Header="Unité" Width="4*"/>
@@ -205,9 +202,48 @@
                                 <DataGridTextColumn Header="Méthode" Width="8*"/>
                                 <DataGridTextColumn Width="4*"/>
                             </DataGrid.Columns>
-                            <CheckBox />
                         </DataGrid>
                     </Grid>
+                    <Expander Grid.Row="5" Header="Navire associé" Foreground="{DynamicResource policeEntete}" Background="{DynamicResource fondRetractable}">
+                        <Grid Background="White">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="9*"/>
+                                <ColumnDefinition Width="9*"/>
+                                <ColumnDefinition Width="9*"/>
+                                <ColumnDefinition Width="9*"/>
+                                <ColumnDefinition Width="9*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="6*"/>
+                                <RowDefinition Height="1*"/>
+                            </Grid.RowDefinitions>
+                            <Button Grid.Row="1" Grid.Column="1" Content="+"/>
+                            <Button Grid.Row="1" Grid.Column="3" Content="-"/>
+                            <TextBlock Grid.Row="2" Grid.ColumnSpan="6" Text="Immatriculation :" HorizontalAlignment="Right" Margin="0,0,5,0" VerticalAlignment="Center" Foreground="{DynamicResource policeNormale}"/>
+                            <TextBox Grid.Row="2" Grid.Column="6" VerticalContentAlignment="Center"/>
+                            <TextBlock Grid.Row="2" Grid.Column="7" Text="Nom :" HorizontalAlignment="Right" Margin="0,0,5,0" VerticalAlignment="Center" Foreground="{DynamicResource policeNormale}"/>
+                            <TextBox Grid.Row="2" Grid.Column="8" VerticalContentAlignment="Center"/>
+                            <TextBlock Grid.Row="3" Grid.ColumnSpan="6" Text="Quartier d'immatriculation :" HorizontalAlignment="Right" Margin="0,0,5,0" VerticalAlignment="Center" Foreground="{DynamicResource policeNormale}"/>
+                            <TextBox Grid.Row="3" Grid.Column="6" VerticalContentAlignment="Center"/>
+                            <TextBlock Grid.Row="3" Grid.Column="7" Text="Longueur hors tout (m) :" HorizontalAlignment="Right" Margin="0,0,5,0" VerticalAlignment="Center" Foreground="{DynamicResource policeNormale}"/>
+                            <TextBox Grid.Row="3" Grid.Column="8" VerticalContentAlignment="Center"/>
+                            <TextBlock Grid.Row="4" Grid.ColumnSpan="6" Text="Capture remontée sur le navire de l'observateur ?" HorizontalAlignment="Right" Margin="0,0,5,0" VerticalAlignment="Center" Foreground="{DynamicResource policeNormale}"/>
+                            <ComboBox  Grid.Row="4" Grid.Column="6" VerticalContentAlignment="Center"/>
+                            <TextBlock Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="4" Text="Commentaire :" HorizontalAlignment="Right" Margin="0,0,5,0" VerticalAlignment="Center" Foreground="{DynamicResource policeNormale}"/>
+                            <TextBox Grid.Row="6" Grid.Column="5" Grid.ColumnSpan="5" VerticalContentAlignment="Center"/>
+                        </Grid>
+                    </Expander>
                 </Grid>
             </TabItem>
             <TabItem Header="Engin">

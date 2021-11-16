@@ -11,6 +11,11 @@
             <GradientStop Color="#FF93D2E0" Offset="0"/>
             <GradientStop Color="White" Offset="1"/>
         </LinearGradientBrush>
+        <LinearGradientBrush x:Key="fondRetractable" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF93D2E0" Offset="0"/>
+            <GradientStop Color="White" Offset="0.1"/>
+        </LinearGradientBrush>
+        <SolidColorBrush x:Key="policeNormale" Color="Black"/>
 
     </Application.Resources>
 </Application>
