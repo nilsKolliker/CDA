@@ -1,7 +1,8 @@
-﻿<Application x:Class="testCalculette.App"
+﻿<Application
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:testCalculette"
+             xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="testCalculette.App"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
 
@@ -11,6 +12,9 @@
         <SolidColorBrush x:Key="paneauxSolaire" Color="#FFFFE800"/>
         <SolidColorBrush x:Key="fontDEcrant" Color="White"/>
         <ImageBrush x:Key="fond" ImageSource="schroedingercat.jpg" Stretch="UniformToFill"/>
+        <Thickness x:Key="pasDePadding">0</Thickness>
+
+
 
     </Application.Resources>
 </Application>
