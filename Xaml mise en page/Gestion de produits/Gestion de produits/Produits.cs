@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Gestion_de_produits
 {
-    class Produits
+    public class Produits
     {
         public int Id { get; set; }
         public string Nom { get; set; }
@@ -19,6 +19,9 @@ namespace Gestion_de_produits
             Nom = nom;
             Categorie = catégorie;
             Rayon = rayon;
+        }
+        public Produits()
+        {
         }
     }
 }

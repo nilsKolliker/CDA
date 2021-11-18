@@ -22,7 +22,7 @@ namespace Gestion_de_produits
     /// </summary>
     public partial class MainWindow : Window
     {
-        private List<Produits> liste = new List<Produits>();
+        public List<Produits> liste = new List<Produits>();
         public string Path { get; set; } = @"../../../MonFichier.json";
         public MainWindow()
         {
@@ -31,6 +31,7 @@ namespace Gestion_de_produits
             //InitialiserJson();
             LireJson();
             GrilleProduit.ItemsSource = this.liste;
+            
 
         }
 
@@ -51,17 +52,25 @@ namespace Gestion_de_produits
         private void InitialiserJson()
         {
             List<Produits> listeProduit = new List<Produits>();
-            listeProduit.Add(new Produits(1, "gomme non létale", "papeterie", "Materiel de bureau"));
-            listeProduit.Add(new Produits(2, "Tshirt bas de game", "Vetement", "Habillage homme"));
+            listeProduit.Add(new Produits(0, "gomme non létale", "papeterie", "Materiel de bureau"));
+            listeProduit.Add(new Produits(1, "Tshirt bas de game", "Vetement", "Habillage homme"));
             File.WriteAllText(this.Path, JsonConvert.SerializeObject(listeProduit, Formatting.Indented));
         }
 
         private void Action(object sender, RoutedEventArgs e)
         {
-            ActionWindow fenetre = new ActionWindow((string)((Button)sender).Content);
+            string action = (string)((Button)sender).Content;
+            ActionWindow fenetre;
+            
+            if (action != "_Ajouter"&& GrilleProduit.SelectedItem==null)
+            {
+                return;
+            }
+            Produits produit = (Produits)GrilleProduit.SelectedItem;
+            fenetre = new ActionWindow(action, produit, this);
+
+            
             fenetre.ShowDialog();
-
-
         }
     }
 }

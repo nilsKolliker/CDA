@@ -38,7 +38,7 @@
             <Button Content="_Dupplique" Background="{DynamicResource fondBouton}" Grid.Column="6"/>
             <Button Content="_Vider" Background="{DynamicResource fondBouton}" Grid.Column="8"/>
         </Grid>
-        <DataGrid x:Name="GrilleProduit"  Grid.Column="1" Grid.Row="2" VerticalScrollBarVisibility="Visible" Background="{DynamicResource fondList}" AutoGenerateColumns="False">
+        <DataGrid x:Name="GrilleProduit"  Grid.Column="1" Grid.Row="2" VerticalScrollBarVisibility="Visible" Background="{DynamicResource fondList}" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single">
             <DataGrid.Columns>
                 <DataGridTextColumn Width="1*"  Header="idProduit" Binding="{Binding Id}"/>
                 <DataGridTextColumn Width="5*" Header="LibelleProduit" Binding="{Binding Nom}"/>

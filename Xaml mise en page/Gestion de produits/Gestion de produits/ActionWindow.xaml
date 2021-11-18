@@ -18,8 +18,6 @@
             <RowDefinition Height="5*"/>
             <RowDefinition Height="3*"/>
             <RowDefinition Height="5*"/>
-            <RowDefinition Height="3*"/>
-            <RowDefinition Height="5*"/>
             <RowDefinition Height="4*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -30,16 +28,14 @@
             <ColumnDefinition Width="5*"/>
         </Grid.ColumnDefinitions>
         <Label Name="action" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" />
-        <Label Content="idProduit :" Grid.Column="1" Grid.Row="3" HorizontalContentAlignment="{DynamicResource alignementLabel}"/>
-        <TextBox Text="" Grid.Column="3" Grid.Row="3" />
-        <Label Content="LibelleProduit :" Grid.Column="1" Grid.Row="5" HorizontalContentAlignment="{DynamicResource alignementLabel}"/>
-        <TextBox Text="" Grid.Column="3" Grid.Row="5" />
-        <Label Content="Catégories :" Grid.Column="1" Grid.Row="7" HorizontalContentAlignment="{DynamicResource alignementLabel}"/>
-        <TextBox Text="" Grid.Column="3" Grid.Row="7" />
-        <Label Content="Rayons :" Grid.Column="1" Grid.Row="9" HorizontalContentAlignment="{DynamicResource alignementLabel}"/>
-        <TextBox Text="" Grid.Column="3" Grid.Row="9"/>
-        <Button Content="_Valider" Grid.Column="1" Grid.Row="11" Background="{DynamicResource fondBouton}"/>
-        <Button Content="_Annuler" Grid.Column="3" Grid.Row="11" Background="{DynamicResource fondBouton}"/>
+        <Label Content="LibelleProduit :" Grid.Column="1" Grid.Row="3" HorizontalContentAlignment="{DynamicResource alignementLabel}"/>
+        <TextBox Name="Nom" Grid.Column="3" Grid.Row="3" />
+        <Label Content="Catégories :" Grid.Column="1" Grid.Row="5" HorizontalContentAlignment="{DynamicResource alignementLabel}"/>
+        <TextBox Name="Categ" Grid.Column="3" Grid.Row="5" />
+        <Label Content="Rayons :" Grid.Column="1" Grid.Row="7" HorizontalContentAlignment="{DynamicResource alignementLabel}"/>
+        <TextBox Name="Rayon" Grid.Column="3" Grid.Row="7"/>
+        <Button Content="_Valider" Grid.Column="1" Grid.Row="9" Background="{DynamicResource fondBouton}" Click="Valider"/>
+        <Button Content="_Annuler" Grid.Column="3" Grid.Row="9" Background="{DynamicResource fondBouton}" Click="Fermer"/>
 
 
     </Grid>

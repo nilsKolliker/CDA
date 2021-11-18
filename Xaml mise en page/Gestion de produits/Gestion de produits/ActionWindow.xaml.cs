@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,10 +20,65 @@ namespace Gestion_de_produits
     /// </summary>
     public partial class ActionWindow : Window
     {
-        public ActionWindow(string nomAction)
+        public string Action { get; set; }
+        public Produits Produits { get; set; }
+        public MainWindow MainWindow { get; set; }
+
+        public ActionWindow(string nomAction, Produits produit, MainWindow mainWindow)
         {
             InitializeComponent();
-            action.Content = nomAction;
+            MainWindow = mainWindow;
+            Action = nomAction;
+            action.Content = this.Action;
+            if (this.Action!= "_Ajouter")
+            {
+                Produits = produit;
+                Nom.Text = produit.Nom;
+                Categ.Text = produit.Categorie;
+                Rayon.Text = produit.Rayon;
+                if (this.Action== "_Supprimer")
+                {
+                    Nom.IsEnabled = false;
+                    Categ.IsEnabled = false;
+                    Rayon.IsEnabled = false;
+                }
+            }
+            
+        }
+
+        private void Valider(object sender, RoutedEventArgs e)
+        {
+            switch (Action)
+            {
+                case "_Ajouter":
+                    Produits.Id = MainWindow.liste.Count;
+                    MajProduit();
+                    MainWindow.liste.Add(Produits)
+                    break;
+                case "_Modifier":
+                    MajProduit();
+                    break;
+                case "_Supprimer":
+                    break;
+                default:
+                    break;
+            }
+            this.Fermer();
+        }
+        private void Fermer(object sender, RoutedEventArgs e)
+        {
+
+            this.Fermer();
+        }
+        private void Fermer()
+        {
+            this.Close();
+        }
+        private void MajProduit()
+        {
+            Produits.Nom = Nom.Text;
+            Produits.Categorie = Categ.Text;
+            Produits.Rayon = Rayon.Text;
         }
     }
 }
