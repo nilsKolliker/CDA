@@ -57,6 +57,11 @@ namespace Gestion_de_produits
             File.WriteAllText(this.Path, JsonConvert.SerializeObject(listeProduit, Formatting.Indented));
         }
 
+        private void EcrireJson()
+        {
+            File.WriteAllText(this.Path, JsonConvert.SerializeObject(this.liste, Formatting.Indented));
+        }
+
         private void Action(object sender, RoutedEventArgs e)
         {
             string action = (string)((Button)sender).Content;
@@ -69,8 +74,11 @@ namespace Gestion_de_produits
             Produits produit = (Produits)GrilleProduit.SelectedItem;
             fenetre = new ActionWindow(action, produit, this);
 
-            
+            this.Opacity = 0.5;
             fenetre.ShowDialog();
+            EcrireJson();
+            GrilleProduit.Items.Refresh();
+            this.Opacity = 1;
         }
     }
 }

@@ -51,14 +51,29 @@ namespace Gestion_de_produits
             switch (Action)
             {
                 case "_Ajouter":
-                    Produits.Id = MainWindow.liste.Count;
-                    MajProduit();
-                    MainWindow.liste.Add(Produits)
+                    Produits produits = new Produits(MainWindow.liste[MainWindow.liste.Count-1].Id+1, Nom.Text, Categ.Text, Rayon.Text);
+                    MainWindow.liste.Add(produits);
                     break;
                 case "_Modifier":
-                    MajProduit();
+                    Produits.Nom = Nom.Text;
+                    Produits.Categorie = Categ.Text;
+                    Produits.Rayon = Rayon.Text;
+                    for (int i = 0; i < MainWindow.liste.Count; i++)
+                    {
+                        if (MainWindow.liste[i].Id== Produits.Id)
+                        {
+                            MainWindow.liste[i] = Produits;
+                        }
+                    }
                     break;
                 case "_Supprimer":
+                    for (int i = 0; i < MainWindow.liste.Count; i++)
+                    {
+                        if (MainWindow.liste[i].Id == Produits.Id)
+                        {
+                            MainWindow.liste.Remove(MainWindow.liste[i]);
+                        }
+                    }
                     break;
                 default:
                     break;
@@ -73,12 +88,6 @@ namespace Gestion_de_produits
         private void Fermer()
         {
             this.Close();
-        }
-        private void MajProduit()
-        {
-            Produits.Nom = Nom.Text;
-            Produits.Categorie = Categ.Text;
-            Produits.Rayon = Rayon.Text;
         }
     }
 }
