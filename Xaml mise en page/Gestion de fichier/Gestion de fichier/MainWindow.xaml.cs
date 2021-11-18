@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System.IO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace Gestion_de_fichier
 {
     /// <summary>
@@ -24,10 +27,21 @@ namespace Gestion_de_fichier
         {
             InitializeComponent();
             string path = @"../../../MonFichier.json";
-            string[] tableau = new string[10] { "toto", "tata", "titi", "tutu", "tete", "lolo", "lala", "lili", "lulu", "lele" };
-            string[] tableauRetour = new string[10];
-            string json = tableau.JsonConvert();
-            TextBlock.Text = json;
+
+            //string[] tableau = new string[10] { "toto", "tata", "titi", "tutu", "tete", "lolo", "lala", "lili", "lulu", "lele" };
+            //List<Truc> listeTrucs = new List<Truc>();
+            //foreach (string nom in tableau)
+            //{
+            //    listeTrucs.Add(new Truc(nom));
+            //}
+            //string json = JsonConvert.SerializeObject(listeTrucs, Formatting.Indented);
+            //File.WriteAllText(path,json);
+
+            string json2 = File.ReadAllText(path);
+            List<Truc> listeRetour = JsonConvert.DeserializeObject<List<Truc>>(json2);
+            superGrille.ItemsSource = listeRetour;
+            //TestBlock.Text = ""+Truc.Compteur;
+
         }
     }
 }

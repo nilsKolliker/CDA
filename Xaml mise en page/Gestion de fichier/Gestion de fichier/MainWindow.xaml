@@ -17,8 +17,10 @@
             <ColumnDefinition Width="5*"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid Name="superGrille" Grid.Column="1" Grid.Row="1"/>
-        <TextBlock Name="TextBlock" Grid.Column="1" Grid.Row="2" Text="TextBlock"/>
+        <DataGrid Name="superGrille" Grid.Column="1" Grid.Row="1" AutoGenerateColumns="False">
+            
+        </DataGrid>
+        <TextBlock x:Name="TestBlock" Grid.Column="1" Grid.Row="2"/>
 
     </Grid>
 </Window>

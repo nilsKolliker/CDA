@@ -13,6 +13,12 @@ U:\59011-07-07\CDA_nils\Xaml mise en page\Gestion de fichier\Gestion de fichier\
 U:\59011-07-07\CDA_nils\Xaml mise en page\Gestion de fichier\Gestion de fichier\obj\Debug\Gestion_de_fichier.Properties.Resources.resources
 U:\59011-07-07\CDA_nils\Xaml mise en page\Gestion de fichier\Gestion de fichier\obj\Debug\Gestion de fichier.csproj.GenerateResource.cache
 U:\59011-07-07\CDA_nils\Xaml mise en page\Gestion de fichier\Gestion de fichier\obj\Debug\Gestion de fichier.csproj.CoreCompileInputs.cache
-U:\59011-07-07\CDA_nils\Xaml mise en page\Gestion de fichier\Gestion de fichier\obj\Debug\Gestion de fichier.csproj.CopyComplete
 U:\59011-07-07\CDA_nils\Xaml mise en page\Gestion de fichier\Gestion de fichier\obj\Debug\Gestion de fichier.exe
 U:\59011-07-07\CDA_nils\Xaml mise en page\Gestion de fichier\Gestion de fichier\obj\Debug\Gestion de fichier.pdb
+U:\59011-07-07\CDA_nils\Xaml mise en page\Gestion de fichier\Gestion de fichier\bin\Debug\Xamarin.Forms.Core.dll
+U:\59011-07-07\CDA_nils\Xaml mise en page\Gestion de fichier\Gestion de fichier\bin\Debug\Xamarin.Forms.Platform.dll
+U:\59011-07-07\CDA_nils\Xaml mise en page\Gestion de fichier\Gestion de fichier\bin\Debug\Xamarin.Forms.Xaml.dll
+U:\59011-07-07\CDA_nils\Xaml mise en page\Gestion de fichier\Gestion de fichier\bin\Debug\Xamarin.Forms.Core.pdb
+U:\59011-07-07\CDA_nils\Xaml mise en page\Gestion de fichier\Gestion de fichier\bin\Debug\Xamarin.Forms.Core.xml
+U:\59011-07-07\CDA_nils\Xaml mise en page\Gestion de fichier\Gestion de fichier\bin\Debug\Xamarin.Forms.Xaml.pdb
+U:\59011-07-07\CDA_nils\Xaml mise en page\Gestion de fichier\Gestion de fichier\bin\Debug\Xamarin.Forms.Xaml.xml
