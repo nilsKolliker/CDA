@@ -1,0 +1,262 @@
+﻿<Window x:Class="Saisie_pêche.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Saisie_pêche"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="750" Width="1000">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="40*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Opération de pêche" VerticalAlignment="Center" FontWeight="Bold" Grid.Column="1"/>
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="5*"/>
+            </Grid.ColumnDefinitions>
+            <GroupBox Header="Navire">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="8*"/>
+                        <ColumnDefinition Width="7*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="Immatriculation :" HorizontalAlignment="Right" Margin="0,0,5,0" VerticalAlignment="Center"/>
+                    <TextBox Grid.Column="1" Text="639451" VerticalContentAlignment="Center"/>
+                    <TextBlock Grid.Row="1" Text="Nom :" HorizontalAlignment="Right" Margin="0,0,5,0" VerticalAlignment="Center"/>
+                    <TextBox Grid.Row="1" Grid.Column="1" Text="PHILICANTHAN" VerticalContentAlignment="Center"/>
+                </Grid>
+            </GroupBox>
+            <GroupBox Header="Marée" Grid.Column="1">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="8*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="Départ :" HorizontalAlignment="Right" Margin="0,0,5,0" VerticalAlignment="Center"/>
+                    <TextBox Grid.Column="1" Text="22/01/2013-UCH-Granville" VerticalContentAlignment="Center"/>
+                    <TextBlock Grid.Row="1" Text="Retour :" HorizontalAlignment="Right" Margin="0,0,5,0" VerticalAlignment="Center"/>
+                    <TextBox Grid.Row="1" Grid.Column="1" Text="23/01/2013-UCH-Granville" VerticalContentAlignment="Center"/>
+                </Grid>
+            </GroupBox>
+            <GroupBox Header="Programme d'observation" Grid.Column="2">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="7*"/>
+                        <ColumnDefinition Width="8*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="Programme :" HorizontalAlignment="Right" Margin="0,0,5,0" VerticalAlignment="Center" Foreground="{DynamicResource important}"/>
+                    <TextBox Grid.Column="1" Text="SIH-OBSMER" VerticalContentAlignment="Center"/>
+                    <TextBlock Grid.Row="1" Text="Stratégie :" HorizontalAlignment="Right" Margin="0,0,5,0" VerticalAlignment="Center"/>
+                    <TextBox Grid.Row="1" Grid.Column="1" Text="OBSMER démar" VerticalContentAlignment="Center"/>
+                </Grid>
+            </GroupBox>
+            <GroupBox Header="Saisisseur" Grid.Column="3">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="8*"/>
+                        <ColumnDefinition Width="7*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="Opérateur de saisie :" HorizontalAlignment="Right" Margin="0,0,5,0" VerticalAlignment="Center"/>
+                    <TextBox Grid.Column="1" Text="TETARD Xavier" VerticalContentAlignment="Center"/>
+                    <TextBlock Grid.Row="1" Text="Dernière modification :" HorizontalAlignment="Right" Margin="0,0,5,0" VerticalAlignment="Center"/>
+                    <TextBox Grid.Row="1" Grid.Column="1" Text="25/11/2013 10:16:37" VerticalContentAlignment="Center"/>
+                </Grid>
+            </GroupBox>
+        </Grid>
+        <TabControl Grid.Column="1" Grid.Row="3">
+            <TabItem Header="Opération">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="5*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="6*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="10*"/>
+                    </Grid.RowDefinitions>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+                        <GroupBox Header="Début de l'opération (Filage)">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="3*"/>
+                                    <ColumnDefinition Width="4*"/>
+                                    <ColumnDefinition Width="4*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <TextBlock Grid.Row="1" Text="Date et Heure :" HorizontalAlignment="Right" Margin="0,0,5,0" VerticalAlignment="Center" Foreground="{DynamicResource important}"/>
+                                <ComboBox Grid.Row="1" Grid.Column="1">
+                                    <ComboBoxItem Content="22/01/2013" IsSelected="True"/>
+                                </ComboBox>
+                                <ComboBox Grid.Row="1" Grid.Column="2">
+                                    <ComboBoxItem Content="18:30" IsSelected="True"/>
+                                </ComboBox>
+                                <TextBlock Grid.Row="2" Text="Latitude :" HorizontalAlignment="Right" Margin="0,0,5,0" VerticalAlignment="Center" Foreground="{DynamicResource important}"/>
+                                <TextBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Text="+49 14.100" VerticalContentAlignment="Center"/>
+                                <TextBlock Grid.Row="3" Text="Longitude :" HorizontalAlignment="Right" Margin="0,0,5,0" VerticalAlignment="Center" Foreground="{DynamicResource important}"/>
+                                <TextBox Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Text="-1 48.320" VerticalContentAlignment="Center"/>
+                                <Image  Grid.Row="2" Grid.Column="3"/>
+                                <Image  Grid.Row="2" Grid.Column="3"/>
+                                <Button Grid.Row="2" Grid.Column="4" Content="->"/>
+                                <Button Grid.Row="3" Grid.Column="4" Content="->"/>
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox Header="Fin de l'opération (Virage)" Grid.Column="1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="3*"/>
+                                    <ColumnDefinition Width="4*"/>
+                                    <ColumnDefinition Width="4*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <TextBlock Text="Durée (h) :" HorizontalAlignment="Right" Margin="0,0,5,0" VerticalAlignment="Center"/>
+                                <TextBox Grid.Column="1" Grid.ColumnSpan="2" Text="2:00" VerticalContentAlignment="Center"/>
+                                <TextBlock Grid.Row="1" Text="Date et Heure :" HorizontalAlignment="Right" Margin="0,0,5,0" VerticalAlignment="Center" Foreground="{DynamicResource important}"/>
+                                <ComboBox Grid.Row="1" Grid.Column="1">
+                                    <ComboBoxItem Content="22/01/2013" IsSelected="True"/>
+                                </ComboBox>
+                                <ComboBox Grid.Row="1" Grid.Column="2">
+                                    <ComboBoxItem Content="20:30" IsSelected="True"/>
+                                </ComboBox>
+                                <TextBlock Grid.Row="2" Text="Latitude :" HorizontalAlignment="Right" Margin="0,0,5,0" VerticalAlignment="Center" Foreground="{DynamicResource important}"/>
+                                <TextBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Text="+49 14.200" VerticalContentAlignment="Center"/>
+                                <TextBlock Grid.Row="3" Text="Longitude :" HorizontalAlignment="Right" Margin="0,0,5,0" VerticalAlignment="Center" Foreground="{DynamicResource important}"/>
+                                <TextBox Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Text="-1 48.390" VerticalContentAlignment="Center"/>
+                                <Image  Grid.Row="2" Grid.Column="3"/>
+                                <Image  Grid.Row="2" Grid.Column="3"/>
+                            </Grid>
+                        </GroupBox>
+                    </Grid>
+                    <Label Grid.Row="1" Content="Zone d'activité: 27E8" Foreground="{DynamicResource policeEntete}" Background="{DynamicResource fondEntete}"/>
+                    <Label Grid.Row="2" Content="Autres caractéristiques de l'opération" Foreground="{DynamicResource policeEntete}" Background="{DynamicResource fondEntete}"/>
+                    <Grid Grid.Row="3">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="50*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="3*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="3*"/>
+                            <RowDefinition Height="7*"/>
+                        </Grid.RowDefinitions>
+                        <Button Grid.Column="1" Content="+"/>
+                        <Button Grid.Row="2" Grid.Column="1" Content="-"/>
+                        <DataGrid Grid.Column="3" Grid.RowSpan="4">
+                            <DataGrid.Columns>
+                                <DataGridCheckBoxColumn  Width="1*"/>
+                                <DataGridTextColumn Header="Caractéristique" Width="8*"/>
+                                <DataGridTextColumn Header="Valeur" Width="5*"/>
+                                <DataGridTextColumn Header="Unité" Width="4*"/>
+                                <DataGridTextColumn Header="Support" Width="4*"/>
+                                <DataGridTextColumn Header="Fraction" Width="4*"/>
+                                <DataGridTextColumn Header="Méthode" Width="8*"/>
+                                <DataGridTextColumn Width="4*"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </Grid>
+                    <Expander Grid.Row="5" Header="Navire associé" Foreground="{DynamicResource policeEntete}" Background="{DynamicResource fondRetractable}">
+                        <Grid Background="White">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="9*"/>
+                                <ColumnDefinition Width="9*"/>
+                                <ColumnDefinition Width="9*"/>
+                                <ColumnDefinition Width="9*"/>
+                                <ColumnDefinition Width="9*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="6*"/>
+                                <RowDefinition Height="1*"/>
+                            </Grid.RowDefinitions>
+                            <Button Grid.Row="1" Grid.Column="1" Content="+"/>
+                            <Button Grid.Row="1" Grid.Column="3" Content="-"/>
+                            <TextBlock Grid.Row="2" Grid.ColumnSpan="6" Text="Immatriculation :" HorizontalAlignment="Right" Margin="0,0,5,0" VerticalAlignment="Center" Foreground="{DynamicResource policeNormale}"/>
+                            <TextBox Grid.Row="2" Grid.Column="6" VerticalContentAlignment="Center"/>
+                            <TextBlock Grid.Row="2" Grid.Column="7" Text="Nom :" HorizontalAlignment="Right" Margin="0,0,5,0" VerticalAlignment="Center" Foreground="{DynamicResource policeNormale}"/>
+                            <TextBox Grid.Row="2" Grid.Column="8" VerticalContentAlignment="Center"/>
+                            <TextBlock Grid.Row="3" Grid.ColumnSpan="6" Text="Quartier d'immatriculation :" HorizontalAlignment="Right" Margin="0,0,5,0" VerticalAlignment="Center" Foreground="{DynamicResource policeNormale}"/>
+                            <TextBox Grid.Row="3" Grid.Column="6" VerticalContentAlignment="Center"/>
+                            <TextBlock Grid.Row="3" Grid.Column="7" Text="Longueur hors tout (m) :" HorizontalAlignment="Right" Margin="0,0,5,0" VerticalAlignment="Center" Foreground="{DynamicResource policeNormale}"/>
+                            <TextBox Grid.Row="3" Grid.Column="8" VerticalContentAlignment="Center"/>
+                            <TextBlock Grid.Row="4" Grid.ColumnSpan="6" Text="Capture remontée sur le navire de l'observateur ?" HorizontalAlignment="Right" Margin="0,0,5,0" VerticalAlignment="Center" Foreground="{DynamicResource policeNormale}"/>
+                            <ComboBox  Grid.Row="4" Grid.Column="6" VerticalContentAlignment="Center"/>
+                            <TextBlock Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="4" Text="Commentaire :" HorizontalAlignment="Right" Margin="0,0,5,0" VerticalAlignment="Center" Foreground="{DynamicResource policeNormale}"/>
+                            <TextBox Grid.Row="6" Grid.Column="5" Grid.ColumnSpan="5" VerticalContentAlignment="Center"/>
+                        </Grid>
+                    </Expander>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Engin">
+                <Grid/>
+            </TabItem>
+            <TabItem Header="Position géographique">
+                <Grid/>
+            </TabItem>
+            <TabItem Header="Commentaire">
+                <TextBox/>
+            </TabItem>
+        </TabControl>
+
+
+    </Grid>
+</Window>

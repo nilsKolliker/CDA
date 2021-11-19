@@ -1,0 +1,16 @@
+U:\59011-07-07\CDA_nils\init C#\Combat\Combat\bin\Debug\net5.0\Combat.exe
+U:\59011-07-07\CDA_nils\init C#\Combat\Combat\bin\Debug\net5.0\Combat.deps.json
+U:\59011-07-07\CDA_nils\init C#\Combat\Combat\bin\Debug\net5.0\Combat.runtimeconfig.json
+U:\59011-07-07\CDA_nils\init C#\Combat\Combat\bin\Debug\net5.0\Combat.runtimeconfig.dev.json
+U:\59011-07-07\CDA_nils\init C#\Combat\Combat\bin\Debug\net5.0\Combat.dll
+U:\59011-07-07\CDA_nils\init C#\Combat\Combat\bin\Debug\net5.0\ref\Combat.dll
+U:\59011-07-07\CDA_nils\init C#\Combat\Combat\bin\Debug\net5.0\Combat.pdb
+U:\59011-07-07\CDA_nils\init C#\Combat\Combat\obj\Debug\net5.0\Combat.csproj.AssemblyReference.cache
+U:\59011-07-07\CDA_nils\init C#\Combat\Combat\obj\Debug\net5.0\Combat.GeneratedMSBuildEditorConfig.editorconfig
+U:\59011-07-07\CDA_nils\init C#\Combat\Combat\obj\Debug\net5.0\Combat.AssemblyInfoInputs.cache
+U:\59011-07-07\CDA_nils\init C#\Combat\Combat\obj\Debug\net5.0\Combat.AssemblyInfo.cs
+U:\59011-07-07\CDA_nils\init C#\Combat\Combat\obj\Debug\net5.0\Combat.csproj.CoreCompileInputs.cache
+U:\59011-07-07\CDA_nils\init C#\Combat\Combat\obj\Debug\net5.0\Combat.dll
+U:\59011-07-07\CDA_nils\init C#\Combat\Combat\obj\Debug\net5.0\ref\Combat.dll
+U:\59011-07-07\CDA_nils\init C#\Combat\Combat\obj\Debug\net5.0\Combat.pdb
+U:\59011-07-07\CDA_nils\init C#\Combat\Combat\obj\Debug\net5.0\Combat.genruntimeconfig.cache
