@@ -1,0 +1,15 @@
+C:\repo local\CDA_nils\Xaml mise en page\MaquetteMaintenance\MaquetteMaintenance\bin\Debug\MaquetteMaintenance.exe.config
+C:\repo local\CDA_nils\Xaml mise en page\MaquetteMaintenance\MaquetteMaintenance\bin\Debug\MaquetteMaintenance.exe
+C:\repo local\CDA_nils\Xaml mise en page\MaquetteMaintenance\MaquetteMaintenance\bin\Debug\MaquetteMaintenance.pdb
+C:\repo local\CDA_nils\Xaml mise en page\MaquetteMaintenance\MaquetteMaintenance\obj\Debug\MaquetteMaintenance.csproj.AssemblyReference.cache
+C:\repo local\CDA_nils\Xaml mise en page\MaquetteMaintenance\MaquetteMaintenance\obj\Debug\MainWindow.g.cs
+C:\repo local\CDA_nils\Xaml mise en page\MaquetteMaintenance\MaquetteMaintenance\obj\Debug\App.g.cs
+C:\repo local\CDA_nils\Xaml mise en page\MaquetteMaintenance\MaquetteMaintenance\obj\Debug\MaquetteMaintenance_MarkupCompile.cache
+C:\repo local\CDA_nils\Xaml mise en page\MaquetteMaintenance\MaquetteMaintenance\obj\Debug\MaquetteMaintenance_MarkupCompile.lref
+C:\repo local\CDA_nils\Xaml mise en page\MaquetteMaintenance\MaquetteMaintenance\obj\Debug\MainWindow.baml
+C:\repo local\CDA_nils\Xaml mise en page\MaquetteMaintenance\MaquetteMaintenance\obj\Debug\MaquetteMaintenance.g.resources
+C:\repo local\CDA_nils\Xaml mise en page\MaquetteMaintenance\MaquetteMaintenance\obj\Debug\MaquetteMaintenance.Properties.Resources.resources
+C:\repo local\CDA_nils\Xaml mise en page\MaquetteMaintenance\MaquetteMaintenance\obj\Debug\MaquetteMaintenance.csproj.GenerateResource.cache
+C:\repo local\CDA_nils\Xaml mise en page\MaquetteMaintenance\MaquetteMaintenance\obj\Debug\MaquetteMaintenance.csproj.CoreCompileInputs.cache
+C:\repo local\CDA_nils\Xaml mise en page\MaquetteMaintenance\MaquetteMaintenance\obj\Debug\MaquetteMaintenance.exe
+C:\repo local\CDA_nils\Xaml mise en page\MaquetteMaintenance\MaquetteMaintenance\obj\Debug\MaquetteMaintenance.pdb
