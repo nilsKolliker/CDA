@@ -1,0 +1,107 @@
+﻿<Window x:Class="MaquetteMaintenance.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MaquetteMaintenance"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="650" Width="1200">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="24*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <ComboBox Grid.Column="1" Margin="0,33,0,0" VerticalAlignment="Top" SelectedIndex="0">
+            <ComboBoxItem Content="2021">
+            </ComboBoxItem>
+        </ComboBox>
+        <DataGrid Height="150" Margin="0,60,0,0" VerticalAlignment="Top" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" Grid.Column="1"  Grid.ColumnSpan="6">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Numéro"/>
+                <DataGridTextColumn Header="Prestataire"/>
+                <DataGridTextColumn Header="Code UEM"/>
+                <DataGridTextColumn Header="Type de travail"/>
+                <DataGridTextColumn Header="Point km début"/>
+                <DataGridTextColumn Header="Point km fin"/>
+                <DataGridTextColumn Header="Volume"/>
+                <DataGridTextColumn Header="Prix Unitaire"/>
+                <DataGridTextColumn Header="Date de réception"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Ajouter" Grid.Column="1" HorizontalAlignment="Left" Margin="0,223,0,0" VerticalAlignment="Top" Width="90"/>
+        <Button Content="Modifier" Grid.Column="1" HorizontalAlignment="Left" Margin="99,223,0,0" VerticalAlignment="Top" Width="90" Grid.ColumnSpan="2"/>
+        <Button Content="Sauvegarder" Grid.Column="2" HorizontalAlignment="Left" Margin="54,223,0,0" VerticalAlignment="Top" Width="90"/>
+        <Button Content="Supprimer" Grid.Column="2" HorizontalAlignment="Left" Margin="153,223,0,0" VerticalAlignment="Top" Width="90"/>
+        <Button Content="Imprimer" Grid.Column="2" HorizontalAlignment="Left" Margin="253,223,0,0" VerticalAlignment="Top" Width="91"/>
+        <Button Content="" Grid.Column="2" HorizontalAlignment="Left" Margin="354,223,0,0" VerticalAlignment="Top" Width="90" Grid.ColumnSpan="3"/>
+        <GroupBox Header="UEM" HorizontalAlignment="Left" Height="90" Margin="0,248,0,0" VerticalAlignment="Top" Width="479" Grid.Column="1" Grid.ColumnSpan="3">
+            <Grid Margin="0,0,-2,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="205*"/>
+                    <ColumnDefinition Width="76*"/>
+                </Grid.ColumnDefinitions>
+                <Label HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="87" Content="Accès UEM"/>
+                <ComboBox HorizontalAlignment="Left" Margin="91,10,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="0">
+                    <ComboBoxItem Content="Canal">
+                    </ComboBoxItem>
+                </ComboBox>
+                <Label HorizontalAlignment="Left" Margin="250,10,0,0" VerticalAlignment="Top" Width="87" Content="Type "/>
+                <ComboBox HorizontalAlignment="Left" Margin="302,10,0,0" VerticalAlignment="Top" Width="147" SelectedIndex="0" Grid.ColumnSpan="2">
+                    <ComboBoxItem Content="distributeur">
+                    </ComboBoxItem>
+                </ComboBox>
+                <Label HorizontalAlignment="Left" Margin="250,41,0,0" VerticalAlignment="Top" Width="48" Content="Canal "/>
+                <ComboBox HorizontalAlignment="Left" Margin="302,41,0,0" VerticalAlignment="Top" Width="147" SelectedIndex="0" Grid.ColumnSpan="2">
+                    <ComboBoxItem Content="Nd-Dis-NDebouchage">
+                    </ComboBoxItem>
+                </ComboBox>
+                <Label HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Width="87" Content="Code UEM"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="91,41,0,0" TextWrapping="Wrap" Text="Nid-Ari-ND8/1d" VerticalAlignment="Top" Width="120"/>
+            </Grid>
+
+        </GroupBox>
+        <GroupBox Grid.Column="1" Header="Prévisions" HorizontalAlignment="Left" Height="266" Margin="0,343,0,0" VerticalAlignment="Top" Width="565" Grid.ColumnSpan="2">
+            <Grid>
+                <Label Content="Type de travail" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="112,14,0,0" Text="déblai pour remblai compacté" VerticalAlignment="Top" Width="190"/>
+                <Label Content="Type d'entretien" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="112,45,0,0" TextWrapping="Wrap" Text="préventif" VerticalAlignment="Top" Width="190"/>
+                <Label Content="Point km début" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="112,76,0,0" TextWrapping="Wrap" Text="30" VerticalAlignment="Top" Width="190"/>
+                <Label Content="Point km fin" HorizontalAlignment="Left" Margin="10,103,0,0" VerticalAlignment="Top"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="112,106,0,0" TextWrapping="Wrap" Text="320" VerticalAlignment="Top" Width="190"/>
+
+            </Grid>
+        </GroupBox>
+        <GroupBox Grid.Column="4" Header="Réalisations" HorizontalAlignment="Left" Height="266" Margin="0,343,0,0" VerticalAlignment="Top" Width="565" Grid.ColumnSpan="3">
+            <Grid>
+                <Label Content="Type de travail" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <ComboBox HorizontalAlignment="Left" Margin="112,14,0,0" VerticalAlignment="Top" Width="190" SelectedIndex="0">
+                    <ComboBoxItem Content="déblai pour remblai compacté"/>
+                </ComboBox>
+                <Label Content="Partie concernée" HorizontalAlignment="Left" Margin="316,10,0,0" VerticalAlignment="Top"/>
+                <ComboBox HorizontalAlignment="Left" Margin="420,14,0,0" VerticalAlignment="Top" Width="120"/>
+                <Label Content="Type d'entretien" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="92"/>
+                <ComboBox HorizontalAlignment="Left" Margin="112,45,0,0" VerticalAlignment="Top" Width="190" SelectedIndex="0">
+                    <ComboBoxItem Content="préventif"/>
+                </ComboBox>
+                <Label Content="Prestataire" HorizontalAlignment="Left" Margin="316,45,0,0" VerticalAlignment="Top"/>
+                <ComboBox HorizontalAlignment="Left" Margin="420,45,0,0" VerticalAlignment="Top" Width="120"/>
+                <Label Content="Point km début" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top"/>
+                <TextBox HorizontalAlignment="Left" Height="24" Margin="112,74,0,0" TextWrapping="Wrap" Text="30" VerticalAlignment="Top" Width="190"/>
+                <Label Content="Numéro contrat" HorizontalAlignment="Left" Margin="316,72,0,0" VerticalAlignment="Top"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="420,75,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+
+            </Grid>
+        </GroupBox>
+
+
+
+    </Grid>
+</Window>
