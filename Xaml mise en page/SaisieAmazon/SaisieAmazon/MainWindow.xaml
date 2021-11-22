@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SaisieAmazon"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1000" Width="1000">
-    <Grid>
+        Title="MainWindow" Height="1000" Width="1000" Foreground="DarkCyan">
+    <Grid >
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="25*"/>
@@ -19,14 +19,16 @@
         </Grid.ColumnDefinitions>
         <Grid Grid.Row="1" Grid.Column="1">
             <Grid.RowDefinitions>
-                <RowDefinition Height="1*"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="2*"/>
                 <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
-            <GroupBox Header="Images">
+            <GroupBox Header="Images" BorderBrush="LightSteelBlue">
                 <Grid >
                     <Grid.RowDefinitions>
                         <RowDefinition Height="20*"/>
@@ -37,7 +39,7 @@
                         <ColumnDefinition Width="2*"/>
                         <ColumnDefinition Width="1*"/>
                     </Grid.ColumnDefinitions>
-                    <Rectangle Stroke="Gray" Fill="AliceBlue"/>
+                    <Rectangle Stroke="LightSteelBlue" Fill="AliceBlue"/>
                     <Image />
                     <Grid Grid.Column="1">
                         <Grid.RowDefinitions>
@@ -51,21 +53,259 @@
                             <ColumnDefinition Width="1*"/>
                             <ColumnDefinition Width="10*"/>
                         </Grid.ColumnDefinitions>
-                        <Button Content="Ouvrire une image" Grid.Column="1"/>
-                        <Button Content="Ajouter l'image" Grid.Column="1" Grid.Row="2"/>
-                        <Button Content="Retirer l'image" Grid.Column="1" Grid.Row="4"/>
+                        <Button Content="Ouvrir une image" Grid.Column="1" Background="LightBlue" BorderBrush="LightSteelBlue" Foreground="DarkBlue"/>
+                        <Button Content="Ajouter l'image" Grid.Column="1" Grid.Row="2" Background="LightBlue" BorderBrush="LightSteelBlue" Foreground="DarkBlue"/>
+                        <Button Content="Retirer l'image" Grid.Column="1" Grid.Row="4" Background="LightBlue" BorderBrush="LightSteelBlue" Foreground="DarkBlue"/>
                     </Grid>
-                    <DataGrid  Grid.Row="2" Grid.ColumnSpan="2">
-                        <DataGrid.Columns>
-                            <DataGridTextColumn Header="Liste des images choisies"/>
+                    <DataGrid  Grid.Row="2" Grid.ColumnSpan="2" Background="AliceBlue" BorderBrush="LightSteelBlue" Foreground="DarkBlue" VerticalScrollBarVisibility="Visible">
+                        <DataGrid.Columns >
+                            <DataGridTextColumn Header="Liste des images choisies" Width="1*"/>
                         </DataGrid.Columns>
                     </DataGrid>
                 </Grid>
             </GroupBox>
 
-            <GroupBox Grid.Column="1">
-                
+            <!--2eme bloc-->
+
+            <GroupBox Header="Référence" Grid.Column="1" BorderBrush="LightSteelBlue">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="5*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="5*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="5*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="5*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="5*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="5*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="5*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="4*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Nom : " HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Foreground="DarkBlue"/>
+                    <Label Content="Asin : " HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Grid.Row="2" Foreground="DarkBlue"/>
+                    <Label Content="Marque : " HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Grid.Row="4" Foreground="DarkBlue"/>
+                    <Label Content="Série : " HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Grid.Row="6" Foreground="DarkBlue"/>
+                    <Label Content="Usage : " HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Grid.Row="8" Foreground="DarkBlue"/>
+                    <Label Content="Prix : " HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Grid.Row="10" Foreground="DarkBlue"/>
+                    <Label Content="Quantité : " HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Grid.Row="12" Foreground="DarkBlue"/>
+                    <TextBox Grid.Column="1" TextWrapping="Wrap" Text="KOORUI Ecran PC Gaming 27 Pouces 165hz, Moniteur PC Dalle IPS, Résolution Full HD (1920 x 1080), 1MS, Display Port 1.2 &amp; 1x HDMI1.4 &amp; Type-c(15W), FreeSync, HDR10, Noir " VerticalContentAlignment="Center" VerticalScrollBarVisibility="Visible" Background="AliceBlue" BorderBrush="LightSteelBlue" Foreground="DarkBlue"/>
+                    <TextBox Grid.Column="1" Grid.Row="2" Text="B09G6XMPG6" VerticalContentAlignment="Center" Background="AliceBlue" BorderBrush="LightSteelBlue" Foreground="DarkBlue"/>
+                    <TextBox Grid.Column="1" Grid.Row="4" Text="KOORUI" VerticalContentAlignment="Center" Background="AliceBlue" BorderBrush="LightSteelBlue" Foreground="DarkBlue"/>
+                    <TextBox Grid.Column="1" Grid.Row="6" Text="27E1" VerticalContentAlignment="Center" Background="AliceBlue" BorderBrush="LightSteelBlue" Foreground="DarkBlue"/>
+                    <Grid Grid.Column="1" Grid.Row="8">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="8*"/>
+                            <ColumnDefinition Width="8*"/>
+                        </Grid.ColumnDefinitions>
+                        <RadioButton Content="Particulier" Grid.Column="1" VerticalContentAlignment="Center" BorderBrush="LightSteelBlue" Foreground="DarkBlue"/>
+                        <RadioButton Content="Professionnel" Grid.Column="2" VerticalContentAlignment="Center" BorderBrush="LightSteelBlue" Foreground="DarkBlue"/>
+                    </Grid>
+                    <Grid  Grid.Column="1" Grid.Row="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="8*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBox Grid.Column="0" Text="269,99" VerticalContentAlignment="Center" Background="AliceBlue" BorderBrush="LightSteelBlue" Foreground="DarkBlue"/>
+                        <Label Grid.Column="1" Content="€" VerticalContentAlignment="Center" Foreground="DarkBlue"/>
+                    </Grid>
+                    <TextBox Grid.Column="1" Grid.Row="12" Text="23" VerticalContentAlignment="Center" Background="AliceBlue" BorderBrush="LightSteelBlue" Foreground="DarkBlue"/>
+                </Grid>
             </GroupBox>
+
+            <!--3eme bloc-->
+
+            <GroupBox Header="Caractéristique" Grid.Row="1" Grid.ColumnSpan="2" BorderBrush="LightSteelBlue">
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="10*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="Couleur : " HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Foreground="DarkBlue"/>
+                        <Label Content="Dimensions de l'article : " Grid.Row="2" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Foreground="DarkBlue"/>
+                        <Label Content="Technologie d'affichage : " Grid.Row="4" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Foreground="DarkBlue"/>
+                        <Label Content="Technologie de connectivité : " Grid.Row="6" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Foreground="DarkBlue"/>
+                        <Label Content="Interface du matériel informatique : " Grid.Row="10" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Foreground="DarkBlue"/>
+                        <Label Content="Fréquence de rafraîchissement : " Grid.Row="12" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Foreground="DarkBlue"/>
+                        <Label Content="Temps de réponse : " Grid.Row="14" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Foreground="DarkBlue"/>
+                        <ComboBox Grid.Column="1" VerticalContentAlignment="Center" Foreground="DarkBlue">
+                            <ComboBoxItem Content="Noir" IsSelected="True"/>
+                        </ComboBox>
+                        <Grid Grid.Column="1" Grid.Row="2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBox Text="61.35 x 54.41 x 23.3" VerticalContentAlignment="Center" Background="AliceBlue"  BorderBrush="LightSteelBlue" Foreground="DarkBlue"/>
+                            <Label Grid.Column="1" Content="cm" VerticalContentAlignment="Center" Foreground="DarkBlue"/>
+                        </Grid>
+                        <ComboBox Grid.Column="1" Grid.Row="4" VerticalContentAlignment="Center" Foreground="DarkBlue">
+                            <ComboBoxItem Content="IPS" IsSelected="True"/>
+                        </ComboBox>
+                        <ListBox Grid.Column="1" Grid.Row="6" Grid.RowSpan="3" SelectionMode="Multiple" Background="AliceBlue"  BorderBrush="LightSteelBlue" Foreground="DarkBlue">
+                            <ListBoxItem Content="HDMI" IsSelected="True"/>
+                            <ListBoxItem Content="DisplayPort " IsSelected="True"/>
+                            <ListBoxItem Content="DVI"/>
+                            <ListBoxItem Content="Type-c" IsSelected="True"/>
+                        </ListBox>
+                        <ComboBox Grid.Column="1" Grid.Row="10" VerticalContentAlignment="Center" Foreground="DarkBlue">
+                            <ComboBoxItem Content="USB" IsSelected="True"/>
+                        </ComboBox>
+                        <Grid Grid.Column="1" Grid.Row="12">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBox Text="165" VerticalContentAlignment="Center" Background="AliceBlue"  BorderBrush="LightSteelBlue" Foreground="DarkBlue"/>
+                            <Label Grid.Column="1" Content="Hz" VerticalContentAlignment="Center" Foreground="DarkBlue"/>
+                        </Grid>
+                        <Grid Grid.Column="1" Grid.Row="14">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBox Text="1" VerticalContentAlignment="Center" Background="AliceBlue"  BorderBrush="LightSteelBlue" Foreground="DarkBlue"/>
+                            <Label Grid.Column="1" Content="millisecondes" VerticalContentAlignment="Center" Foreground="DarkBlue"/>
+                        </Grid>
+
+                    </Grid>
+                    <Grid Grid.Column="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="Taille de l'écran : " HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Foreground="DarkBlue"/>
+                        <Label Content="Rapport hauteur/largeur : " Grid.Row="2" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Foreground="DarkBlue"/>
+                        <Label Content="Résolution : " Grid.Row="4" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Foreground="DarkBlue"/>
+                        <Label Content="Résolution native : " Grid.Row="6" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Foreground="DarkBlue"/>
+                        <Label Content="Résolution d'affichage maximale : " Grid.Row="8" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Foreground="DarkBlue"/>
+                        <Label Content="Angle de vue réel : " Grid.Row="10" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Foreground="DarkBlue"/>
+                        <Label Content="Luminosité de l'image : " Grid.Row="12" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Foreground="DarkBlue"/>
+                        <Label Content="Contraste de l'image : " Grid.Row="14" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Foreground="DarkBlue"/>
+                        <Grid Grid.Column="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBox Text="27" VerticalContentAlignment="Center" Background="AliceBlue" BorderBrush="LightSteelBlue" Foreground="DarkBlue"/>
+                            <Label Grid.Column="1" Content="pouces" VerticalContentAlignment="Center" Foreground="DarkBlue"/>
+                        </Grid>
+                        <TextBox Grid.Column="1" Grid.Row="2" Text="16:9" VerticalContentAlignment="Center" Background="AliceBlue" BorderBrush="LightSteelBlue" Foreground="DarkBlue"/>
+                        <TextBox Grid.Column="1" Grid.Row="4" Text="FHD 1080p" VerticalContentAlignment="Center" Background="AliceBlue" BorderBrush="LightSteelBlue" Foreground="DarkBlue"/>
+                        <TextBox Grid.Column="1" Grid.Row="6" Text="1920X1080" VerticalContentAlignment="Center" Background="AliceBlue" BorderBrush="LightSteelBlue" Foreground="DarkBlue"/>
+                        <TextBox Grid.Column="1" Grid.Row="8" Text="1080p Full HD Pixels" VerticalContentAlignment="Center" Background="AliceBlue" BorderBrush="LightSteelBlue" Foreground="DarkBlue"/>
+                        <Grid Grid.Column="1" Grid.Row="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBox Text="178" VerticalContentAlignment="Center" Background="AliceBlue" BorderBrush="LightSteelBlue" Foreground="DarkBlue"/>
+                            <Label Grid.Column="1" Content="degrees" VerticalContentAlignment="Center" Foreground="DarkBlue"/>
+                        </Grid>
+                        <TextBox Grid.Column="1" Grid.Row="12" Text="300cd/㎡ candela" VerticalContentAlignment="Center" Background="AliceBlue" BorderBrush="LightSteelBlue" Foreground="DarkBlue"/>
+                        <TextBox Grid.Column="1" Grid.Row="14" Text="1000:1" VerticalContentAlignment="Center" Background="AliceBlue" BorderBrush="LightSteelBlue" Foreground="DarkBlue"/>
+                    </Grid>
+                </Grid>
+
+
+            </GroupBox>
+
+            <!--4eme bloc-->
+
+            <Grid Grid.Row="2" Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <GroupBox Header="À propos de cet article" BorderBrush="LightSteelBlue">
+                    <TextBox TextWrapping="Wrap" Text=" Dalle IPS de 27 pouces avec Résolution FHD (1920 x 1080 px) et DCI-P3 90% de gamme de couleurs; Format d'image : 16 : 9. Écran pc avec HDR10, Taux de rafraîchissement de 165 Hz et Temps de réponse de 1 ms; écran pc 27 compris les technologies de faible lumière bleue et sans scintillement, angle de vision large de 178°, luminosité/contraste : 300 cd/m²
+【KOORUI ecran pc 27 pouces vous emmène dans les mondes du jeu immersif】 Le écrans pc utilise le mode de jeu unique - un positionnement précis améliore les taux de tir et de réussite et augmente ainsi vos chances de gagner le jeu. ecran pc 27 pouces avec taux de rafraîchissement de 165 Hz garantit que le jeu fonctionne sans bégaiement gênant. La technologie Adaptive Freesync garantit que les images sont affichées en douceur et que les retards d'image n'ont aucune chance.
+【90% DCI-P3 de gamme de couleurs offre une expérience comme au cinéma】L'ecran 165hz avec la nouvelle génération de panneaux FAST IPS pour une expérience de visionnage incomparable. L'ecran pc 27 pouces avec une couverture de couleur professionnelle DCI-P3 à 90 % pour des tons et des transitions de couleurs plus intenses et expressifs; Dalle ips avec Angle de vision large de 178 degrés, de sorte que tous les angles de couleur semblent plus réalistes, délicats et cohérents.
+【Design Unique Avec Trou Noir】Gaming ecran combine un savoir-faire exquis avec les dernières technologies et apporte un design de boîtier ultra-mince. L'aspect noir mat élégant avec garniture bleue vous plonge dans la haute technologie de KOORUI. Design ergonomique avec inclinaison de -5° ~ +15° ; rotation de +30 °~ -30 ° ; pivotement de +90° ~ -90° et réglage de la hauteur de 0 ~ 110 mm. Le moniteur de jeu 27 pouces est compatible VESA et vous permet plus d'espace dans votre environnement.
+【Les connexions de diversification vous offrent des possibilités illimitées】 L'ecran pc 165hz offre un matériel de connexion utile. Il permet une connectivité transparente avec votre PC et votre Play Station avec DisplayPort, Type-c (15W) et HDMI et est donc le partenaire idéal pour le travail et les loisirs. " VerticalScrollBarVisibility="Visible" Background="AliceBlue"  BorderBrush="LightSteelBlue" Foreground="DarkBlue"/>
+                </GroupBox>
+
+                <!--5eme bloc-->
+
+                <GroupBox Header="Articles similaires" Grid.Column="1" BorderBrush="LightSteelBlue">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="5*"/>
+                        </Grid.RowDefinitions>
+                        <ComboBox/>
+                        <ComboBox Grid.Row="2"/>
+                        <ComboBox Grid.Row="4"/>
+                    </Grid>
+                </GroupBox>
+            </Grid>
+
+            <!--6eme bloc-->
+
+            <Grid Grid.Column="1" Grid.Row="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="5*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <Button Content="Enregistrer" Grid.Row="1" Background="LightBlue" BorderBrush="LightSteelBlue" Foreground="DarkBlue"/>
+                <Button Content="Annuler" Grid.Row="1" Grid.Column="2" Background="LightBlue" BorderBrush="LightSteelBlue" Foreground="DarkBlue"/>
+            </Grid>
         </Grid>
     </Grid>
 </Window>

@@ -1,9 +1,9 @@
-type d'article				ecrant PC					combobox/page à part
-
+nom					KOORUI Ecran PC Gaming 27 Pouces 165hz, Moniteur PC Dalle IPS, Résolution Full HD (1920 x 1080), 1MS, Display Port 1.2 & 1x HDMI1.4 & Type-c(15W), FreeSync, HDR10, Noir 
+											textbox
 quantité dispo				23						textbox
 liste d'images										data grid + boutons
 
-Usages spécifiques pour le produit	Professionnel					radiot bouton
+Usages spécifiques pour le produit	Professionnel					radio bouton
 Fréquence de rafraîchissement		165 Hz						textbox+ Hz
 
 Prix					269,99 €					textbox+ , +textbox+ €
@@ -21,7 +21,7 @@ Résolution				FHD 1080p					textbox
 Temps de réponse			1 millisecondes					textbox+ millisecondes
 
 Marque 				‎	KOORUI						textbox
-séries					27E1						textbox
+série					27E1						textbox
 Interface du matériel informatique 	USB 						combobox
 
 ASIN 					B09G6XMPG6					textbox
@@ -32,3 +32,28 @@ ASIN 					B09G6XMPG6					textbox
 【90% DCI-P3 de gamme de couleurs offre une expérience comme au cinéma】L'ecran 165hz avec la nouvelle génération de panneaux FAST IPS pour une expérience de visionnage incomparable. L'ecran pc 27 pouces avec une couverture de couleur professionnelle DCI-P3 à 90 % pour des tons et des transitions de couleurs plus intenses et expressifs; Dalle ips avec Angle de vision large de 178 degrés, de sorte que tous les angles de couleur semblent plus réalistes, délicats et cohérents.
 【Design Unique Avec Trou Noir】Gaming ecran combine un savoir-faire exquis avec les dernières technologies et apporte un design de boîtier ultra-mince. L'aspect noir mat élégant avec garniture bleue vous plonge dans la haute technologie de KOORUI. Design ergonomique avec inclinaison de -5° ~ +15° ; rotation de +30 °~ -30 ° ; pivotement de +90° ~ -90° et réglage de la hauteur de 0 ~ 110 mm. Le moniteur de jeu 27 pouces est compatible VESA et vous permet plus d'espace dans votre environnement.
 【Les connexions de diversification vous offrent des possibilités illimitées】 L'ecran pc 165hz offre un matériel de connexion utile. Il permet une connectivité transparente avec votre PC et votre Play Station avec DisplayPort, Type-c (15W) et HDMI et est donc le partenaire idéal pour le travail et les loisirs. 
+
+liste d'images
+
+nom
+ASIN
+Marque
+séries
+Usages spécifiques pour le produit
+Prix
+quantité dispo
+
+Fréquence de rafraîchissement
+Rapport hauteur/largeur
+Couleur
+Technologie de connectivité
+Taille de l'écran
+Technologie d’affichage
+Luminosité de l’image
+Contraste de l’image
+Dimensions de l’article
+Résolution native
+Angle de vue réel
+Résolution
+Temps de réponse
+Interface du matériel informatique

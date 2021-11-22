@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+    <Title>grille vierge</Title>
+    <Description>grille vide, 2 lignes, 2 colonnes</Description>
+    <HelpUrl>
+    </HelpUrl>
+    <Shortcut>newgr</Shortcut>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal Editable="true">
+        <ID>ligne1</ID>
+        <ToolTip>taille ligne 1</ToolTip>
+        <Default>1*</Default>
+      </Literal>
+	    <Literal Editable="true">
+        <ID>ligne2</ID>
+        <ToolTip>taille ligne 2</ToolTip>
+        <Default>1*</Default>
+      </Literal>
+      <Literal Editable="true">
+        <ID>colonne1</ID>
+        <ToolTip>taille colonne 1</ToolTip>
+        <Default>1*</Default>
+      </Literal>
+	    <Literal Editable="true">
+        <ID>colonne2</ID>
+        <ToolTip>taille colonne 2</ToolTip>
+        <Default>1*</Default>
+      </Literal>
+    </Declarations>
+
+    <Code Language="xaml">
+      <![CDATA[
+     <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="$ligne1$"/>
+                <RowDefinition Height="$ligne2$"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="$colonne1$"/>
+                <ColumnDefinition Width="$colonne2$"/>
+            </Grid.ColumnDefinitions>
+
+      </Grid>
+      $selected$$end$]]>
+    </Code>
+  </Snippet>
+</CodeSnippet>
