@@ -1,0 +1,1 @@
+scaffold-DbContext -Connection Name=Default MySql.entityFrameworkCore -outputDir .\Data\Models -Tables marques

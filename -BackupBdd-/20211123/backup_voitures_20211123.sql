@@ -31,10 +31,10 @@ DROP TABLE IF EXISTS `marques`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `marques` (
-  `mar_id` int(11) NOT NULL AUTO_INCREMENT,
-  `mar_nom` varchar(20) NOT NULL,
-  PRIMARY KEY (`mar_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+  `marid` int(11) NOT NULL AUTO_INCREMENT,
+  `marnom` varchar(20) NOT NULL,
+  PRIMARY KEY (`marid`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -64,7 +64,7 @@ CREATE TABLE `modeles` (
   `mod_date_ajout` date DEFAULT NULL,
   PRIMARY KEY (`mod_id`),
   KEY `fk_modeles_mar_id` (`mod_mar_id`),
-  CONSTRAINT `fk_modeles_mar_id` FOREIGN KEY (`mod_mar_id`) REFERENCES `marques` (`mar_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_modeles_mar_id` FOREIGN KEY (`mod_mar_id`) REFERENCES `marques` (`marid`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -93,7 +93,7 @@ CREATE TABLE `modeles_options` (
   KEY `om_mod_id` (`om_mod_id`),
   KEY `om_opt_id` (`om_opt_id`),
   CONSTRAINT `modeles_options_ibfk_1` FOREIGN KEY (`om_mod_id`) REFERENCES `modeles` (`mod_id`),
-  CONSTRAINT `modeles_options_ibfk_2` FOREIGN KEY (`om_opt_id`) REFERENCES `options` (`opt_id`)
+  CONSTRAINT `modeles_options_ibfk_2` FOREIGN KEY (`om_opt_id`) REFERENCES `options` (`optid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -115,11 +115,11 @@ DROP TABLE IF EXISTS `options`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `options` (
-  `opt_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `opt_libelle` varchar(50) NOT NULL,
-  `opt_prix` smallint(5) unsigned NOT NULL,
-  PRIMARY KEY (`opt_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+  `optid` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `optlibelle` varchar(50) NOT NULL,
+  `optprix` smallint(5) unsigned NOT NULL,
+  PRIMARY KEY (`optid`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -128,7 +128,7 @@ CREATE TABLE `options` (
 
 LOCK TABLES `options` WRITE;
 /*!40000 ALTER TABLE `options` DISABLE KEYS */;
-INSERT INTO `options` VALUES (1,'Jantes alu',600),(2,'GPS',450),(3,'Toit ouvrant',870),(4,'Peinture métallisée',275);
+INSERT INTO `options` VALUES (1,'Jantes alu',600),(2,'GPS',450),(3,'Toit ouvrant',870),(4,'Peinture métallisée',275),(5,'Roues',999);
 /*!40000 ALTER TABLE `options` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -141,4 +141,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-23 12:26:03
+-- Dump completed on 2021-11-23 17:26:03
