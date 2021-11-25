@@ -46,3 +46,9 @@ U:\59011-07-07\CDA_nils\Acces aux donnees\modelToBase\modelToBase\obj\Debug\net5
 U:\59011-07-07\CDA_nils\Acces aux donnees\modelToBase\modelToBase\obj\Debug\net5.0\ref\modelToBase.dll
 U:\59011-07-07\CDA_nils\Acces aux donnees\modelToBase\modelToBase\obj\Debug\net5.0\modelToBase.pdb
 U:\59011-07-07\CDA_nils\Acces aux donnees\modelToBase\modelToBase\obj\Debug\net5.0\modelToBase.genruntimeconfig.cache
+U:\59011-07-07\CDA_nils\Acces aux donnees\modelToBase\modelToBase\bin\Debug\net5.0\AutoMapper.dll
+U:\59011-07-07\CDA_nils\Acces aux donnees\modelToBase\modelToBase\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+U:\59011-07-07\CDA_nils\Acces aux donnees\modelToBase\modelToBase\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+U:\59011-07-07\CDA_nils\Acces aux donnees\modelToBase\modelToBase\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+U:\59011-07-07\CDA_nils\Acces aux donnees\modelToBase\modelToBase\bin\Debug\net5.0\Newtonsoft.Json.dll
+U:\59011-07-07\CDA_nils\Acces aux donnees\modelToBase\modelToBase\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll

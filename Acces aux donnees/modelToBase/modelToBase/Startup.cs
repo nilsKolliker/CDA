@@ -9,6 +9,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using modelToBase.Data;
+using modelToBase.Data.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,7 +30,8 @@ namespace modelToBase
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<myDbContext>(options =>options.UseMySQL(Configuration.GetConnectionString("Default")));
-
+            services.AddTransient<DepartementsServices>();
+            services.AddTransient<VillesServices>();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             services.AddControllers();

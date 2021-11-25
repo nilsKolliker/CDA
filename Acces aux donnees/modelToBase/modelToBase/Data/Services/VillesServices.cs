@@ -21,7 +21,7 @@ namespace modelToBase.Data.Services
             {
                 throw new ArgumentNullException(nameof(obj));
             }
-            _context.Villes.Add(obj);
+            _context.Ville.Add(obj);
             _context.SaveChanges();
         }
 
@@ -31,18 +31,18 @@ namespace modelToBase.Data.Services
             {
                 throw new ArgumentNullException(nameof(obj));
             }
-            _context.Villes.Remove(obj);
+            _context.Ville.Remove(obj);
             _context.SaveChanges();
         }
 
         public IEnumerable<Ville> GetAllVilles()
         {
-            return _context.Villes.ToList();
+            return _context.Ville.ToList();
         }
 
         public Ville GetVilleById(int id)
         {
-            return _context.Villes.FirstOrDefault(obj => obj.IdVille == id);
+            return _context.Ville.FirstOrDefault(obj => obj.IdVille == id);
         }
 
         public void UpdateVille(Ville obj)

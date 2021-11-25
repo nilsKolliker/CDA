@@ -1,5 +1,8 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
+using modelToBase.Data.Dtos;
+using modelToBase.Data.Models;
 using modelToBase.Data.Services;
 using System;
 using System.Collections.Generic;
@@ -8,6 +11,8 @@ using System.Threading.Tasks;
 
 namespace modelToBase.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class VillesController: ControllerBase
     {
 
@@ -45,7 +50,7 @@ namespace modelToBase.Controllers
         public ActionResult<VillesDTO> CreateVille(Ville obj)
         {
             _service.AddVille(obj);
-            return CreatedAtRoute(nameof(GetVilleById), new { Id = obj.Id }, obj);
+            return CreatedAtRoute(nameof(GetVilleById), new { Id = obj.IdVille }, obj);
         }
 
         //POST api/Villes/{id}

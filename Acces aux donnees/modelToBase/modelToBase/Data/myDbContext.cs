@@ -9,8 +9,8 @@ namespace modelToBase.Data
 {
     public class myDbContext : DbContext
     {
-        public DbSet<Departement> Departements { get; set; }
-        public DbSet<Ville> Villes { get; set; }
+        public DbSet<Departement> Departement { get; set; }
+        public DbSet<Ville> Ville { get; set; }
         public myDbContext( DbContextOptions<myDbContext> options) : base(options)
         {
         }

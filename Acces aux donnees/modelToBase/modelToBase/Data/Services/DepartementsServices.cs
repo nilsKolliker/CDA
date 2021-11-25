@@ -22,7 +22,7 @@ namespace modelToBase.Data.Services
             {
                 throw new ArgumentNullException(nameof(obj));
             }
-            _context.Departements.Add(obj);
+            _context.Departement.Add(obj);
             _context.SaveChanges();
         }
 
@@ -32,18 +32,18 @@ namespace modelToBase.Data.Services
             {
                 throw new ArgumentNullException(nameof(obj));
             }
-            _context.Departements.Remove(obj);
+            _context.Departement.Remove(obj);
             _context.SaveChanges();
         }
 
         public IEnumerable<Departement> GetAllDepartements()
         {
-            return _context.Departements.ToList();
+            return _context.Departement.ToList();
         }
 
         public Departement GetDepartementById(int id)
         {
-            return _context.Departements.FirstOrDefault(obj => obj.IdDepartement == id);
+            return _context.Departement.FirstOrDefault(obj => obj.IdDepartement == id);
         }
 
         public void UpdateDepartement(Departement obj)
