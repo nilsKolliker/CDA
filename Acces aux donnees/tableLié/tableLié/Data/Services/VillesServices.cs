@@ -9,7 +9,6 @@ namespace tableLié.Data.Services
     public class VillesServices
     {
         private readonly MyDbContext _context;
-
         public VillesServices(MyDbContext context)
         {
             _context = context;
@@ -21,7 +20,6 @@ namespace tableLié.Data.Services
             {
                 throw new ArgumentNullException(nameof(obj));
             }
-            Console.WriteLine(obj.IdVille+" "+obj.Libelle+" "+obj.IdDepartement);
             _context.Ville.Add(obj);
             _context.SaveChanges();
         }
@@ -45,7 +43,7 @@ namespace tableLié.Data.Services
                                         {
                                             IdVille = e1.IdVille,
                                             Libelle = e1.Libelle,
-                                            IdDepartement = e1.IdDepartement,
+                                            IdDepartement = e2.IdDepartement,
                                             Departement = e2
                                         }).ToList();
             return liste;
@@ -60,7 +58,7 @@ namespace tableLié.Data.Services
                                         {
                                             IdVille = e1.IdVille,
                                             Libelle = e1.Libelle,
-                                            IdDepartement = e1.IdDepartement,
+                                            IdDepartement = e2.IdDepartement,
                                             Departement = e2
                                         }).FirstOrDefault(obj => obj.IdVille == id);
             return ville;
