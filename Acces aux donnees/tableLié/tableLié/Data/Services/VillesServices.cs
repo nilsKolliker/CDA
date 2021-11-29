@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using tableLié.Data.Dtos;
 using tableLié.Data.Models;
 
 namespace tableLié.Data.Services
@@ -14,13 +15,18 @@ namespace tableLié.Data.Services
             _context = context;
         }
 
-        public void AddVille(Ville obj)
+        public void AddVille(VillesDTOin obj)
         {
             if (obj == null)
             {
                 throw new ArgumentNullException(nameof(obj));
             }
-            _context.Ville.Add(obj);
+            Ville ville = new Ville()
+            {
+                IdDepartement = obj.IdDepartement,
+                Libelle = obj.Libelle
+            };
+            _context.Ville.Add(ville);
             _context.SaveChanges();
         }
 
@@ -66,6 +72,17 @@ namespace tableLié.Data.Services
 
         public void UpdateVille(Ville obj)
         {
+            if (obj == null)
+            {
+                throw new ArgumentNullException(nameof(obj));
+            }
+            //var ville = new Ville()
+            //{
+            //    IdVille = obj.IdVille,
+            //    Libelle = obj.Libelle,
+            //    IdDepartement = obj.IdDepartement,
+            //};
+            _context.Update(obj);
             _context.SaveChanges();
         }
     }

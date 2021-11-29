@@ -49,32 +49,24 @@ namespace tableLié.Controllers
 
         //POST api/Villes
         [HttpPost]
-        public ActionResult<VillesDTO> CreateVille(Ville obj)
+        public ActionResult<VillesDTO> CreateVille(VillesDTOin obj)
         {
-            Departement dep = _serviceDep.GetDepartementByLibelle(obj.Departement.Libelle);
-            if (dep == null)
-            {
-                return NotFound();
-            }
-            obj.IdDepartement =dep.IdDepartement;
-            obj.Departement = null;
             _service.AddVille(obj);
-            return CreatedAtRoute(nameof(GetVilleById), new { Id = obj.IdVille }, obj);
+            return NoContent();
         }
 
         //POST api/Villes/{id}
         [HttpPut("{id}")]
-        public ActionResult UpdateVille(int id, VillesDTO obj)
+        public ActionResult UpdateVille(int id, VillesDTOin obj)
         {
-            Departement dep = _serviceDep.GetDepartementByLibelle(obj.Departement.Libelle);
             Ville objFromRepo = _service.GetVilleById(id);
-            if (objFromRepo == null||dep==null)
+            //Departement depFromRepo = _serviceDep.GetDepartementById(obj.IdDepartement);
+            if (objFromRepo == null/*|| depFromRepo==null*/)
             {
                 return NotFound();
             }
             _mapper.Map(obj, objFromRepo);
-            objFromRepo.Departement = null;
-            objFromRepo.IdDepartement = dep.IdDepartement;
+            //objFromRepo.Departement = depFromRepo;
             _service.UpdateVille(objFromRepo);
             return NoContent();
         }
