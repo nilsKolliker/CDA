@@ -37,7 +37,16 @@ namespace tableLié.Data.Services
 
         public IEnumerable<Departement> GetAllDepartements()
         {
-            return _context.Departement.ToList();
+            var liste = (from e1 in _context.Ville
+                         join e2 in _context.Departement
+                         on e1.IdDepartement equals e2.IdDepartement
+                         select new Departement
+                         {
+                             IdDepartement = e1.IdDepartement,
+                             Libelle = e2.Libelle,
+                             Ville = _context.Ville.Where(v => v.IdDepartement == e2.IdDepartement).ToList()
+                         }).ToList();
+            return liste;
         }
 
         public Departement GetDepartementById(int id)

@@ -12,7 +12,9 @@ namespace tableLié.Data.Profiles
     {
         public VillesProfile()
         {
+            CreateMap<Ville, VillesDTOout>();
             CreateMap<Ville, VillesDTO>();
+            CreateMap<VillesDTO, Ville>();
             CreateMap<VillesDTOin, Ville>();
         }
     }

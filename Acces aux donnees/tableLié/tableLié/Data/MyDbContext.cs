@@ -17,17 +17,10 @@ namespace tableLié.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Departement>(e2 =>
-            {
-                e2.ToTable("departement");
-                e2.Property(e => e.IdDepartement).HasColumnName("IdDepartement");
-            });
-            modelBuilder.Entity<Ville>(e1 =>
-            {
-                e1.ToTable("ville");
-                e1.Property(e => e.IdDepartement).HasColumnName("IdDepartement");
-                e1.HasOne(e => e.Departement).WithOne().HasForeignKey<Ville>(e => e.IdDepartement);
-            });
+            modelBuilder.Entity<Ville>()
+                .HasOne<Departement>(v => v.Departement)
+                .WithMany(d => d.Ville)
+                .HasForeignKey(v => v.IdDepartement);
         }
     }
 }

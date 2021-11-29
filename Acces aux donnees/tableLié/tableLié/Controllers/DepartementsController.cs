@@ -27,27 +27,27 @@ namespace tableLié.Controllers
 
         //GET api/Departements
         [HttpGet]
-        public ActionResult<IEnumerable<DepartementsDTO>> GetAllDepartements()
+        public ActionResult<IEnumerable<DepartementsDTOout>> GetAllDepartements()
         {
             IEnumerable<Departement> listeDepartements = _service.GetAllDepartements();
-            return Ok(_mapper.Map<IEnumerable<DepartementsDTO>>(listeDepartements));
+            return Ok(_mapper.Map<IEnumerable<DepartementsDTOout>>(listeDepartements));
         }
 
         //GET api/Departements/{i}
         [HttpGet("{id}", Name = "GetDepartementById")]
-        public ActionResult<DepartementsDTO> GetDepartementById(int id)
+        public ActionResult<DepartementsDTOout> GetDepartementById(int id)
         {
             Departement commandItem = _service.GetDepartementById(id);
             if (commandItem != null)
             {
-                return Ok(_mapper.Map<DepartementsDTO>(commandItem));
+                return Ok(_mapper.Map<DepartementsDTOout>(commandItem));
             }
             return NotFound();
         }
 
         //POST api/Departements
         [HttpPost]
-        public ActionResult<DepartementsDTO> CreateDepartement(Departement obj)
+        public ActionResult<DepartementsDTOout> CreateDepartement(Departement obj)
         {
             _service.AddDepartement(obj);
             return CreatedAtRoute(nameof(GetDepartementById), new { Id = obj.IdDepartement }, obj);

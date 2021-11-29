@@ -12,6 +12,7 @@ namespace tableLié.Data.Profiles
     {
         public DepartementsProfile()
         {
+            CreateMap<Departement, DepartementsDTOout>();
             CreateMap<Departement, DepartementsDTO>();
             CreateMap<DepartementsDTO, Departement>();
         }

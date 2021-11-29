@@ -5,9 +5,8 @@ using System.Threading.Tasks;
 
 namespace tableLié.Data.Dtos
 {
-    public class DepartementsDTO
+    public class VillesDTOout
     {
         public string Libelle { get; set; }
-
     }
 }
