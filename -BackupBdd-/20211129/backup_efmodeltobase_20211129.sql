@@ -34,7 +34,7 @@ CREATE TABLE `departement` (
   `IdDepartement` int(11) NOT NULL AUTO_INCREMENT,
   `Libelle` varchar(50) NOT NULL,
   PRIMARY KEY (`IdDepartement`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,7 +43,7 @@ CREATE TABLE `departement` (
 
 LOCK TABLES `departement` WRITE;
 /*!40000 ALTER TABLE `departement` DISABLE KEYS */;
-INSERT INTO `departement` VALUES (1,'A'),(2,'B');
+INSERT INTO `departement` VALUES (1,'A'),(2,'B'),(12,'C');
 /*!40000 ALTER TABLE `departement` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -69,7 +69,7 @@ CREATE TABLE `ville` (
 
 LOCK TABLES `ville` WRITE;
 /*!40000 ALTER TABLE `ville` DISABLE KEYS */;
-INSERT INTO `ville` VALUES (1,'aaa',1),(2,'aab',1),(3,'cca',2),(4,'bab',2),(5,'bac',2),(6,'aaa',1),(7,'aba',2),(8,'bba',2),(9,'aba',2);
+INSERT INTO `ville` VALUES (1,'aaa',1),(2,'aab',1),(3,'bca',2),(4,'bab',2),(5,'bac',2);
 /*!40000 ALTER TABLE `ville` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -82,4 +82,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-29 12:26:02
+-- Dump completed on 2021-11-29 17:26:02

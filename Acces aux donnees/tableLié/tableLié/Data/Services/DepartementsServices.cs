@@ -37,14 +37,21 @@ namespace tableLié.Data.Services
 
         public IEnumerable<Departement> GetAllDepartements()
         {
-            var liste = (from e1 in _context.Ville
-                         join e2 in _context.Departement
-                         on e1.IdDepartement equals e2.IdDepartement
+            //var liste = (from e1 in _context.Ville
+            //             join e2 in _context.Departement
+            //             on e1.IdDepartement equals e2.IdDepartement
+            //             select new Departement
+            //             {
+            //                 IdDepartement = e1.IdDepartement,
+            //                 Libelle = e2.Libelle,
+            //                 Ville = _context.Ville.Where(v => v.IdDepartement == e2.IdDepartement).ToList()
+            //             }).ToList();
+            var liste = (from e1 in _context.Departement
                          select new Departement
                          {
                              IdDepartement = e1.IdDepartement,
-                             Libelle = e2.Libelle,
-                             Ville = _context.Ville.Where(v => v.IdDepartement == e2.IdDepartement).ToList()
+                             Libelle = e1.Libelle,
+                             Ville = _context.Ville.Where(v => v.IdDepartement == e1.IdDepartement).ToList()
                          }).ToList();
             return liste;
         }
