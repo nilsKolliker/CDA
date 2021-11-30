@@ -11,7 +11,7 @@ namespace PersonneAnimal.Data.Models
         public int? IdPersonne { get; set; }
         public int? IdAnimal { get; set; }
 
-        public virtual Animal IdAnimalNavigation { get; set; }
-        public virtual Personne IdPersonneNavigation { get; set; }
+        public virtual Animal Animal { get; set; }
+        public virtual Personne Personne { get; set; }
     }
 }

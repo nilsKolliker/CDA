@@ -13,17 +13,36 @@ namespace PersonneAnimal.Data.Dtos
 
     public partial class PersonneDTOout
     {
-        //public PersonneDTOout()
-        //{
-        //    Adoptions = new HashSet<Adoption>();
-        //}
+        public PersonneDTOout()
+        {
+            Adoptions = new HashSet<AdoptionDTOavecAnimal>();
+        }
 
-        public int IdPersonne { get; set; }
         public string Nom { get; set; }
 
-        public virtual SexeDTOin IdSexeNavigation { get; set; }
-        //public virtual ICollection<Adoption> Adoptions { get; set; }
+        public virtual SexeDTOin Sexe { get; set; }
+        public virtual ICollection<AdoptionDTOavecAnimal> Adoptions { get; set; }
     }
+
+    public partial class PersonneDTOavecSexe
+    {
+        public string Nom { get; set; }
+
+        public virtual SexeDTOin Sexe { get; set; }
+    }
+
+    public partial class PersonneDTOavecAnimal
+    {
+        public PersonneDTOavecAnimal()
+        {
+            Adoptions = new HashSet<AdoptionDTOavecAnimal>();
+        }
+
+        public string Nom { get; set; }
+        public virtual ICollection<AdoptionDTOavecAnimal> Adoptions { get; set; }
+    }
+
+
 
     public partial class PersonneDTOsimple
     {

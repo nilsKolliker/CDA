@@ -39,12 +39,12 @@ namespace PersonneAnimal.Data.Services
 
         public IEnumerable<Sexe> GetAllSexes()
         {
-            return _context.Sexes.Include("Personnes").ToList();
+            return _context.Sexes.Include("Personnes.Adoptions.Animal").ToList();
         }
 
         public Sexe GetSexeById(int id)
         {
-            return _context.Sexes.Include("Personnes").FirstOrDefault(obj => obj.IdSexe == id);
+            return _context.Sexes.Include("Personnes.Adoptions.Animal").FirstOrDefault(obj => obj.IdSexe == id);
         }
 
         public void UpdateSexe(Sexe obj)

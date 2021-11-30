@@ -16,7 +16,7 @@ namespace PersonneAnimal.Data.Models
         public string Nom { get; set; }
         public int IdSexe { get; set; }
 
-        public virtual Sexe IdSexeNavigation { get; set; }
-        //public virtual ICollection<Adoption> Adoptions { get; set; }
+        public virtual Sexe Sexe { get; set; }
+        public virtual ICollection<Adoption> Adoptions { get; set; }
     }
 }

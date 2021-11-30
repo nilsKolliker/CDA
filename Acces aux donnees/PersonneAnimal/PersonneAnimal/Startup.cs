@@ -2,11 +2,14 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using PersonneAnimal.Data.Models;
+using PersonneAnimal.Data.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,7 +29,13 @@ namespace PersonneAnimal
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<MyDbContext>(options => options.UseMySQL(Configuration.GetConnectionString("Default")));
+            services.AddDbContext<PersonneAnimalContext>(options => options.UseMySQL(Configuration.GetConnectionString("GoDTB")));
+            services.AddTransient<PersonnesServices>();
+            services.AddTransient<SexesServices>();
+            services.AddTransient<AnimauxServices>();
+            services.AddTransient<AdoptionsServices>();
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

@@ -13,6 +13,7 @@ namespace PersonneAnimal.Data.Profiles
         public SexesProfile()
         {
             CreateMap<SexeDTOin, Sexe>();
+            CreateMap<Sexe, SexeDTOin>();
             CreateMap<Sexe, SexeDTOout>();
         }
     }

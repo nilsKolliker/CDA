@@ -18,7 +18,7 @@ namespace PersonneAnimal.Data.Models
         }
 
         public virtual DbSet<Adoption> Adoptions { get; set; }
-        public virtual DbSet<Animal> Animals { get; set; }
+        public virtual DbSet<Animal> Animaux { get; set; }
         public virtual DbSet<Personne> Personnes { get; set; }
         public virtual DbSet<Sexe> Sexes { get; set; }
 
@@ -49,12 +49,12 @@ namespace PersonneAnimal.Data.Models
 
                 entity.Property(e => e.IdPersonne).HasColumnType("int(11)");
 
-                entity.HasOne(d => d.IdAnimalNavigation)
+                entity.HasOne(d => d.Animal)
                     .WithMany(p => p.Adoptions)
                     .HasForeignKey(d => d.IdAnimal)
                     .HasConstraintName("adoption_ibfk_2");
 
-                entity.HasOne(d => d.IdPersonneNavigation)
+                entity.HasOne(d => d.Personne)
                     .WithMany(p => p.Adoptions)
                     .HasForeignKey(d => d.IdPersonne)
                     .HasConstraintName("adoption_ibfk_1");
@@ -91,7 +91,7 @@ namespace PersonneAnimal.Data.Models
                     .IsRequired()
                     .HasMaxLength(50);
 
-                entity.HasOne(d => d.IdSexeNavigation)
+                entity.HasOne(d => d.Sexe)
                     .WithMany(p => p.Personnes)
                     .HasForeignKey(d => d.IdSexe)
                     .OnDelete(DeleteBehavior.ClientSetNull)

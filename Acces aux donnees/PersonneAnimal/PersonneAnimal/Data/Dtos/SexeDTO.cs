@@ -14,10 +14,10 @@ namespace PersonneAnimal.Data.Dtos
     {
         public SexeDTOout()
         {
-            Personnes = new HashSet<PersonneDTOsimple>();
+            Personnes = new HashSet<PersonneDTOavecAnimal>();
         }
         public string Libelle { get; set; }
 
-        public virtual ICollection<PersonneDTOsimple> Personnes { get; set; }
+        public virtual ICollection<PersonneDTOavecAnimal> Personnes { get; set; }
     }
 }

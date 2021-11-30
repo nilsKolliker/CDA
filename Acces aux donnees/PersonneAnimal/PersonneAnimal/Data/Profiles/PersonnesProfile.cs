@@ -14,6 +14,8 @@ namespace PersonneAnimal.Data.Profiles
         {
             CreateMap<PersonneDTOin, Personne>();
             CreateMap<Personne, PersonneDTOout>();
+            CreateMap<Personne, PersonneDTOavecAnimal>();
+            CreateMap<Personne, PersonneDTOavecSexe>();
             CreateMap<Personne, PersonneDTOsimple>();
         }
     }
