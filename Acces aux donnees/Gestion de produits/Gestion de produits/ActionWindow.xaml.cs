@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -30,20 +29,20 @@ namespace Gestion_de_produits
             MainWindow = mainWindow;
             Action = nomAction;
             action.Content = this.Action;
-            if (this.Action!= "_Ajouter")
+            if (this.Action != "_Ajouter")
             {
                 Produits = produit;
                 Nom.Text = produit.Nom;
                 Categ.Text = produit.Categorie;
                 Rayon.Text = produit.Rayon;
-                if (this.Action== "_Supprimer")
+                if (this.Action == "_Supprimer")
                 {
                     Nom.IsEnabled = false;
                     Categ.IsEnabled = false;
                     Rayon.IsEnabled = false;
                 }
             }
-            
+
         }
 
         private void Valider(object sender, RoutedEventArgs e)
@@ -51,7 +50,7 @@ namespace Gestion_de_produits
             switch (Action)
             {
                 case "_Ajouter":
-                    Produits produits = new Produits(MainWindow.liste[MainWindow.liste.Count-1].Id+1, Nom.Text, Categ.Text, Rayon.Text);
+                    Produits produits = new Produits(MainWindow.liste[MainWindow.liste.Count - 1].Id + 1, Nom.Text, Categ.Text, Rayon.Text);
                     MainWindow.liste.Add(produits);
                     break;
                 case "_Modifier":
@@ -60,7 +59,7 @@ namespace Gestion_de_produits
                     Produits.Rayon = Rayon.Text;
                     for (int i = 0; i < MainWindow.liste.Count; i++)
                     {
-                        if (MainWindow.liste[i].Id== Produits.Id)
+                        if (MainWindow.liste[i].Id == Produits.Id)
                         {
                             MainWindow.liste[i] = Produits;
                         }

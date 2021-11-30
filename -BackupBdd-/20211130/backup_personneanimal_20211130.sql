@@ -39,7 +39,7 @@ CREATE TABLE `adoption` (
   KEY `IdAnimal` (`IdAnimal`),
   CONSTRAINT `adoption_ibfk_1` FOREIGN KEY (`IdPersonne`) REFERENCES `personne` (`IdPersonne`),
   CONSTRAINT `adoption_ibfk_2` FOREIGN KEY (`IdAnimal`) REFERENCES `animal` (`IdAnimal`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -48,7 +48,7 @@ CREATE TABLE `adoption` (
 
 LOCK TABLES `adoption` WRITE;
 /*!40000 ALTER TABLE `adoption` DISABLE KEYS */;
-INSERT INTO `adoption` VALUES (1,1,1),(2,1,2),(3,2,3);
+INSERT INTO `adoption` VALUES (1,1,1),(2,1,2),(3,2,3),(4,2,1);
 /*!40000 ALTER TABLE `adoption` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -90,7 +90,7 @@ CREATE TABLE `personne` (
   PRIMARY KEY (`IdPersonne`),
   KEY `IdSexe` (`IdSexe`),
   CONSTRAINT `personne_ibfk_1` FOREIGN KEY (`IdSexe`) REFERENCES `sexe` (`IdSexe`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -99,7 +99,7 @@ CREATE TABLE `personne` (
 
 LOCK TABLES `personne` WRITE;
 /*!40000 ALTER TABLE `personne` DISABLE KEYS */;
-INSERT INTO `personne` VALUES (1,'Toto',1),(2,'Tata',2),(3,'Titi',2);
+INSERT INTO `personne` VALUES (1,'Toto',1),(2,'Tata',2),(3,'Titi',2),(8,'truc',4);
 /*!40000 ALTER TABLE `personne` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -114,7 +114,7 @@ CREATE TABLE `sexe` (
   `IdSexe` int(11) NOT NULL AUTO_INCREMENT,
   `Libelle` varchar(1) NOT NULL,
   PRIMARY KEY (`IdSexe`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -123,7 +123,7 @@ CREATE TABLE `sexe` (
 
 LOCK TABLES `sexe` WRITE;
 /*!40000 ALTER TABLE `sexe` DISABLE KEYS */;
-INSERT INTO `sexe` VALUES (1,'M'),(2,'F'),(3,'A');
+INSERT INTO `sexe` VALUES (1,'M'),(2,'F'),(3,'A'),(4,'W');
 /*!40000 ALTER TABLE `sexe` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -136,4 +136,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-30 12:26:03
+-- Dump completed on 2021-11-30 17:26:55

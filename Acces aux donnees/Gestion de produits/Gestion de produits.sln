@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.31729.503
+VisualStudioVersion = 16.0.31911.196
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gestion de produits", "Gestion de produits\Gestion de produits.csproj", "{9D364CD5-74DC-4FBA-9E6A-CA511ABCEC94}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gestion de produits", "Gestion de produits\Gestion de produits.csproj", "{E512274D-6744-42D3-A4FA-F2C815EB5BB4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9D364CD5-74DC-4FBA-9E6A-CA511ABCEC94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9D364CD5-74DC-4FBA-9E6A-CA511ABCEC94}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9D364CD5-74DC-4FBA-9E6A-CA511ABCEC94}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9D364CD5-74DC-4FBA-9E6A-CA511ABCEC94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E512274D-6744-42D3-A4FA-F2C815EB5BB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E512274D-6744-42D3-A4FA-F2C815EB5BB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E512274D-6744-42D3-A4FA-F2C815EB5BB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E512274D-6744-42D3-A4FA-F2C815EB5BB4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {7D5B8CEC-051E-4681-ADB5-BCEBD1A649E0}
+		SolutionGuid = {AEA89274-D45A-421C-A4E6-858D356EFE2D}
 	EndGlobalSection
 EndGlobal

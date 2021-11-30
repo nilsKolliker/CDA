@@ -4,7 +4,6 @@
              xmlns:local="clr-namespace:Gestion_de_produits"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-
         <SolidColorBrush x:Key="fondDApli" Color="#FFD4DAB0"/>
         <LinearGradientBrush x:Key="fondBouton" EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="#FF3ACBC5" Offset="0"/>
@@ -17,6 +16,5 @@
             <GradientStop Color="White" Offset="1"/>
         </LinearGradientBrush>
         <HorizontalAlignment x:Key="alignementLabel">Right</HorizontalAlignment>
-
     </Application.Resources>
 </Application>

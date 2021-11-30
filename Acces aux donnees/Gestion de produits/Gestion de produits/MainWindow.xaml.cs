@@ -23,7 +23,7 @@ namespace Gestion_de_produits
     public partial class MainWindow : Window
     {
         public List<Produits> liste = new List<Produits>();
-        public string Path { get; set; } = @"../../../MonFichier.json";
+        public string Path { get; set; } = @"../../../../MonFichier.json";
         public MainWindow()
         {
 
@@ -31,7 +31,7 @@ namespace Gestion_de_produits
             //InitialiserJson();
             LireJson();
             GrilleProduit.ItemsSource = this.liste;
-            
+
 
         }
 
@@ -42,7 +42,7 @@ namespace Gestion_de_produits
             {
                 json = File.ReadAllText(this.Path);
             }
-            catch (Exception e)
+            catch
             {
                 return;
             }
@@ -66,8 +66,8 @@ namespace Gestion_de_produits
         {
             string action = (string)((Button)sender).Content;
             ActionWindow fenetre;
-            
-            if (action != "_Ajouter"&& GrilleProduit.SelectedItem==null)
+
+            if (action != "_Ajouter" && GrilleProduit.SelectedItem == null)
             {
                 return;
             }
