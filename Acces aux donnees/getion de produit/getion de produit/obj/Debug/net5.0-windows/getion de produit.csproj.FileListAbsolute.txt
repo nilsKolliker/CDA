@@ -1,0 +1,49 @@
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\bin\Debug\net5.0-windows\getion de produit.exe
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\bin\Debug\net5.0-windows\getion de produit.deps.json
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\bin\Debug\net5.0-windows\getion de produit.runtimeconfig.json
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\bin\Debug\net5.0-windows\getion de produit.runtimeconfig.dev.json
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\bin\Debug\net5.0-windows\getion de produit.dll
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\bin\Debug\net5.0-windows\ref\getion de produit.dll
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\bin\Debug\net5.0-windows\getion de produit.pdb
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\bin\Debug\net5.0-windows\AutoMapper.dll
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\bin\Debug\net5.0-windows\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\bin\Debug\net5.0-windows\BouncyCastle.Crypto.dll
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\bin\Debug\net5.0-windows\Google.Protobuf.dll
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\bin\Debug\net5.0-windows\Humanizer.dll
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\bin\Debug\net5.0-windows\K4os.Compression.LZ4.dll
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\bin\Debug\net5.0-windows\K4os.Compression.LZ4.Streams.dll
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\bin\Debug\net5.0-windows\K4os.Hash.xxHash.dll
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.dll
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Design.dll
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\bin\Debug\net5.0-windows\Microsoft.Extensions.DependencyInjection.dll
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\bin\Debug\net5.0-windows\MySql.Data.dll
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\bin\Debug\net5.0-windows\Ubiety.Dns.Core.dll
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\bin\Debug\net5.0-windows\ZstdNet.dll
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\bin\Debug\net5.0-windows\MySql.EntityFrameworkCore.dll
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\bin\Debug\net5.0-windows\System.Diagnostics.DiagnosticSource.dll
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\obj\Debug\net5.0-windows\getion de produit.csproj.AssemblyReference.cache
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\obj\Debug\net5.0-windows\MainWindow.g.cs
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\obj\Debug\net5.0-windows\App.g.cs
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\obj\Debug\net5.0-windows\getion de produit_MarkupCompile.cache
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\obj\Debug\net5.0-windows\getion de produit_MarkupCompile.lref
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\obj\Debug\net5.0-windows\MainWindow.baml
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\obj\Debug\net5.0-windows\getion de produit.g.resources
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\obj\Debug\net5.0-windows\getion de produit.GeneratedMSBuildEditorConfig.editorconfig
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\obj\Debug\net5.0-windows\getion de produit.AssemblyInfoInputs.cache
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\obj\Debug\net5.0-windows\getion de produit.AssemblyInfo.cs
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\obj\Debug\net5.0-windows\getion de produit.csproj.CoreCompileInputs.cache
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\obj\Debug\net5.0-windows\getion de produit.csproj.CopyComplete
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\obj\Debug\net5.0-windows\getion de produit.dll
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\obj\Debug\net5.0-windows\ref\getion de produit.dll
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\obj\Debug\net5.0-windows\getion de produit.pdb
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\obj\Debug\net5.0-windows\getion de produit.genruntimeconfig.cache
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\bin\Debug\net5.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\bin\Debug\net5.0-windows\Microsoft.Extensions.Caching.Memory.dll
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\bin\Debug\net5.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\bin\Debug\net5.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\bin\Debug\net5.0-windows\Microsoft.Extensions.Logging.dll
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\bin\Debug\net5.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\bin\Debug\net5.0-windows\Microsoft.Extensions.Options.dll
+U:\59011-07-07\CDA_nils\Acces aux donnees\getion de produit\getion de produit\bin\Debug\net5.0-windows\Microsoft.Extensions.Primitives.dll
