@@ -37,13 +37,13 @@ namespace getion_de_produit.Data
                 entity.HasKey(e => e.IdCategorie)
                     .HasName("PRIMARY");
 
-                entity.ToTable("categories");
+                //entity.ToTable("categories");
 
-                entity.Property(e => e.IdCategorie).HasColumnType("int(11)");
+                //entity.Property(e => e.IdCategorie).HasColumnType("int(11)");
 
-                entity.Property(e => e.LibelleCategorie)
-                    .IsRequired()
-                    .HasMaxLength(50);
+                //entity.Property(e => e.LibelleCategorie)
+                //    .IsRequired()
+                //    .HasMaxLength(50);
             });
 
             modelBuilder.Entity<Produit>(entity =>
@@ -51,33 +51,33 @@ namespace getion_de_produit.Data
                 entity.HasKey(e => e.IdProduit)
                     .HasName("PRIMARY");
 
-                entity.ToTable("produits");
+                //entity.ToTable("produits");
 
-                entity.HasIndex(e => e.IdCategorie, "IdCategorie");
+                //entity.HasIndex(e => e.IdCategorie, "IdCategorie");
 
-                entity.HasIndex(e => e.IdRayon, "IdRayon");
+                //entity.HasIndex(e => e.IdRayon, "IdRayon");
 
-                entity.Property(e => e.IdProduit).HasColumnType("int(11)");
+                //entity.Property(e => e.IdProduit).HasColumnType("int(11)");
 
-                entity.Property(e => e.IdCategorie).HasColumnType("int(11)");
+                //entity.Property(e => e.IdCategorie).HasColumnType("int(11)");
 
-                entity.Property(e => e.IdRayon).HasColumnType("int(11)");
+                //entity.Property(e => e.IdRayon).HasColumnType("int(11)");
 
-                entity.Property(e => e.LibelleProduit)
-                    .IsRequired()
-                    .HasMaxLength(50);
+                //entity.Property(e => e.LibelleProduit)
+                //    .IsRequired()
+                //    .HasMaxLength(50);
 
-                entity.HasOne(d => d.Categorie)
-                    .WithMany(p => p.Produits)
-                    .HasForeignKey(d => d.IdCategorie)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("produits_ibfk_1");
+                //entity.HasOne(d => d.Categorie)
+                //    .WithMany(p => p.Produits)
+                //    .HasForeignKey(d => d.IdCategorie)
+                //    .OnDelete(DeleteBehavior.ClientSetNull)
+                //    .HasConstraintName("produits_ibfk_1");
 
-                entity.HasOne(d => d.Rayon)
-                    .WithMany(p => p.Produits)
-                    .HasForeignKey(d => d.IdRayon)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("produits_ibfk_2");
+                //entity.HasOne(d => d.Rayon)
+                //    .WithMany(p => p.Produits)
+                //    .HasForeignKey(d => d.IdRayon)
+                //    .OnDelete(DeleteBehavior.ClientSetNull)
+                //    .HasConstraintName("produits_ibfk_2");
             });
 
             modelBuilder.Entity<Rayon>(entity =>
@@ -85,13 +85,13 @@ namespace getion_de_produit.Data
                 entity.HasKey(e => e.IdRayon)
                     .HasName("PRIMARY");
 
-                entity.ToTable("rayons");
+                //entity.ToTable("rayons");
 
-                entity.Property(e => e.IdRayon).HasColumnType("int(11)");
+                //entity.Property(e => e.IdRayon).HasColumnType("int(11)");
 
-                entity.Property(e => e.LibelleRayon)
-                    .IsRequired()
-                    .HasMaxLength(50);
+                //entity.Property(e => e.LibelleRayon)
+                //    .IsRequired()
+                //    .HasMaxLength(50);
             });
 
             OnModelCreatingPartial(modelBuilder);
