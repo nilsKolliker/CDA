@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.7.31, for Win64 (x86_64)
 --
--- Host: localhost    Database: cadeaux
+-- Host: localhost    Database: noel
 -- ------------------------------------------------------
 -- Server version	5.7.31
 
@@ -16,12 +16,12 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Current Database: `cadeaux`
+-- Current Database: `noel`
 --
 
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ `cadeaux` /*!40100 DEFAULT CHARACTER SET utf8 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `noel` /*!40100 DEFAULT CHARACTER SET utf8 */;
 
-USE `cadeaux`;
+USE `noel`;
 
 --
 -- Table structure for table `assurer`
@@ -211,6 +211,30 @@ LOCK TABLES `lutins` WRITE;
 UNLOCK TABLES;
 
 --
+-- Temporary table structure for view `organisation`
+--
+
+DROP TABLE IF EXISTS `organisation`;
+/*!50001 DROP VIEW IF EXISTS `organisation`*/;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+/*!50001 CREATE VIEW `organisation` AS SELECT 
+ 1 AS `Id_Traineaux`,
+ 1 AS `numeroTraineau`,
+ 1 AS `taille`,
+ 1 AS `dateMiseEnService`,
+ 1 AS `dateRevision`,
+ 1 AS `Id_rennes`,
+ 1 AS `nom`,
+ 1 AS `sexe`,
+ 1 AS `dateNaissance`,
+ 1 AS `dateResponsabilte`,
+ 1 AS `id_Lutins`,
+ 1 AS `nomLutin`,
+ 1 AS `prenom`*/;
+SET character_set_client = @saved_cs_client;
+
+--
 -- Table structure for table `participe`
 --
 
@@ -312,6 +336,30 @@ LOCK TABLES `traineaux` WRITE;
 /*!40000 ALTER TABLE `traineaux` DISABLE KEYS */;
 /*!40000 ALTER TABLE `traineaux` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Current Database: `noel`
+--
+
+USE `noel`;
+
+--
+-- Final view structure for view `organisation`
+--
+
+/*!50001 DROP VIEW IF EXISTS `organisation`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_unicode_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `organisation` AS select `traineaux`.`Id_Traineaux` AS `Id_Traineaux`,`traineaux`.`numeroTraineau` AS `numeroTraineau`,`traineaux`.`taille` AS `taille`,`traineaux`.`dateMiseEnService` AS `dateMiseEnService`,`traineaux`.`dateRevision` AS `dateRevision`,`rennes`.`Id_rennes` AS `Id_rennes`,`rennes`.`nom` AS `nom`,`rennes`.`sexe` AS `sexe`,`rennes`.`dateNaissance` AS `dateNaissance`,`conduit`.`dateResponsabilte` AS `dateResponsabilte`,`lutins`.`Id_Lutins` AS `id_Lutins`,`lutins`.`nom` AS `nomLutin`,`lutins`.`prenom` AS `prenom` from ((((`rennes` join `tire` on((`rennes`.`Id_rennes` = `tire`.`Id_rennes`))) join `traineaux` on((`tire`.`Id_Traineaux` = `traineaux`.`Id_Traineaux`))) join `conduit` on((`conduit`.`Id_Traineaux` = `traineaux`.`Id_Traineaux`))) join `lutins` on((`lutins`.`Id_Lutins` = `conduit`.`Id_Lutins`))) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -322,4 +370,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-12-02 17:26:02
+-- Dump completed on 2021-12-03 10:56:02
