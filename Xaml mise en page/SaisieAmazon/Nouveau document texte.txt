@@ -1,0 +1,59 @@
+nom					KOORUI Ecran PC Gaming 27 Pouces 165hz, Moniteur PC Dalle IPS, Résolution Full HD (1920 x 1080), 1MS, Display Port 1.2 & 1x HDMI1.4 & Type-c(15W), FreeSync, HDR10, Noir 
+											textbox
+quantité dispo				23						textbox
+liste d'images										data grid + boutons
+
+Usages spécifiques pour le produit	Professionnel					radio bouton
+Fréquence de rafraîchissement		165 Hz						textbox+ Hz
+
+Prix					269,99 €					textbox+ , +textbox+ €
+Rapport hauteur/largeur			16:9						textbox+ : +textbox 
+Couleur					Noir						combobox
+Technologie de connectivité		HDMI 1.4, DisplayPort 1.2, Type-c (15W)		textbox
+Taille de l'écran	 		27 pouces					textbox+ pouces
+Technologie d’affichage			IPS						
+Luminosité de l’image			300cd/㎡ candela					textbox
+Contraste de l’image 			1000:1						textbox:textbox
+Dimensions de l’article			61.35 x 54.41 x 23.3 cm				textbox+ , +textbox+ x textbox+ , +textbox+ x + textbox+ , +textbox+ cm
+Résolution native 			1920X1080					textbox+ x textbox
+Angle de vue réel			178 degrees					textbox+ degrees
+Résolution				FHD 1080p					textbox
+Temps de réponse			1 millisecondes					textbox+ millisecondes
+
+Marque 				‎	KOORUI						textbox
+série					27E1						textbox
+Interface du matériel informatique 	USB 						combobox
+
+ASIN 					B09G6XMPG6					textbox
+
+À propos de cet article (gros pavé)							gigatextbox
+ Dalle IPS de 27 pouces avec Résolution FHD (1920 x 1080 px) et DCI-P3 90% de gamme de couleurs; Format d'image : 16 : 9. Écran pc avec HDR10, Taux de rafraîchissement de 165 Hz et Temps de réponse de 1 ms; écran pc 27 compris les technologies de faible lumière bleue et sans scintillement, angle de vision large de 178°, luminosité/contraste : 300 cd/m²
+【KOORUI ecran pc 27 pouces vous emmène dans les mondes du jeu immersif】 Le écrans pc utilise le mode de jeu unique - un positionnement précis améliore les taux de tir et de réussite et augmente ainsi vos chances de gagner le jeu. ecran pc 27 pouces avec taux de rafraîchissement de 165 Hz garantit que le jeu fonctionne sans bégaiement gênant. La technologie Adaptive Freesync garantit que les images sont affichées en douceur et que les retards d'image n'ont aucune chance.
+【90% DCI-P3 de gamme de couleurs offre une expérience comme au cinéma】L'ecran 165hz avec la nouvelle génération de panneaux FAST IPS pour une expérience de visionnage incomparable. L'ecran pc 27 pouces avec une couverture de couleur professionnelle DCI-P3 à 90 % pour des tons et des transitions de couleurs plus intenses et expressifs; Dalle ips avec Angle de vision large de 178 degrés, de sorte que tous les angles de couleur semblent plus réalistes, délicats et cohérents.
+【Design Unique Avec Trou Noir】Gaming ecran combine un savoir-faire exquis avec les dernières technologies et apporte un design de boîtier ultra-mince. L'aspect noir mat élégant avec garniture bleue vous plonge dans la haute technologie de KOORUI. Design ergonomique avec inclinaison de -5° ~ +15° ; rotation de +30 °~ -30 ° ; pivotement de +90° ~ -90° et réglage de la hauteur de 0 ~ 110 mm. Le moniteur de jeu 27 pouces est compatible VESA et vous permet plus d'espace dans votre environnement.
+【Les connexions de diversification vous offrent des possibilités illimitées】 L'ecran pc 165hz offre un matériel de connexion utile. Il permet une connectivité transparente avec votre PC et votre Play Station avec DisplayPort, Type-c (15W) et HDMI et est donc le partenaire idéal pour le travail et les loisirs. 
+
+liste d'images
+
+nom
+ASIN
+Marque
+séries
+Usages spécifiques pour le produit
+Prix
+quantité dispo
+
+Fréquence de rafraîchissement
+Rapport hauteur/largeur
+Couleur
+Technologie de connectivité
+Taille de l'écran
+Technologie d’affichage
+Luminosité de l’image
+Contraste de l’image
+Dimensions de l’article
+Résolution native
+Angle de vue réel
+Résolution
+Temps de réponse
+Interface du matériel informatique
