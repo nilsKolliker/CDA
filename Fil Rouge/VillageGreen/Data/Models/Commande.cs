@@ -17,7 +17,7 @@ namespace VillageGreen.Data.Models
 
         public int IdCommande { get; set; }
         public string NumeroCommande { get; set; }
-        public DateTime? DateCommande { get; set; }
+        public DateTime DateCommande { get; set; }
         public int IdUser { get; set; }
         public int IdAdresse { get; set; }
 

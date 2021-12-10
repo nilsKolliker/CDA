@@ -49,7 +49,7 @@ CREATE TABLE Reglements(
 --
 CREATE TABLE TVA(
    IdTVA INT AUTO_INCREMENT PRIMARY KEY,
-   tauxTVA INT
+   tauxTVA INT NOT NULL
 )ENGINE=InnoDB;
 
 
@@ -58,7 +58,7 @@ CREATE TABLE TVA(
 --
 CREATE TABLE Roles(
    IdRole INT AUTO_INCREMENT PRIMARY KEY,
-   libelleRole VARCHAR(50)
+   libelleRole VARCHAR(50) NOT NULL
 )ENGINE=InnoDB;
 
 
@@ -88,7 +88,7 @@ CREATE TABLE Produits(
    description TEXT NOT NULL,
    refProduit VARCHAR(5)  NOT NULL UNIQUE,
    prixHorsTaxe DECIMAL(19,4) NOT NULL,
-   photo VARCHAR(150) ,
+   photo VARCHAR(150) NOT NULL,
    stock INT NOT NULL,
    IdRubrique INT NOT NULL
 )ENGINE=InnoDB;
@@ -146,8 +146,8 @@ CREATE TABLE Adresses(
 --
 CREATE TABLE Commandes(
    IdCommande INT AUTO_INCREMENT PRIMARY KEY,
-   NumeroCommande VARCHAR(10) UNIQUE,
-   dateCommande DATE,
+   NumeroCommande VARCHAR(10) NOT NULL UNIQUE,
+   dateCommande DATETIME NOT NULL,
    IdUser INT NOT NULL,
    IdAdresse INT NOT NULL
 )ENGINE=InnoDB;
@@ -158,9 +158,9 @@ CREATE TABLE Commandes(
 --
 CREATE TABLE LignesCommande(
     IdLigneCommande INT AUTO_INCREMENT PRIMARY KEY,
-   IdProduit INT,
-   IdCommande INT,
-   quantiteProduit INT
+   IdProduit INT NOT NULL,
+   IdCommande INT NOT NULL,
+   quantiteProduit INT NOT NULL
 )ENGINE=InnoDB;
 
 
@@ -169,10 +169,10 @@ CREATE TABLE LignesCommande(
 --
 CREATE TABLE Livraisons(
     IdLivraison INT AUTO_INCREMENT PRIMARY KEY,
-   IdCommande INT,
-   IdAdresse INT,
-   dateLivraison DATE,
-   quantiteLivraison INT
+   IdCommande INT NOT NULL,
+   IdAdresse INT NOT NULL,
+   dateLivraison DATETIME NOT NULL,
+   quantiteLivraison INT NOT NULL
 )ENGINE=InnoDB;
 
 --
@@ -180,8 +180,8 @@ CREATE TABLE Livraisons(
 --
 CREATE TABLE Approvisionnements(
     IdApprovisionnement INT AUTO_INCREMENT PRIMARY KEY,
-   IdProduit INT,
-   IdFournisseur INT,
+   IdProduit INT NOT NULL,
+   IdFournisseur INT NOT NULL,
    refFournisseur VARCHAR(5)  NOT NULL
 )ENGINE=InnoDB;
 
@@ -190,8 +190,8 @@ CREATE TABLE Approvisionnements(
 --
 CREATE TABLE Factures(
     IdFacture INT AUTO_INCREMENT PRIMARY KEY,
-   IdReglement INT,
-   IdCommande INT,
+   IdReglement INT NOT NULL,
+   IdCommande INT NOT NULL,
    datePaiement DATE NOT NULL,
    montantPaiement DECIMAL(19,4) NOT NULL
 )ENGINE=InnoDB;
@@ -201,8 +201,8 @@ CREATE TABLE Factures(
 --
 CREATE TABLE HistoriqueTVA(
     IdHistoriqueTVA INT AUTO_INCREMENT PRIMARY KEY,
-   IdProduit INT,
-   IdTVA INT,
+   IdProduit INT NOT NULL,
+   IdTVA INT NOT NULL,
    dateTVA DATE NOT NULL
 )ENGINE=InnoDB;
 
@@ -211,9 +211,9 @@ CREATE TABLE HistoriqueTVA(
 --
 CREATE TABLE ProgressionsCommande(
     IdProgressionsCommande INT AUTO_INCREMENT PRIMARY KEY,
-   IdCommande INT,
-   IdEtatCommande INT,
-   dateEtatCommande DATE NOT NULL
+   IdCommande INT NOT NULL,
+   IdEtatCommande INT NOT NULL,
+   dateEtatCommande DATETIME NOT NULL
 )ENGINE=InnoDB;
 
 

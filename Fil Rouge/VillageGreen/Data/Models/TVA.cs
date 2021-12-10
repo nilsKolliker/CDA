@@ -13,7 +13,7 @@ namespace VillageGreen.Data.Models
         }
 
         public int IdTva { get; set; }
-        public int? TauxTva { get; set; }
+        public int TauxTva { get; set; }
 
         public virtual ICollection<HistoriqueTVA> HistoriqueTVA { get; set; }
     }
