@@ -1,0 +1,25 @@
+.columnTel{
+    flex-direction: column;
+}
+
+.rowTel{
+    flex-direction: row;
+}
+
+.noneTel{
+    display: none;
+}
+
+.demiTel{
+    display: flex;
+    flex: 0.5;
+}
+
+.miniTel{
+    display: flex;
+    flex: 0.2;    
+}
+
+.gig{
+    flex: 5;
+}
