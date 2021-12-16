@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-body, header, main, nav, section, footer, div, h1, h2, a, button{
+body, header, main, nav, section, footer, div, h1, h2, a, button, img{
     display: flex;
     flex:1;
 }
@@ -33,7 +33,7 @@ img{
     height: 4vh;
 }
 
-.bigSpaceHorizon{
+footer{
     flex: none;
     height: 10vh;
 }
@@ -49,4 +49,22 @@ img{
 
 .flexeNone{
     flex: none;
+}
+
+header{
+    color: var(--color1);
+    background-color: var(--color2);
+}
+
+body, button{
+    background-color: var(--color1);
+}
+
+.coreNav, footer{
+    background-color: var(--color3);
+}
+
+button{
+    border-radius: 35%;
+    color: var(--color2);
 }
