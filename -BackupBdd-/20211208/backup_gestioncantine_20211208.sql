@@ -46,7 +46,7 @@ CREATE TABLE `eleves` (
 
 LOCK TABLES `eleves` WRITE;
 /*!40000 ALTER TABLE `eleves` DISABLE KEYS */;
-INSERT INTO `eleves` VALUES (1,'Dubois','Julette','1999-11-11',50),(2,'Marnier','Sophie','2001-02-15',100),(3,'Godart','Louis','2000-06-29',20),(4,'Pichon','Mathieu','2000-04-02',60),(5,'Chavain ','Natalie','2002-02-25',120),(6,'Dubois ','Juliette','2003-12-14',40);
+INSERT INTO `eleves` VALUES (1,'Dubois','Julette','1999-11-11',140),(2,'Marnier','Sophie','2001-02-15',50),(3,'Godart','Louis','2000-06-29',20),(4,'Pichon','Mathieu','2000-04-02',110),(5,'Chavain ','Natalie','2002-02-25',120),(6,'Dubois ','Juliette','2003-12-14',0);
 /*!40000 ALTER TABLE `eleves` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -118,7 +118,7 @@ CREATE TABLE `paiements` (
   KEY `FK_Paiements_ModesDePaiement` (`IdModeDePaiement`),
   CONSTRAINT `FK_Paiements_Eleves` FOREIGN KEY (`IdEleve`) REFERENCES `eleves` (`IdEleve`),
   CONSTRAINT `FK_Paiements_ModesDePaiement` FOREIGN KEY (`IdModeDePaiement`) REFERENCES `modesdepaiement` (`IdModeDePaiement`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -127,7 +127,7 @@ CREATE TABLE `paiements` (
 
 LOCK TABLES `paiements` WRITE;
 /*!40000 ALTER TABLE `paiements` DISABLE KEYS */;
-INSERT INTO `paiements` VALUES (1,50,'2017-09-05',1,2),(2,50,'2017-09-10',2,2),(3,20,'2017-09-25',3,1),(5,80,'2017-09-25',5,1),(6,40,'2017-09-05',6,3);
+INSERT INTO `paiements` VALUES (1,50,'2017-09-05',4,2),(2,40,'2017-09-10',1,2),(3,20,'2017-09-25',3,1),(5,80,'2017-09-25',5,1);
 /*!40000 ALTER TABLE `paiements` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -224,4 +224,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-12-08 12:26:02
+-- Dump completed on 2021-12-08 17:26:03
