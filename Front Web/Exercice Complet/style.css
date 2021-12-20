@@ -1,16 +1,22 @@
 *{
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
-body, header, main, nav, section, footer, div, h1, h2, a, button, img{
+body, header, main, nav, section, footer, div, h1, h2, a, button, img, form, .flex{
     display: flex;
     flex:1;
 }
 
-.column, body, header, main, section{
+.column, body, header, main{
     flex-direction: column;
 }
+
+main{
+    background-color: var(--color5);
+}
+
 
 img{
     width: 100%;
@@ -29,12 +35,10 @@ img{
 }
 
 .spaceHorizon{
-    flex: none;
     height: 4vh;
 }
 
 footer{
-    flex: none;
     height: 10vh;
 }
 
@@ -43,29 +47,20 @@ footer{
     justify-content: center;
 }
 
-.flexeNone{
+.flexeNone, footer, .spaceHorizon{
     flex: none;
 }
 
-.menu,.sousMenu,header, .section3{
+.menu,.sousMenu,header{
     background-color: var(--color4);
 }
 
-.menu:first-child, .section2{
+.menu:first-child, footer, .button, .menu:hover, .sousMenu a:hover{
     background-color: var(--color3);
-}
-
-.section1{
-    background-color: var(--color5);
 }
 
 .menu:last-child{
     border: 1px solid var(--color5);
-}
-
-section{
-    flex: none;
-    height: 50vh;
 }
 
 nav{
@@ -76,17 +71,23 @@ nav{
     position: relative;
 }
 .sousMenu{
-    display: none;
     position: absolute;
     min-width: 100%;
+}
+.titreMenuTel, .quEnTel,.sousMenu{
+    display: none;
 }
 .menu:hover .sousMenu{
     display: flex;
 }
-.titreMenuTel, .quEnTel{
-    display: none;
-}
 .boutonTop{
-    position: sticky;
-    top: 90vh;
+    position:sticky;
+    top: 70vh;
+}
+.button{
+    border-radius:5vh;
+}
+
+input:invalid{
+    background-color: rgb(255, 140, 140);
 }

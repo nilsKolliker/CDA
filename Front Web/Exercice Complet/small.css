@@ -11,7 +11,7 @@
 .telMenu:hover .telSousMenu, .quEnTel{
     display: flex;
 }
-.telMenu, .telSousMenu{
+.telMenu, .telSousMenu, .telColumn{
     flex-direction: column;
 }
 
@@ -23,4 +23,8 @@
 }
 .telMenu{
     background-color: var(--color4);
+}
+
+.demiTel{
+    flex: 0.5;
 }
