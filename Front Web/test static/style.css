@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body, header, main, nav, section, footer, div, h1, h2, a, button, img{
+    display: flex;
+    flex:1;
+}
+
+.column, body, header, main, section{
+    flex-direction: column;
+}
+
+img{
+    width: 100%;
+}
+
+.mini{
+    flex: 0.2;
+}
+
+.demi{
+    flex: 0.5;
+}
+
+.gig{
+    flex: 10;
+}
+
+.spaceHorizon{
+    flex: none;
+    height: 4vh;
+}
+
+footer{
+    flex: none;
+    height: 10vh;
+}
+
+.titre{
+    font-size: 2em;
+}
+
+.center{
+    align-items: center;
+    justify-content: center;
+}
+
+.flexeNone{
+    flex: none;
+}
+
+header{
+    color: var(--color1);
+    background-color: var(--color2);
+}
+
+body, button{
+    background-color: var(--color1);
+}
+
+.coreNav, footer{
+    background-color: var(--color3);
+}
+
+button{
+    border-radius: 35%;
+    color: var(--color2);
+}
