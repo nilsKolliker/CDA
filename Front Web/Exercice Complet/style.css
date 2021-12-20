@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body, header, main, nav, section, footer, div, h1, h2, a, button, img{
+    display: flex;
+    flex:1;
+}
+
+.column, body, header, main, section{
+    flex-direction: column;
+}
+
+img{
+    width: 100%;
+}
+
+.mini{
+    flex: 0.2;
+}
+
+.demi{
+    flex: 0.5;
+}
+
+.gig{
+    flex: 10;
+}
+
+.spaceHorizon{
+    flex: none;
+    height: 4vh;
+}
+
+footer{
+    flex: none;
+    height: 10vh;
+}
+
+.center, a{
+    align-items: center;
+    justify-content: center;
+}
+
+.flexeNone{
+    flex: none;
+}
+
+.menu,.sousMenu,header, .section3{
+    background-color: var(--color4);
+}
+
+.menu:first-child, .section2{
+    background-color: var(--color3);
+}
+
+.section1{
+    background-color: var(--color5);
+}
+
+.menu:last-child{
+    border: 1px solid var(--color5);
+}
+
+section{
+    flex: none;
+    height: 50vh;
+}
+
+nav{
+    position: sticky;
+    top:0;
+}
+.menu{
+    position: relative;
+}
+.sousMenu{
+    display: none;
+    position: absolute;
+    min-width: 100%;
+}
+.menu:hover .sousMenu{
+    display: flex;
+}
+.titreMenuTel, .quEnTel{
+    display: none;
+}
+.boutonTop{
+    position: sticky;
+    top: 90vh;
+}

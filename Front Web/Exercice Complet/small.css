@@ -1,0 +1,26 @@
+.titreMenuTel{
+    display: flex;
+}
+
+.telSousMenu{
+    display: none;
+    position: absolute;
+    min-width: 33%;
+}
+
+.telMenu:hover .telSousMenu, .quEnTel{
+    display: flex;
+}
+.telMenu, .telSousMenu{
+    flex-direction: column;
+}
+
+.menu:hover .sousMenu{
+    position:static;
+}
+.sousMenu, .quEnTel{
+    background-color: var(--color5);
+}
+.telMenu{
+    background-color: var(--color4);
+}
