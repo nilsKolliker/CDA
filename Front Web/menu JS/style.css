@@ -25,21 +25,28 @@ body, nav, section, div{
     height: 4vh;
 }
 
-.menu{
-    background-color: azure;
+.menuStyle{
+    background-color: red;
 }
 
 .sousMenu{
     display: none;
     left: 5vw;
-    background-color: aliceblue;
 }
 
-.sousMenu:last-child{
+.style{
+    background-color: blue;
+}
+
+.style, .menuStyle{
+    justify-content: center;
+    align-items: center;
+}
+
+.sousMenu:last-child .style{
     border-radius: 0 0 5vh 5vh;
 }
 
-/* .isActived{
-    background-color: aquamarine;
-    font-size: 1.1em;
-} */
+.actived{
+    border-radius: 0 0 5vh 0;
+}

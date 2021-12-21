@@ -1,28 +1,27 @@
-var listeMenu = document.querySelectorAll(".menu");
-
-listeMenu.forEach(element => {
+var listMenu=document.querySelectorAll(".menu");
+listMenu.forEach(element => {
     element.addEventListener("click",touchAuMenu);
 });
+var listSousMenu = document.querySelectorAll(".sousMenu");
 
 function touchAuMenu(e){
+    fermerLesSousMenus();
     afficheMenu(e);
-    activedClass(e)
 }
 
+//affiche les sous menus si ils sont caché, les cache si afficher, dépend de la structure de la page
 function afficheMenu(e) {
     e.target.parentNode.parentNode.querySelectorAll(".sousMenu").forEach(element => {
-        if (element.style.display=="flex") {
-            element.style.display="none"
-        }else{
-            element.style.display="flex"
-        }  
+        element.style.display="flex" 
     });
+    e.target.parentNode.parentNode.querySelector("i").style.color="white";
 }
 
-function activedClass(e) {
-    if (e.target.classList.contains("isActived")) {
-        e.target.classList.remove("isActived");
-    }else{
-        e.target.classList.add("isActived");
-    }
+function fermerLesSousMenus(){
+    listSousMenu.forEach(element => {
+        element.style.display="none"; 
+    });
+    listMenu.forEach(element => {
+        element.querySelector("i").style.color="black";
+    });
 }
