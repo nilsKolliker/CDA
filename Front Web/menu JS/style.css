@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body, nav, section, div{
+    display: flex;
+    flex:1;
+}
+
+.column{
+    flex-direction: column;
+}
+
+.mini{
+    flex: 0.2;
+}
+
+.demi{
+    flex: 0.5;
+}
+
+.spaceHorizon{
+    flex: none;
+    height: 4vh;
+}
+
+.menu{
+    background-color: azure;
+}
+
+.sousMenu{
+    display: none;
+    left: 5vw;
+    background-color: aliceblue;
+}
+
+.sousMenu:last-child{
+    border-radius: 0 0 5vh 5vh;
+}
+
+/* .isActived{
+    background-color: aquamarine;
+    font-size: 1.1em;
+} */
