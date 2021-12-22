@@ -14,7 +14,7 @@ function afficheMenu(e) {
     e.target.parentNode.parentNode.querySelectorAll(".sousMenu").forEach(element => {
         element.style.display="flex" 
     });
-    e.target.parentNode.parentNode.querySelector("i").style.color="white";
+    e.target.parentNode.parentNode.querySelector("i").classList.add("white");
 }
 
 function fermerLesSousMenus(){
@@ -22,6 +22,7 @@ function fermerLesSousMenus(){
         element.style.display="none"; 
     });
     listMenu.forEach(element => {
-        element.querySelector("i").style.color="black";
+        let icone= element.querySelector("i")
+        icone.classList.remove("white");
     });
 }

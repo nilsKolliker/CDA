@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.7.31, for Win64 (x86_64)
 --
--- Host: localhost    Database: efmodeltobase
+-- Host: localhost    Database: ecf
 -- ------------------------------------------------------
 -- Server version	5.7.31
 
@@ -16,61 +16,66 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Current Database: `efmodeltobase`
+-- Current Database: `ecf`
 --
 
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ `efmodeltobase` /*!40100 DEFAULT CHARACTER SET utf8 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `ecf` /*!40100 DEFAULT CHARACTER SET utf8 */;
 
-USE `efmodeltobase`;
+USE `ecf`;
 
 --
--- Table structure for table `departement`
+-- Table structure for table `groupes`
 --
 
-DROP TABLE IF EXISTS `departement`;
+DROP TABLE IF EXISTS `groupes`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `departement` (
-  `IdDepartement` int(11) NOT NULL AUTO_INCREMENT,
-  `Libelle` varchar(50) NOT NULL,
-  PRIMARY KEY (`IdDepartement`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+CREATE TABLE `groupes` (
+  `IdGroupe` int(11) NOT NULL AUTO_INCREMENT,
+  `NomDuGroupe` varchar(50) NOT NULL,
+  `NombreDeFollowers` int(11) NOT NULL,
+  `Logo` varchar(250) NOT NULL,
+  PRIMARY KEY (`IdGroupe`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `departement`
+-- Dumping data for table `groupes`
 --
 
-LOCK TABLES `departement` WRITE;
-/*!40000 ALTER TABLE `departement` DISABLE KEYS */;
-INSERT INTO `departement` VALUES (1,'A'),(2,'B'),(12,'C');
-/*!40000 ALTER TABLE `departement` ENABLE KEYS */;
+LOCK TABLES `groupes` WRITE;
+/*!40000 ALTER TABLE `groupes` DISABLE KEYS */;
+INSERT INTO `groupes` VALUES (1,'TheGroup',3,'logo1.jpg'),(2,'Meilleur Groupe',30,'logo2.png'),(4,'plantage',56,'logo1.jpg');
+/*!40000 ALTER TABLE `groupes` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `ville`
+-- Table structure for table `musiciens`
 --
 
-DROP TABLE IF EXISTS `ville`;
+DROP TABLE IF EXISTS `musiciens`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `ville` (
-  `IdVille` int(11) NOT NULL AUTO_INCREMENT,
-  `Libelle` varchar(50) NOT NULL,
-  `IdDepartement` int(11) NOT NULL,
-  PRIMARY KEY (`IdVille`),
-  KEY `IX_Ville_DepartementIdDepartement` (`IdDepartement`)
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+CREATE TABLE `musiciens` (
+  `idMusicien` int(11) NOT NULL AUTO_INCREMENT,
+  `Nom` varchar(50) NOT NULL,
+  `Prenom` varchar(50) NOT NULL,
+  `Instrument` varchar(50) NOT NULL,
+  `IdGroupe` int(11) NOT NULL,
+  PRIMARY KEY (`idMusicien`),
+  KEY `FK_Membres_Groupes` (`IdGroupe`),
+  CONSTRAINT `FK_Membres_Groupes` FOREIGN KEY (`IdGroupe`) REFERENCES `groupes` (`IdGroupe`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `ville`
+-- Dumping data for table `musiciens`
 --
 
-LOCK TABLES `ville` WRITE;
-/*!40000 ALTER TABLE `ville` DISABLE KEYS */;
-INSERT INTO `ville` VALUES (1,'aaa',1),(2,'aab',1),(3,'bca',2),(4,'bab',2),(5,'bac',2);
-/*!40000 ALTER TABLE `ville` ENABLE KEYS */;
+LOCK TABLES `musiciens` WRITE;
+/*!40000 ALTER TABLE `musiciens` DISABLE KEYS */;
+INSERT INTO `musiciens` VALUES (1,'Dupond','Toto','guitare',1),(4,'Durand','Titi','batterie',2),(7,'aaa','aaa','aaa',4);
+/*!40000 ALTER TABLE `musiciens` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
