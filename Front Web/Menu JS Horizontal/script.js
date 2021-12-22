@@ -1,5 +1,16 @@
 var sousMenuOuvert; // stocke l'ement de sousMenuOuvert
 var sousMenuItemActive // stocke le sous menu actif
+var nav=document.querySelector("nav");//stocke la nav
+var iconeBurger=nav.querySelector("i");//stoke l'icone du menu
+var burgerOuvert=false;//stoke si le menu burger est ouver ou non
+
+var premiereSection=getElementsById("section1")
+
+// se déclanche au scroll
+window.onscroll = function (e) {
+    if(premiereSection.scrollHeight - premiereSection.scrollTop === premiereSection.clientHeight)
+    
+} 
 
 // on gère le survol et le clic des menus
 var listeMenus = document.getElementsByClassName("menu");
@@ -19,7 +30,10 @@ listeSousMenus.forEach(element => {
 
 // on recupère le clique sur l'icone du menu
 var titreMenu = document.querySelector(".titreNav");
-titreMenu.addEventListener("click", clickTitreMenu)
+titreMenu.addEventListener("click", clickTitreMenu);
+
+//on recupère le clique sur la page pour couper le menu si clique à coté
+document.addEventListener("click",cliqueSurLaPage);
 
 
 function fermeMenu(event) {
@@ -33,8 +47,6 @@ function fermeMenu(event) {
         sousMenuOuvert = undefined;
     }
 }
-
-
 
 /**
  * méthode qui gère le changement d'affichage des menus lors du survol ou du clic
@@ -77,8 +89,37 @@ function clickSousMenu(event) {
     sousMenuItemActive = event.target;
 }
 
-function clickTitreMenu(event){
-    for (let i = 0; i < listeMenus.length; i++) {
-        listeMenus[i].style.display.flex
+/**
+ * Gestion du menu burger quand clic sur l'entete
+ */
+function clickTitreMenu(){
+    if (burgerOuvert){
+        fermerMenuBurger();
+    }else{
+        listeMenus[0].parentNode.classList.remove("telNone");
+        burgerOuvert=true;
+        iconeBurger.classList.add("iconeretourne");
+    }
+    
+}
+
+/**
+ * Gestion du menu burger quand clic à coté
+ * @param {*} event 
+ */
+function cliqueSurLaPage(event){
+    if(!nav.contains(event.target))//si la nav ne contient pas la source du clique, on ferme !
+    {
+        fermerMenuBurger();
     }
 }
+
+/**
+ * permet de refermer le menu burger sur petit ecrants
+ */
+function fermerMenuBurger(){
+    listeMenus[0].parentNode.classList.add("telNone");
+    burgerOuvert=false;
+    iconeBurger.classList.remove("iconeretourne");
+}
+

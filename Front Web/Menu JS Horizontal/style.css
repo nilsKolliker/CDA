@@ -41,12 +41,11 @@ main {
     flex: 4;
 }
 .menu{
-    
+    position: relative;
     height: min-content;
 }
 
-.titreNav,
-.menuItem {
+.titreNav, .menuItem, .fusee {
     font-size: 2em;
     color: var(--font);
     background-color: var(--bgc1);
@@ -87,6 +86,35 @@ main {
     background-color: #fff;
 }
 
+.space{
+    height: 100vh;
+    object-fit: cover;
+}
+
+.hidden{
+    display: none;
+}
+
+.bigV{
+    flex: none;
+    height: 50vh;
+}
+
+.fusee{
+    display: none;
+    position: fixed;
+    top:80vh;
+    left:45vw;
+    height: 10vw;
+    width: 10vw;
+    border-radius: 100%;
+}
+
+.fa-rocket{
+    transform: rotate(-45deg);
+}
+
+/****  Tel  ****/
 @media screen and (max-width: 800px) {
     .titreNav {
         display: flex;
@@ -100,7 +128,26 @@ main {
         top:0;
     }
 
-    .menu{
+    .telNone{
         display: none;
+    }
+
+    nav{
+        position: relative;
+    }
+
+    .telAbs{
+        position:absolute;
+        width: 100%;
+    }
+
+    i{
+        transform: rotate(180deg);
+        transition: 0.1s;
+    }
+    
+    .iconeretourne{
+        transform: rotate(0deg);
+        transition: 0.1;
     }
 }
