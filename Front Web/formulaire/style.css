@@ -1,9 +1,14 @@
 :root{
     --colorPolice:#555;
     --colorFont:#ddd;
+    --colorValid:rgb(141,255,141);
+    --colirInvalid:rgb(255,141,141);
+}
+html{
+    background-color: var(--colorFont);
 }
 
-html, body, div, label, input, form, select{
+html, body, div, main{
     margin: 0;
     padding: 0;
     display: flex;
@@ -33,8 +38,35 @@ html, body, div, label, input, form, select{
 }
 
 .green{
-    background-color: rgb(141,255,141);
+    background-color: var(--colorValid);
 }
 .red{
-    background-color: rgb(255,141,141);
+    background-color: var(--colirInvalid);
+}
+
+form{
+    padding: 1em;
+    border-radius: 3vh;
+    background-color: var(--colorPolice);
+    color: var(--colorFont);
+    display: grid;
+    grid-template-columns: 5fr 5fr 1fr;
+}
+.relative{
+    position: relative;
+}
+.indice{
+    border: var(--colorPolice) solid 1px;
+    padding: 1em;
+    border-radius: 3vh;
+    position: absolute;
+    background-color: var(--colorFont);
+    color: var(--colorPolice);
+    left: 100%;
+    width: 500%;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
 }

@@ -8,8 +8,39 @@
     <script src="https://kit.fontawesome.com/a6b48dfea6.js" crossorigin="anonymous"></script>
     <title>NOM DU SITE</title>
 </head>
-<body>
-    
+<body class="column">
+    <header>
+
+    </header>
+    <div class="spaceHorizon"></div>
+    <main>
+        <div></div>
+        <form action="" method="GET">
+            <label for="Nom">Nom : </label>
+            <input type="text" name="Nom" pattern="^([A-Z]+[ '-])*[A-Z]{2,}$" title="NOM en Majuscule (tiret, espace et apostrophe autorisé)" required>
+            <div class="centre relative"><i class="fas fa-question-circle"></i></div>
+            <label for="Prenom">Prenom : </label>
+            <input type="text" name="Prenom" pattern="^[A-Z][a-z]+([- ][A-Z][a-z]+)*$" title="La 1ere lettre du(des) Prenom(s) en majuscule et le reste en minuscule (tiret et espace autorisé)">
+            <div class="centre relative"><i class="fas fa-question-circle"></i></div>
+            <label for="Age">Age : </label>
+            <input type="number" name="Age" min="0" max="130" title="nombre entier entre 0 et 130">
+            <div class="centre relative"><i class="fas fa-question-circle"></i></div>
+            <label for="Password">Mot De Passe : </label>
+            <input type="password" name="Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*\W).{8,}$" title="1 minuscule, 1 majuscule, 1 chiffre, 1 caractère spécial, 8 caractères minimum">
+            <div class="centre relative"><i class="fas fa-question-circle"></i></div>
+            <label for="Confirmation">Confirmer le MDP : </label>
+            <input type="password" name="Confirmation" title="Réécrire le mot de Passe">
+            <div class="centre relative"><i class="fas fa-question-circle"></i></div>
+
+            <button type="button">Reset</button>
+            <button type="submit" disabled>Valider</button>
+        </form>
+        <div></div>
+    </main>
+    <div class="spaceHorizon"></div>
+    <footer>
+
+    </footer>
     <script src="script.js"></script>
 </body>
 
