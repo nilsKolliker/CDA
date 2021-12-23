@@ -58,24 +58,33 @@ function voirIndice(event){
         detruitIndice(indice);   
     });
     let parent=event.target.parentNode;
+    let inputCorespondant=parent.previousElementSibling;
     if (!parent.querySelector(".indice")) {
         let indice=document.createElement("div");
-        if (parent.previousElementSibling.name=="Password") {
-            indice.classList.add("indice grid");
-            let listeIndiceMdp=parent.previousElementSibling.title.split(", ");
-            // parent.previousElementSibling.pattern
+        indice.classList.add("indice");
+        event.target.parentNode.insertBefore(indice,null);
+        if (inputCorespondant.name=="Password") {
+            indice.classList.add("grid");
+            let listeIndiceMdp=inputCorespondant.title.split(", ");
+            let listePatern= inputCorespondant.pattern.replace(/\)/g,")[separateur]").split("[separateur]");
             for (let i = 0; i < listeIndiceMdp.length; i++) {
                 listeIndiceMdp[i];
                 let divValidité=document.createElement("div");
                 let iconValidité=document.createElement("i");
+                iconValidité.classList.add("fas");
+                if (RegExp(listePatern[i]).test(inputCorespondant.value)) {
+                    iconValidité.classList.add("fa-check-circle","greenIcone");
+                }else{
+                    iconValidité.classList.add("fa-times-circle","redIcone");
+                }
                 let divIndice=document.createElement("div");
-                appendChild(document.createTextNode(listeIndiceMdp[i]));
-                
+                divIndice.appendChild(document.createTextNode(listeIndiceMdp[i]));
+                indice.insertBefore(divValidité,null);  
+                indice.insertBefore(divIndice,null);
+                divValidité.insertBefore(iconValidité, null);  
             }
         }else{
-            indice.classList.add("indice");
-            indice.appendChild(document.createTextNode(parent.previousElementSibling.title));
-            event.target.parentNode.insertBefore(indice,null);
+            indice.appendChild(document.createTextNode(inputCorespondant.title));
         }
         
     }  

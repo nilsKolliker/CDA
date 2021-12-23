@@ -3,6 +3,7 @@
     --colorFont:#ddd;
     --colorValid:rgb(141,255,141);
     --colirInvalid:rgb(255,141,141);
+    --colorFontIndice:white;
 }
 html{
     background-color: var(--colorFont);
@@ -44,6 +45,13 @@ html, body, div, main{
     background-color: var(--colirInvalid);
 }
 
+.greenIcone{
+    color: var(--colorValid);
+}
+.redIcone{
+    color: var(--colirInvalid);
+}
+
 form{
     padding: 1em;
     border-radius: 3vh;
@@ -56,11 +64,10 @@ form{
     position: relative;
 }
 .indice{
-    border: var(--colorPolice) solid 1px;
     padding: 1em;
     border-radius: 3vh;
     position: absolute;
-    background-color: var(--colorFont);
+    background-color: var(--colorFontIndice);
     color: var(--colorPolice);
     left: 100%;
     width: 500%;
