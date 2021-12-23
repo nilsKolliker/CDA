@@ -111,7 +111,24 @@ main {
 }
 
 .fa-rocket{
-    transform: rotate(-45deg);
+    transform:rotate(-45deg);
+    position: relative;
+}
+
+.fa-burn{
+    position: absolute;
+    transform: rotate(225deg) translate(0.6em, -1.5em);
+}
+
+.decolage{
+    animation: decolage 0.2s infinite;
+}
+
+@keyframes decolage{
+    0%{transform:rotate(-45deg) translate(0.1em,0.1em);}
+    33%{transform:rotate(-45deg) translate(0,0);}
+    66%{transform:rotate(-45deg) translate(-0.1em,0.1em);}
+    100%{transform:rotate(-45deg) translate(0,0);}
 }
 
 /****  Tel  ****/

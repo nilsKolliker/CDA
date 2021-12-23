@@ -4,13 +4,13 @@ var nav=document.querySelector("nav");//stocke la nav
 var iconeBurger=nav.querySelector("i");//stoke l'icone du menu
 var burgerOuvert=false;//stoke si le menu burger est ouver ou non
 
-var premiereSection=getElementsById("section1")
+var fusee=document.querySelector(".fusee");
+var flamme=document.querySelector(".fa-burn");
+var premiereSection=document.querySelector("#section1");
+var space=document.querySelector(".space");
 
-// se déclanche au scroll
-window.onscroll = function (e) {
-    if(premiereSection.scrollHeight - premiereSection.scrollTop === premiereSection.clientHeight)
-    
-} 
+window.addEventListener("scroll",joueDeLEspace);
+fusee.addEventListener("click", decollage);
 
 // on gère le survol et le clic des menus
 var listeMenus = document.getElementsByClassName("menu");
@@ -123,3 +123,40 @@ function fermerMenuBurger(){
     iconeBurger.classList.remove("iconeretourne");
 }
 
+
+function joueDeLEspace(){
+    cacheEspace();
+    afficheOuCacheFusee();
+}
+
+function cacheEspace(){
+    if (!space.classList.contains("hidden")&&space.offsetHeight<window.scrollY) {
+        space.classList.add("hidden");
+        window.scroll(0, 0);
+    }
+}
+
+function afficheOuCacheFusee(){
+    if(window.scrollY>premiereSection.offsetTop){
+        fusee.style.display = "flex"
+        flamme.style.display = "none"
+    }else{
+        fusee.style.display = "none"
+    }
+}
+
+function decollage(){
+    flamme.style.display = "inline-block"
+    fusee.firstChild.classList.add("decolage");
+    window.setTimeout(dansLesEtoiles, 1000);
+}
+
+function dansLesEtoiles(){
+    space.classList.remove("hidden");
+    window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+    });
+    fusee.firstChild.classList.remove("decolage");
+}

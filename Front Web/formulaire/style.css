@@ -1,0 +1,40 @@
+:root{
+    --colorPolice:#555;
+    --colorFont:#ddd;
+}
+
+html, body, div, label, input, form, select{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex:1;
+}
+
+.column{
+    flex-direction: column;
+}
+
+.spaceHorizon{
+    flex: none;
+    height: 3vh;
+}
+
+.demi{
+    flex: 0.5;
+}
+
+.mini{
+    flex: 0.2;
+}
+
+.centre{
+    align-items: center;
+    justify-content: center;
+}
+
+.green{
+    background-color: rgb(141,255,141);
+}
+.red{
+    background-color: rgb(255,141,141);
+}

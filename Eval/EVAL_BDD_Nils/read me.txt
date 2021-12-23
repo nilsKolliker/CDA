@@ -1,0 +1,7 @@
+Comme le terme voeu est utiliser au singulier et que le cadeau dépend du voeu,
+et n'aillant pas la possibilitée de demander au pere noël car je ne suis plus un enfant
+j'ai déduis qu'un enfant ne peut formuler qu'un voeu au pere noel et ne peut donc recevoir qu'un cadeau.
+
+De plus, comme les numéros d'identifications des enfants, lutins et traîneaux ont déjà été attribués, je ne vais pas les auto_incrementer.
+Enfin j'estime qu'un enfant peut ne pas avoir de cadeaux (par exemple si son adresse n'est pas renseigner... ça arrive tous les ans, dans le tiers monde)
+(Du coup, j'ai laissé la possibilité de ne pas renseigner l'adresse d'un enfant)
