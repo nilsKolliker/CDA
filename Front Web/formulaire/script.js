@@ -14,6 +14,12 @@ listeIndice.forEach(indice => {
     indice.addEventListener("mouseout", cacheIndice);     
 });
 
+document.querySelectorAll(".fa-eye").forEach(oeil => {
+    oeil.addEventListener("mousedown", voirMdp);
+    oeil.addEventListener("mouseup", cacheMdp);
+    oeil.addEventListener("mouseout", cacheMdp);
+});
+
 function check(event){
     checkInput(event.target)
     if (event.target.name=="Password") {
@@ -60,9 +66,14 @@ function voirIndice(event){
     let parent=event.target.parentNode;
     let inputCorespondant=parent.previousElementSibling;
     if (!parent.querySelector(".indice")) {
-        let indice=document.createElement("div");
+        creerIndice(parent, inputCorespondant)
+    }  
+}
+
+function creerIndice(divCible, inputCorespondant){
+    let indice=document.createElement("div");
         indice.classList.add("indice");
-        event.target.parentNode.insertBefore(indice,null);
+        divCible.insertBefore(indice,null);
         if (inputCorespondant.name=="Password") {
             indice.classList.add("grid");
             let listeIndiceMdp=inputCorespondant.title.split(", ");
@@ -86,8 +97,6 @@ function voirIndice(event){
         }else{
             indice.appendChild(document.createTextNode(inputCorespondant.title));
         }
-        
-    }  
 }
 
 function cacheIndice(event){
@@ -99,4 +108,14 @@ function detruitIndice(indice){
     if (parent.querySelector(".indice")) {//sécu au cas ou l' indice n'existe pas
         parent.removeChild(parent.querySelector(".indice"));
     }
+}
+
+function voirMdp(event){
+    event.target.classList.add("active");
+    event.target.parentNode.previousElementSibling.type="text";
+}
+
+function cacheMdp(event){
+    event.target.classList.remove("active");
+    event.target.parentNode.previousElementSibling.type="password";
 }

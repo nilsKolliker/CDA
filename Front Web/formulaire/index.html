@@ -26,10 +26,14 @@
             <input type="number" name="Age" min="0" max="130" title="nombre entier entre 0 et 130">
             <div class="centre relative"><i class="fas fa-question-circle"></i></div>
             <label for="Password">Mot De Passe : </label>
-            <input type="password" name="Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*\W).{8,}$" title="1 minuscule, 1 majuscule, 1 chiffre, 1 caractère spécial, 8 caractères minimum">
-            <div class="centre relative"><i class="fas fa-question-circle"></i></div>
+            <input required type="password" name="Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*\W).{8,}$" title="1 minuscule, 1 majuscule, 1 chiffre, 1 caractère spécial, 8 caractères minimum">
+            <div class="centre relative"><i class="fas fa-eye"></i><i class="fas fa-question-circle"></i></div>
             <label for="Confirmation">Confirmer le MDP : </label>
-            <input type="password" name="Confirmation" title="Réécrire le mot de Passe">
+            <input required type="password" name="Confirmation" title="Réécrire le mot de Passe">
+            <div class="centre relative"><i class="fas fa-eye"></i><i class="fas fa-question-circle"></i></div>
+
+            <label for="eMail">Email : </label>
+            <input type="email" name="eMail" title="une adresse mail correct" pattern="^[A-Za-z]([\.\-_]?[A-Za-z0-9])+@[A-Za-z]([\.\-_]?[A-Za-z0-9])+\.[A-Za-z]{2,4}$" required>
             <div class="centre relative"><i class="fas fa-question-circle"></i></div>
 
             <button type="button">Reset</button>

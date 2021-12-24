@@ -9,7 +9,7 @@ html{
     background-color: var(--colorFont);
 }
 
-html, body, div, main{
+html, body, div, main, input, label{
     margin: 0;
     padding: 0;
     display: flex;
@@ -59,21 +59,37 @@ form{
     color: var(--colorFont);
     display: grid;
     grid-template-columns: 5fr 5fr 1fr;
+    row-gap: 0.5em;
+    column-gap: 0.5em;
 }
 .relative{
     position: relative;
 }
 .indice{
     padding: 1em;
+    border: var(--colorPolice) 1px solid;
     border-radius: 3vh;
     position: absolute;
     background-color: var(--colorFontIndice);
     color: var(--colorPolice);
-    left: 100%;
-    width: 500%;
+    top: 100%;
+    width: 600%;
+    z-index: 1;
 }
 
 .grid{
     display: grid;
     grid-template-columns: 1fr 5fr;
+}
+
+.fa-eye{
+    position: absolute;
+    left: -2em;
+    color: var(--colorPolice);
+}
+
+.active{
+    color: var(--colorFontIndice);
+    background-color: var(--colorPolice);
+    border-radius: 40%;
 }
