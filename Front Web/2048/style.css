@@ -1,0 +1,25 @@
+html, body, div, label, input, button{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex:1;
+}
+.column, body{
+    flex-direction: column;
+}
+.mini{
+    flex: 0.2;
+}
+.spaceHorizon{
+    flex: none;
+    height: 3vh;
+}
+.grid{
+    display: grid;
+    row-gap: 0.5em;
+    column-gap: 0.5em;
+}
+
+input{
+    text-align: center;
+}
