@@ -9,6 +9,7 @@ class Employe{
     private $_salaire;
     private $_service;
     private $_agence;
+    private $_listeDEnfant=[];
 
     /*******************************************************************Accesseurs*************************************************************************** */
 
@@ -68,6 +69,14 @@ class Employe{
         $this->_agence = $agence;
     }
 
+    public function getListeDEnfant(){
+        return $this->_listeDEnfant;
+    }
+
+    public function setListeDEnfant($listeDEnfant){
+        $this->_listeDEnfant = $listeDEnfant;
+    }
+
     /*******************************************************************Constructeur************************************************************************* */
 
     public function __construct(array $options = []){
@@ -92,7 +101,19 @@ class Employe{
      * @return String
      */
     public function toString(){
-        return "nom: ".$this->getNom()."\nprenom: ".$this->getPrenom()."\ndateDEmbauche: ".$this->getDateDEmbauche()."\nposte: ".$this->getPoste()."\nsalaire: ".$this->getSalaire()."\nservice: ".$this->getService()."\nAgence: ".$this->getAgence()->toString();
+        $string= "nom: ".$this->getNom()."\nprenom: ".$this->getPrenom()."\ndateDEmbauche: ".$this->getDateDEmbauche()."\nposte: ".$this->getPoste()."\nsalaire: ".$this->getSalaire()."\nservice: ".$this->getService()."\nAgence: ".$this->getAgence()->toString()."Cheque vacance: ";
+        $string.=$this->droitAuChequeVacance()?"oui":"non";
+        $string.="\nCheque noel: ";
+        if ($this->droitAuChequeNoel()) {
+            $string.="oui\n";
+            foreach ($this->chequesNoel() as $valeur => $nombre) {
+                $string.=$nombre." cheque(s) de ".$valeur.". ";
+            }
+            $string.="\n";
+        }else{
+            $string.="non\n";
+        }
+        return $string;
     }
 
     /**
@@ -183,4 +204,25 @@ class Employe{
         return $this->_salaire+$this->calculPrime();
     }
 
+    private function droitAuChequeVacance(){
+        return $this->anciennete()>=1;
+    }
+
+    public function chequesNoel(){
+        $tabCheque=[];
+        foreach ($this->getListeDEnfant() as $gosse) {
+            if (isset($tabCheque[$gosse->valeurDuCheque()])) {
+                $tabCheque[$gosse->valeurDuCheque()]++;
+            }else{
+                $tabCheque[$gosse->valeurDuCheque()]=1;
+            }
+
+        }
+        unset($tabCheque[0]);
+        return $tabCheque;
+    }
+
+    public function droitAuChequeNoel(){
+        return (count($this->chequesNoel())>0);
+    }
 }

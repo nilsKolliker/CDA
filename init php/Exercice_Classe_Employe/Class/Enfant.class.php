@@ -1,53 +1,17 @@
 <?php
-class Agence{
+class Enfant{
 
     /*******************************************************************Attributs**************************************************************************** */
-    private $_nom;
-    private $_adresse;
-    private $_codePostal;
-    private $_ville;
-    private $_restaurant;
+    private $_dateDeNaissance;
 
     /*******************************************************************Accesseurs*************************************************************************** */
 
-    public function getNom(){
-        return $this->_nom;
+    public function getDateDeNaissance(){
+        return $this->_dateDeNaissance->format("d/m/Y");
     }
 
-    public function setNom($nom){
-        $this->_nom = $nom;
-    }
-
-    public function getAdresse(){
-        return $this->_adresse;
-    }
-
-    public function setAdresse($adresse){
-        $this->_adresse = $adresse;
-    }
-
-    public function getCodePostal(){
-        return $this->_codePostal;
-    }
-
-    public function setCodePostal($codePostal){
-        $this->_codePostal = $codePostal;
-    }
-
-    public function getVille(){
-        return $this->_ville;
-    }
-
-    public function setVille($ville){
-        $this->_ville = $ville;
-    }
-
-    public function getRestaurant(){
-        return $this->_restaurant;
-    }
-
-    public function setRestaurant($restaurant){
-        $this->_restaurant = $restaurant;
+    public function setDateDeNaissance($dateDeNaissance){
+        $this->_dateDeNaissance = DateTime::createFromFormat("j/n/Y",$dateDeNaissance);
     }
 
     /*******************************************************************Constructeur************************************************************************* */
@@ -74,9 +38,7 @@ class Agence{
      * @return String
      */
     public function toString(){
-        $string= "nom : ".$this->getNom()." adresse : ".$this->getAdresse()." ".$this->getCodePostal()." ".$this->getVille()."\nrestauration : ";
-        $string.=$this->getRestaurant()?"resto\n":"ticket\n";
-        return $string;
+        return "";
     }
 
     /**
@@ -100,5 +62,22 @@ class Agence{
      */
     public static function compareTo($obj1, $obj2){
         return 0;
+    }
+
+    public function ageDuGosse(){
+        return date_diff($this->_dateDeNaissance,new DateTime())->format("%y");
+    }
+
+    public function valeurDuCheque(){
+        $age=$this->ageDuGosse();
+        if ($age<11) {
+            return 20;
+        }else if($age<16){
+            return 30;
+        }else if($age<19){
+            return 50;
+        }else{
+            return 0;
+        }
     }
 }
