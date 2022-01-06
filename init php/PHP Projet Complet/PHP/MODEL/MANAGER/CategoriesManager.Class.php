@@ -22,14 +22,18 @@ class CategoriesManager
 	public static function delete(Categories $obj)
 	{
  		$db=DbConnect::getDb();
-		$id = (int) $obj->getIdCategorie(); // permet de bloquer les injections SQL
-		$db->exec("DELETE FROM Categories WHERE idCategorie=" .$id);
+		// $id = (int) $obj->getIdCategorie(); // permet de bloquer les injections SQL
+		$q=$db->prepare("DELETE FROM Categories WHERE idCategorie=:idCategorie");
+		$q->bindValue(":idCategorie", $obj->getIdCategorie(),PDO::PARAM_INT);
+		$q->execute();
 	}
 	public static function findById($id)
 	{
  		$db=DbConnect::getDb();
-		$id = (int) $id;
-		$q=$db->query("SELECT * FROM Categories WHERE idCategorie =".$id);
+		// $id = (int) $id;
+		$q=$db->prepare("SELECT * FROM Categories WHERE idCategorie=:idCategorie");
+		$q->bindValue(":idCategorie", $id,PDO::PARAM_INT);
+		$q->execute();
 		$results = $q->fetch(PDO::FETCH_ASSOC);
 		if($results != false)
 		{

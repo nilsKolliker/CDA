@@ -27,14 +27,18 @@ class ProduitsManager
     public static function delete(Produits $obj)
     {
         $db = DbConnect::getDb();
-        $db->exec("DELETE FROM Produits WHERE idProduit=" . $obj->getIdProduit());
+        $q=$db->prepare("DELETE FROM Produits WHERE idProduit=:idProduit");
+        $q->bindValue(":idProduit", $obj->getIdProduit(),PDO::PARAM_INT);
+		$q->execute();
     }
 
     public static function findById($id)
     {
         $db = DbConnect::getDb();
-        $id = (int) $id;  // on verifie que id est numerique, evite l'injection SQL
-        $q = $db->query("SELECT * FROM Produits WHERE idProduit=" . $id);
+        // $id = (int) $id;  // on verifie que id est numerique, evite l'injection SQL
+        $q = $db->prepare("SELECT * FROM Produits WHERE idProduit=:idProduit");
+        $q->bindValue(":idProduit", $id,PDO::PARAM_INT);
+		$q->execute();
         $results = $q->fetch(PDO::FETCH_ASSOC);
         if ($results != false)
         {
@@ -63,10 +67,12 @@ class ProduitsManager
 
     public static function getListByCategorie($idCategorie)
     {
-        $idCategorie=(int) $idCategorie;
+        // $idCategorie=(int) $idCategorie;
         $db = DbConnect::getDb();
         $liste = [];
-        $q = $db->query("SELECT * FROM Produits where idCategorie=$idCategorie");
+        $q = $db->prepare("SELECT * FROM Produits where idCategorie=:idCategorie");
+        $q->bindValue(":idCategorie", $idCategorie,PDO::PARAM_INT);
+		$q->execute();
         while ($donnees = $q->fetch(PDO::FETCH_ASSOC))
         {
             if ($donnees != false)

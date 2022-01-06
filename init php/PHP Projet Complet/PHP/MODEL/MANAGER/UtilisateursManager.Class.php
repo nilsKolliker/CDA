@@ -31,13 +31,17 @@ class UtilisateursManager
     public static function delete(Utilisateurs $obj)
     {
         $db = DbConnect::getDb();
-        $db->exec("DELETE FROM Utilisateurs WHERE idUtilisateur=" . $obj->getIdUtilisateur());
+        $q=$db->prepare("DELETE FROM Utilisateurs WHERE idUtilisateur=:idUtilisateur");
+        $q->bindValue(":idUtilisateur", $obj->getIdUtilisateur(),PDO::PARAM_INT);
+		$q->execute();
     }
     public static function findById($id)
     {
         $db = DbConnect::getDb();
-        $id = (int) $id;
-        $q = $db->query("SELECT * FROM Utilisateurs WHERE idUtilisateur =" . $id);
+        // $id = (int) $id;
+        $q = $db->prepare("SELECT * FROM Utilisateurs WHERE idUtilisateur =:idUtilisateur");
+        $q->bindValue(":idUtilisateur", $id,PDO::PARAM_INT);
+		$q->execute();
         $results = $q->fetch(PDO::FETCH_ASSOC);
         if ($results != false)
         {
@@ -65,9 +69,11 @@ class UtilisateursManager
     public static function findByPseudo($pseudo)
     {
 		$db = DbConnect::getDb();
-        if (!in_array(";",str_split( $pseudo))) // s'il n'y a pas de ; , je lance la requete
-        {
-            $q = $db->query("SELECT * FROM Utilisateurs WHERE pseudo ='" . $pseudo . "'");
+        // if (!in_array(";",str_split( $pseudo))) // s'il n'y a pas de ; , je lance la requete
+        // {
+            $q = $db->prepare("SELECT * FROM Utilisateurs WHERE pseudo =:pseudo");
+            $q->bindValue(":pseudo", $pseudo,PDO::PARAM_STR);
+		    $q->execute();
             $results = $q->fetch(PDO::FETCH_ASSOC);
             if ($results != false)
             {
@@ -77,10 +83,10 @@ class UtilisateursManager
             {
                 return false;
             }
-        }
-        else
-        {
-            return false;
-        }
+        // }
+        // else
+        // {
+        //     return false;
+        // }
     }
 }
