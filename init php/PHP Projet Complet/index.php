@@ -17,9 +17,9 @@ if (isset($_GET['lang'])) {
 }
 
 //on prend la langue de la session sinon FR par défaut
-$lang = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'FR';
+$_SESSION['lang'] = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'FR';
 
-echo texte("Accueil");//un accueil furtif pour tester
+// echo texte("Accueil");//un accueil furtif pour tester
 
 /* création d'un tableau de redirection, en fonction du page, on choisit la page à afficher */
 // Dossier / Nom du fichier / Titre de la page / Autorisation requise / Api ou pas 
@@ -39,7 +39,9 @@ $routes = [
 
     "listeCategorie" => ["PHP/VIEW/LISTE/", "ListeCategorie", "Liste des Catégories", 2, false],
     "formCategorie" => ["PHP/VIEW/FORM/", "FormCategorie", "Gestion des catégories", 2, false],
-    "actionCategorie" => ["PHP/CONTROLLER/ACTION/", "ActionCategorie", "Mise à jour du produit", 2, false]
+    "actionCategorie" => ["PHP/CONTROLLER/ACTION/", "ActionCategorie", "Mise à jour du produit", 2, false],
+    
+    "erreur" => ["PHP/VIEW/GENERAL/", "Erreur", "Une erreur est survenue", 0, false]
 ];
 
 if (isset($_GET["page"])) {

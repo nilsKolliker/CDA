@@ -49,10 +49,30 @@ CREATE TABLE IF NOT EXISTS `texte` (
   KEY `Code Texte` (`codeTexte`)
 ) ENGINE = InnoDB AUTO_INCREMENT = 36 DEFAULT CHARSET = utf8;
 
+-- DROP TABLE IF EXISTS erreurs;
+
+-- CREATE TABLE IF NOT EXISTS erreurs (
+--   idErreur int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+--   codeErreur varchar(50) NOT NULL,
+--   texteErreur varchar(200) NOT NULL
+-- ) ENGINE = InnoDB DEFAULT CHARSET = utf8;
+
 ALTER TABLE
   produits
 ADD
   CONSTRAINT FK_Produit_Categorie FOREIGN KEY (idCategorie) REFERENCES categories (idCategorie);
+
+-- INSERT INTO
+--   erreurs (idErreur, codeErreur, texteErreur)
+-- VALUES
+--   (1, 'Inconnue', '418: je suis une théière !'),
+--   (2, 'Ajouter', 'L\'ajout a échoué'),
+--   (3, 'Modifier', 'La modification a échoué'),
+--   (4, 'Supprimer', 'La suppression a échoué'),
+--   (5, 'Confirm', 'La confirmation ne correspond pas au mot de passe'),
+--   (6, 'DoublePsedo', 'Le pseudo existe deja'),
+--   (7, 'MdpIncorrect', 'Le mot de passe est incorrect'),
+--   (8, 'PsedoUnkn', 'Le pseudo n\'existe pas');
 
 INSERT INTO
   categories (idCategorie, LibelleCategorie)
@@ -120,4 +140,12 @@ VALUES
   (3, 'Afficher', 'Display', 'Afficher'),
   (4, 'Modifier', 'Update', 'Modifier'),
   (5, 'Supprimer', 'Remove', 'Supprimer'),
-  (6, 'art1', 'this is an article', 'c\'est un article ');
+  (6, 'art1', 'this is an article', 'c\'est un article '),
+  (7, 'Inconnue','418 I\'m a teapot', '418: je suis une théière !'),
+  (8, 'erreurAjouter','Add failed', 'L\'ajout a échoué'),
+  (9, 'erreurModifier','Update failed', 'La modification a échoué'),
+  (10, 'erreurSupprimer','Delete failed', 'La suppression a échoué'),
+  (11, 'Confirm','Confirmation not match', 'La confirmation ne correspond pas au mot de passe'),
+  (12, 'DoublePsedo','Nickname already exists ', 'Le pseudo existe deja'),
+  (13, 'MdpIncorrect','incorrect password', 'Le mot de passe est incorrect'),
+  (14, 'PsedoUnkn','nickname unknown', 'Le pseudo n\'existe pas');
