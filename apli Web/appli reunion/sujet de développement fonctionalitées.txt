@@ -1,0 +1,28 @@
+-systeme de planification des reunions
+-systeme de planification des taches de preparation
+-chat vocal en multi
+-persistance des données audios
+-redaction des ordres du jour
+-archivage automatique des ordres du jour
+-distribution automatique des ordres du jour
+-possibilité de consulter les ordres du jour archivés
+-redaction automatique des comptes-rendus
+-personnalisation des comptes-rendus
+-archivage automatique des comptes-rendus
+-distribution automatique des comptes-rendus
+-possibilité de consulter les comptes-rendus archivés
+-possibilité de creer et diffuser des tableaux analytiques détaillés
+-possibilité de creer et diffuser des tableaux de bord
+-possibilité de creer et diffuser des tableaux d'etat des taches
+-possibilité de prendre des notes rapide et efficace
+-possibilité de capturer des notes
+-outils d'aide à la decision
+-possibilité d'attribution d'actions à entreprendre
+-possibilité de suivi de l'etat des taches
+-possibilité de regrouper les taches en projets
+-envoi automatique de rappels sur le suivi des taches
+-possibilité de rechercher efficace les documents archivés
+-possibilité de rattacher des fichiers et des hyperliens
+-outil répartition du temps entre les sujets
+-possibilité de gestion des permissions de chacun
+
