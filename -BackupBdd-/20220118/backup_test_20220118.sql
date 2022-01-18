@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.7.31, for Win64 (x86_64)
 --
--- Host: localhost    Database: personnes
+-- Host: localhost    Database: test
 -- ------------------------------------------------------
 -- Server version	5.7.31
 
@@ -16,36 +16,39 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Current Database: `personnes`
+-- Current Database: `test`
 --
 
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ `personnes` /*!40100 DEFAULT CHARACTER SET utf8 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `test` /*!40100 DEFAULT CHARACTER SET latin1 */;
 
-USE `personnes`;
+USE `test`;
 
 --
--- Table structure for table `utilisateurs`
+-- Table structure for table `chaise`
 --
 
-DROP TABLE IF EXISTS `utilisateurs`;
+DROP TABLE IF EXISTS `chaise`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `utilisateurs` (
-  `Identifiant` int(11) NOT NULL AUTO_INCREMENT,
-  `Nom` varchar(50) NOT NULL,
-  `Prenom` varchar(50) NOT NULL,
-  PRIMARY KEY (`Identifiant`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+CREATE TABLE `chaise` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `date1` date DEFAULT NULL,
+  `date2` date NOT NULL,
+  `time1` time DEFAULT NULL,
+  `time2` time NOT NULL,
+  `int` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `utilisateurs`
+-- Dumping data for table `chaise`
 --
 
-LOCK TABLES `utilisateurs` WRITE;
-/*!40000 ALTER TABLE `utilisateurs` DISABLE KEYS */;
-INSERT INTO `utilisateurs` VALUES (1,'Poson','Alan'),(2,'Degaulle','Charles');
-/*!40000 ALTER TABLE `utilisateurs` ENABLE KEYS */;
+LOCK TABLES `chaise` WRITE;
+/*!40000 ALTER TABLE `chaise` DISABLE KEYS */;
+INSERT INTO `chaise` VALUES (1,NULL,'2022-01-11','18:27:18','20:27:18',NULL),(2,NULL,'2001-12-21',NULL,'03:02:01',NULL);
+/*!40000 ALTER TABLE `chaise` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
