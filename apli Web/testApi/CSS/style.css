@@ -1,0 +1,20 @@
+.grilleApi{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    border: 1px solid var(--mainBG2);
+    border-radius: 3%;
+    overflow: hidden;
+}
+
+main{
+    background-color: var(--mainBG);
+}
+
+header, footer{
+    background-color: var(--headerFooterBG);
+}
+
+.ligne1{
+    background-color: var(--mainBG2);
+}
