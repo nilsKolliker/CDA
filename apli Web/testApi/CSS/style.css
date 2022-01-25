@@ -4,7 +4,6 @@
     justify-content: center;
     border: 1px solid var(--mainBG2);
     border-radius: 3%;
-    overflow: hidden;
 }
 
 main{
@@ -15,6 +14,6 @@ header, footer{
     background-color: var(--headerFooterBG);
 }
 
-.ligne1{
+.ligne0{
     background-color: var(--mainBG2);
 }
