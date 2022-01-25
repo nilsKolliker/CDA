@@ -54,6 +54,7 @@ function afficheContenu(e) {
                 reponse = JSON.parse(this.responseText);
                 var templLigne = document.getElementById("template");
                 if(reponse.data.length){
+                    laCarte.classList.remove("noDisplay");
                     laCarte.src="https://www.openstreetmap.org/export/embed.html?bbox="+(reponse.data[0].longitude-0.005)+"%2C"+(reponse.data[0].latitude-0.005)+"%2C"+(reponse.data[0].longitude+0.005)+"%2C"+(reponse.data[0].latitude+0.005)+"&amp;layer=mapnik";
                 }
                 for (let i = 0; i < reponse.data.length; i++) {
