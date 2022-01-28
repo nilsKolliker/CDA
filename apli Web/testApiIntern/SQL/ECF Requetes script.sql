@@ -2,10 +2,10 @@ DROP DATABASE if exists ApiIntern;
 CREATE DATABASE ApiIntern;
 USE ApiIntern;
 --
--- Table structure for table villes_france
+-- Table structure for table villesfrance
 --
 
-CREATE TABLE IF NOT EXISTS villes_france (
+CREATE TABLE IF NOT EXISTS villesfrance (
   ville_id mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
   ville_departement varchar(3) DEFAULT NULL,
   ville_slug varchar(255) DEFAULT NULL UNIQUE,

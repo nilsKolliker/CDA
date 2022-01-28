@@ -1,2 +1,2 @@
 <?php
-echo JSON_encode(VillesFranceManager::getList(null,["ville_id" => $id],null,null,true));
+echo JSON_encode(VillesFranceManager::getList(null,["ville_id" => $_POST["idVille"]],null,null,true));

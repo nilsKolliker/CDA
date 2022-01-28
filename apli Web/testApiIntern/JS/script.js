@@ -67,7 +67,6 @@ function creeInfo(e) {
         requ.onreadystatechange = function(event) {
             if (this.readyState === XMLHttpRequest.DONE) {
                 if (this.status === 200) {
-                    console.log(this.responseText);
                     reponse=JSON.parse(this.responseText); 
                     console.log(reponse);
                 } else {
