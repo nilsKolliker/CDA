@@ -1,7 +1,10 @@
+using crudTextCsharp.Data;
+using crudTextCsharp.Data.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -26,11 +29,24 @@ namespace crudTextCsharp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<MyDbContext>(options => options.UseMySQL(Configuration.GetConnectionString("GoDTB")));
+            services.AddTransient<UtilisateursService>();
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "crudTextCsharp", Version = "v1" });
+            });
+            services.AddCors(option =>
+            {
+                option.AddPolicy(name: "policy",
+                    builder =>
+                    {
+                        builder.WithOrigins("http://cda")
+                        .WithMethods("PUT", "DELETE", "POST", "GET")
+                        .WithHeaders("content-type");
+                    });
             });
         }
 
@@ -43,6 +59,7 @@ namespace crudTextCsharp
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "crudTextCsharp v1"));
             }
+            app.UseCors("policy");
 
             app.UseHttpsRedirection();
 

@@ -12,8 +12,8 @@ namespace crudTextCsharp.Data.Profiles
     {
         public UtilisateursProfile()
         {
-            CreateMap<Utilisateur, UtilisateurDTO>();
-            CreateMap<UtilisateurDTO, Utilisateur > ();
+            CreateMap<Utilisateur, UtilisateurDTOout>();
+            CreateMap<UtilisateurDTOin, Utilisateur > ();
         }
     }
 }
