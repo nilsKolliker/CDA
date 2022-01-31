@@ -70,7 +70,7 @@ CREATE TABLE `lignespaniers` (
   KEY `IdPanier` (`IdPanier`),
   CONSTRAINT `lignespaniers_ibfk_1` FOREIGN KEY (`IdArticle`) REFERENCES `articles` (`IdArticle`),
   CONSTRAINT `lignespaniers_ibfk_2` FOREIGN KEY (`IdPanier`) REFERENCES `paniers` (`IdPanier`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -79,6 +79,7 @@ CREATE TABLE `lignespaniers` (
 
 LOCK TABLES `lignespaniers` WRITE;
 /*!40000 ALTER TABLE `lignespaniers` DISABLE KEYS */;
+INSERT INTO `lignespaniers` VALUES (1,2,1,1),(3,3,1,1);
 /*!40000 ALTER TABLE `lignespaniers` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -95,7 +96,7 @@ CREATE TABLE `paniers` (
   `DatePanier` date DEFAULT NULL,
   `AdresseLivraison` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`IdPanier`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -104,6 +105,7 @@ CREATE TABLE `paniers` (
 
 LOCK TABLES `paniers` WRITE;
 /*!40000 ALTER TABLE `paniers` DISABLE KEYS */;
+INSERT INTO `paniers` VALUES (1,5,'2022-01-31','ici');
 /*!40000 ALTER TABLE `paniers` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -144,7 +146,7 @@ CREATE TABLE `typesarticles` (
   `IdTypeArticle` int(11) NOT NULL AUTO_INCREMENT,
   `LibelleTypeArticle` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`IdTypeArticle`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -153,7 +155,7 @@ CREATE TABLE `typesarticles` (
 
 LOCK TABLES `typesarticles` WRITE;
 /*!40000 ALTER TABLE `typesarticles` DISABLE KEYS */;
-INSERT INTO `typesarticles` VALUES (1,'Alimentaire'),(2,'Bureautique');
+INSERT INTO `typesarticles` VALUES (1,'Alimentaire'),(2,'Bureautique'),(3,'aaaaa');
 /*!40000 ALTER TABLE `typesarticles` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -195,4 +197,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-01-31 12:26:05
+-- Dump completed on 2022-01-31 17:26:05
