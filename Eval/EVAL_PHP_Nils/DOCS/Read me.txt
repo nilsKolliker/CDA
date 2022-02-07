@@ -1,0 +1,17 @@
+Ce qui a été traité
+-la connexion et la déconnection ont était séparé et redirigent vers le catalogue.
+-les rôles des routes ont été mis
+-la nav change en fonction du rôle
+-le catalogue est un mode ajout des lignes du panier pour le client (la quantité est fixé à 1)
+-le client a un panier de créé la première fois qu’il prend un article
+-les champs de mot de passe et de rôles sont retirer des visuels et automatisés pour les cruds
+-la liste des paniers est adapté pour l’admin
+-des selects ont été mis pour le form Article et le form lignes de paniers
+-la charte graphique a globalement été respecté
+
+Cependant
+-la sauvegarde des images n'a pas été faite
+-la fusion des paniers d’un seul utilisateur n'a pas été faite
+-la suppression des paniers d'un utilisateur à la mort de ce dernier n'a pas été faite
+-l'affichage du catalogue laisse clairement à désirer
+-les traductions n’ont pas été faites

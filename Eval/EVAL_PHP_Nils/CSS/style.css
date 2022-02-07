@@ -1,0 +1,39 @@
+header{
+    height: 10vh;
+    background-color: var(--color5);
+    color: var(--color1);
+}
+
+.titre{
+    font-weight: bold;
+}
+
+main{
+    flex: none;
+    background-color: var(--color4);
+    min-height: 80vh;
+}
+
+nav{
+    background-color: var(--color4);
+}
+.menu{
+    margin: 3px;
+    box-shadow: 3px 3px black ;
+}
+
+footer{
+    height: 10vh;
+    background-color: var(--color5);
+    color: var(--color1);
+}
+
+.alignAGauche{
+    margin-left: 2em;
+    justify-content: start;
+}
+
+.entete{
+    border: solid 1px var(--color1);
+    margin: 3px;
+}
