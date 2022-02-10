@@ -44,7 +44,7 @@ CREATE TABLE `doctrine_migration_versions` (
 
 LOCK TABLES `doctrine_migration_versions` WRITE;
 /*!40000 ALTER TABLE `doctrine_migration_versions` DISABLE KEYS */;
-INSERT INTO `doctrine_migration_versions` VALUES ('DoctrineMigrations\\Version20220210092243','2022-02-10 09:23:17',66),('DoctrineMigrations\\Version20220210092941','2022-02-10 09:29:54',120);
+INSERT INTO `doctrine_migration_versions` VALUES ('DoctrineMigrations\\Version20220210092243','2022-02-10 09:23:17',66),('DoctrineMigrations\\Version20220210092941','2022-02-10 09:29:54',120),('DoctrineMigrations\\Version20220210141601','2022-02-10 14:16:13',235),('DoctrineMigrations\\Version20220210151613','2022-02-10 15:16:24',89);
 /*!40000 ALTER TABLE `doctrine_migration_versions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -85,6 +85,9 @@ CREATE TABLE `user` (
   `nom` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `prenom` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `date_de_naissanse` date DEFAULT NULL,
+  `photo` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `mdp` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `role` varchar(25) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -95,7 +98,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'do','john','2022-02-09'),(2,'dupond','toto','2022-02-11');
+INSERT INTO `user` VALUES (1,'do','john','2022-02-09',NULL,'',''),(2,'dupond','toto','2022-02-11','2.png','','');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -135,4 +138,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-02-10 12:26:06
+-- Dump completed on 2022-02-10 17:26:07
