@@ -1,0 +1,58 @@
+﻿<Window x:Class="GenerateurDeOuf.Generateur"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GenerateurDeOuf"
+        mc:Ignorable="d"
+        Title="GenerateurPinguin - Selection de la base de données" Height="650" Width="800" Background="#FF1B2E46" Foreground="White" Icon="Media/image.ico">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.15*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="1.5*"/>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="0.5*"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Grid.ColumnSpan="3" Content="Generateur de ouf" FontWeight="Bold" Foreground="White"/>
+
+        <DataGrid x:Name="dg" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Base de données " Binding="{Binding Bdd}" Width="1*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <GroupBox Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Header="Projet">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="0.5*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="1.5*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                    <ColumnDefinition Width="0.7*"/>
+                </Grid.ColumnDefinitions>
+                <Label Content="NOM DU PROJET"   HorizontalAlignment="Left"  Foreground="White"/>
+                <TextBox x:Name="nomProjet" Text="" VerticalContentAlignment="Center" Grid.Column="2" />
+
+                <Label HorizontalAlignment="Left"  FontSize="12" Content="PAF :" Foreground="White"  Grid.Row="2"/>
+                <TextBox VerticalAlignment="Center" Name="affichePath" Text="C:\"  Grid.Column="2" Grid.Row="2"/>
+                <Button Content="Parcourir" Grid.Column="4" Grid.Row="2" Click="openWindow" Background="{DynamicResource ColorFont}" Foreground="{DynamicResource ColorFontWhite}" FontWeight="{DynamicResource Gras}" Grid.RowSpan="2"/>
+            </Grid>
+        </GroupBox>
+        <Button x:Name="go" Content="GO !" Grid.Column="2" Grid.Row="5" Margin="5" Click="generation" Foreground="{DynamicResource ColorFontWhite}" Background="{DynamicResource ColorFont}" FontWeight="{DynamicResource Gras}"/>
+    </Grid>
+</Window>

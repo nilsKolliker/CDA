@@ -1,0 +1,14 @@
+﻿<Application
+    x:Class="GenerateurDeOuf.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:GenerateurDeOuf"
+    StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+        <FontWeight x:Key="Gras">Bold</FontWeight>
+        <SolidColorBrush x:Key="ColorFont" Color="#FF696FB4" />
+        <SolidColorBrush x:Key="ColorFontWhite" Color="White" />
+
+    </Application.Resources>
+</Application>

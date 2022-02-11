@@ -1,0 +1,60 @@
+﻿<Window x:Class="GenerateurDeOuf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GenerateurDeOuf"
+        mc:Ignorable="d"
+        Title="GenerateurPinguin - Configuration" MinHeight="450" MaxHeight="450" MinWidth="800" MaxWidth="800" Background="#FF1B2E46" Foreground="White" Height="455.57" Icon="Media/image.ico">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="22*"/>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="23"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="0.5*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Content="Generateur de ouf" FontWeight="Bold" Foreground="White"/>
+        <GroupBox Header="Moteur de bases de données" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="7" Background="#FF1B2E46" FontSize="20" Padding="5">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="0.5*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="SERVER" VerticalAlignment="center" HorizontalAlignment="Left" FontSize="20"/>
+                <TextBox x:Name="server" Text="localhost" VerticalContentAlignment="Center"  Grid.Column="1"/>
+                <TextBlock Text="USERNAME" VerticalAlignment="center" HorizontalAlignment="Left" FontSize="20" Grid.Row="2"/>
+                <TextBox x:Name="username" Text="root" VerticalContentAlignment="Center" Grid.Row="2" Grid.Column="1"/>
+                <TextBlock Text="PASSWORD" VerticalAlignment="center" HorizontalAlignment="Left" FontSize="20"  Grid.Row="4"/>
+                <TextBox x:Name="password" Text="" VerticalContentAlignment="Center" Grid.Row="4" Grid.Column="1"/>
+                <TextBlock Text="PORT" VerticalAlignment="center" HorizontalAlignment="Left" FontSize="20" Grid.Row="6" />
+                <TextBox x:Name="port" Text="3306" VerticalContentAlignment="Center" Grid.Row="6" Grid.Column="1"/>
+            </Grid>
+        </GroupBox>
+        <Button x:Name="submit" Content="Suivant" Grid.Row="10" Grid.Column="2" Margin="5" Click="afficheBDD" Background="{DynamicResource ColorFont}" Foreground="{DynamicResource ColorFontWhite}" FontWeight="{DynamicResource Gras}"/>
+    </Grid>
+</Window>
