@@ -1,0 +1,3 @@
+y a t'il un moyen de differentier 2 formateurs avec le même nom et prénom ?
+y a t'il un moyen de differentier 2 stagières avec le même nom et prénom ?
+parmi les personnes pouvant accéder à l'application sans pouvoir modifier, y a t il d'autres personnes que les formateurs ? si oui, quelle(s) partie de l'application ont elle le droit de regarder ?
