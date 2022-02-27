@@ -1,3 +1,4 @@
-y a t'il un moyen de differentier 2 formateurs avec le même nom et prénom ?
-y a t'il un moyen de differentier 2 stagières avec le même nom et prénom ?
-parmi les personnes pouvant accéder à l'application sans pouvoir modifier, y a t il d'autres personnes que les formateurs ? si oui, quelle(s) partie de l'application ont elle le droit de regarder ?
+existe t il déjà un numero permetant de differentier 2 formateurs avec le même nom et prénom ?
+existe t il déjà un numero permetant de differentier 2 formations avec le même libelle mais sur des periodes differantes?
+toutes les personnes pouvant accéder à l'application sans pouvoir modifier, sont elle des formateurs ? si ce n'est pas le cas, quelle(s) partie de l'application ont elle le droit de regarder ?
+les calcules de nombre d'heure de formation sur une periode se font sur un nombre de semaines, ou un nombre de jours ?
