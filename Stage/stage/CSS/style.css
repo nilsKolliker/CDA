@@ -1,0 +1,46 @@
+.encadre{
+    /* border: solid 1px var(--linkColor); */
+    border-radius: 5vh;
+}
+.circleCo{
+    border-radius: 100%;
+    flex: none;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.cadreCo{
+    /* border: solid 1px var(--linkColor); */
+    width: 20vh;
+    height: 20vh;
+    top: 0;
+    overflow: hidden;
+    background-color: var(--bgc3);
+}
+.teteCo{
+    width: 10vh;
+    height: 10vh;
+    top: 35%;
+    background-color: var(--bgc1);
+}
+.corpCo{
+    width: 20vh;
+    height: 20vh;
+    top:110%;
+    background-color: var(--bgc1);
+}
+body{
+    background-color: var(--color);
+}
+header{
+    background-color: var(--bgc2);
+}
+nav{
+    background-color: var(--bgc3);
+}
+section{
+    background-color: var(--bgc2);
+}
+
+.menu:hover{
+    background-color: var(--bgc1);
+}

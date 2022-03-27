@@ -116,7 +116,8 @@ CREATE TABLE Plan_Plannings(
    idJour TINYINT NOT NULL COMMENT '0 = lundi ; 1 = mardi ; ect',
    nbrDHeureMatin INT,
    nbrDHeureApresMidi INT,
-   idAction INT NOT NULL
+   idAction INT,
+   idUtilisateur INT
 )ENGINE=InnoDB;
 
 DROP TABLE IF EXISTS Plan_Occupations;
@@ -153,13 +154,6 @@ CREATE TABLE Plan_Rattachements(
    idCentre INT
 )ENGINE=InnoDB;
 
-DROP TABLE IF EXISTS Plan_Preferences;
-CREATE TABLE Plan_Preferences(
-   idPreference INT AUTO_INCREMENT PRIMARY KEY,
-   idUtilisateur INT,
-   idPlanning INT
-)ENGINE=InnoDB;
-
 ALTER TABLE Plan_Utilisateurs
     ADD CONSTRAINT fk_Plan_Utilisateurs_Plan_Centres FOREIGN KEY(idCentre) REFERENCES Plan_Centres(idCentre);
 
@@ -192,7 +186,8 @@ ALTER TABLE Plan_Presences
     ADD CONSTRAINT fk_Plan_Presences_Plan_Actions FOREIGN KEY(idAction) REFERENCES Plan_Actions(idAction);
 
 ALTER TABLE Plan_Plannings
-    ADD CONSTRAINT fk_Plan_Plannings_Plan_Actions FOREIGN KEY(idAction) REFERENCES Plan_Actions(idAction);
+    ADD CONSTRAINT fk_Plan_Plannings_Plan_Actions FOREIGN KEY(idAction) REFERENCES Plan_Actions(idAction),
+    ADD CONSTRAINT fk_Plan_Plannings_Plan_Utilisateurs FOREIGN KEY(idUtilisateur) REFERENCES Plan_Utilisateurs(idUtilisateur);
 
 ALTER TABLE Plan_Occupations
     ADD CONSTRAINT fk_Plan_Occupations_Plan_Actions FOREIGN KEY(idAction) REFERENCES Plan_Actions(idAction),
@@ -209,7 +204,3 @@ ALTER TABLE Plan_SousTraitances
 ALTER TABLE Plan_Rattachements
     ADD CONSTRAINT fk_Plan_Rattachements_Plan_Centres FOREIGN KEY(idCentre) REFERENCES Plan_Centres(idCentre),
     ADD CONSTRAINT fk_Plan_Rattachements_Plan_Utilisateurs FOREIGN KEY(idUtilisateur) REFERENCES Plan_Utilisateurs(idUtilisateur);
-
-ALTER TABLE Plan_Preferences
-    ADD CONSTRAINT fk_Plan_Preferences_Plan_Plannings FOREIGN KEY(idPlanning) REFERENCES Plan_Plannings(idPlanning),
-    ADD CONSTRAINT fk_Plan_Preferences_Plan_Utilisateurs FOREIGN KEY(idUtilisateur) REFERENCES Plan_Utilisateurs(idUtilisateur);
