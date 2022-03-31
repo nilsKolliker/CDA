@@ -11,12 +11,17 @@ $objets = Plan_ActionsManager::getList();
 //Création du template de la grid
 echo '<div class="grid-col-14 gridListe">';
 
+echo '<div class="bigEspace grid-columns-span-14"></div>';
 echo '<div class="caseListe titreListe grid-columns-span-14">Liste des Plan_Actions </div>';
+echo '<div class="bigEspace grid-columns-span-14"></div>';
+echo '<div class="bigEspace grid-columns-span-14"></div>';
+$temp=$_SESSION["utilisateur"]->getRole()>=3?'<a href="index.php?page=FormPlan_Actions&mode=Ajouter"><button><i class="fas fa-plus"></i></button></a>':"";
 echo '<div class="caseListe grid-columns-span-14">
 <div></div>
-<div class="caseListe"><a href="index.php?page=FormPlan_Actions&mode=Ajouter"><i class="fas fa-plus"></i></a></div>
+<div class="caseListe">'.$temp.'</div>
 <div></div>
 </div>';
+echo '<div class="bigEspace grid-columns-span-14"></div>';
 
 echo '<div class="caseListe labelListe">NumOffre</div>';
 echo '<div class="caseListe labelListe">DateDebut</div>';
@@ -49,12 +54,16 @@ echo '<div class="caseListe donneeListe">'.$unObjet->getDateFinCertif().'</div>'
 echo '<div class="caseListe donneeListe">'.$unObjet->getActive().'</div>';
 echo '<div class="caseListe donneeListe">'.$unObjet->getIdCentre().'</div>';
 echo '<div class="caseListe donneeListe">'.$unObjet->getIdFormation().'</div>';
-echo '<div class="caseListe"> <a href="index.php?page=FormPlan_Actions&mode=Afficher&id='.$unObjet->getIdAction().'"><i class="fas fa-file-contract"></i></a></div>';
-                                                    
-echo '<div class="caseListe"> <a href="index.php?page=FormPlan_Actions&mode=Modifier&id='.$unObjet->getIdAction().'"><i class="fas fa-pen"></i></a></div>';
-                                                    
-echo '<div class="caseListe"> <a href="index.php?page=FormPlan_Actions&mode=Supprimer&id='.$unObjet->getIdAction().'"><i class="fas fa-trash-alt"></i></a></div>';
+echo '<div class="caseListe"> <a href="index.php?page=FormPlan_Actions&mode=Afficher&id='.$unObjet->getIdAction().'"><button><i class="fas fa-file-contract"></i></button></a></div>';
+
+$temp=$_SESSION["utilisateur"]->getRole()>=3? '<a href="index.php?page=FormPlan_Actions&mode=Modifier&id='.$unObjet->getIdAction().'"><button><i class="fas fa-pen"></i></button></a>':"";
+echo '<div class="caseListe">'.$temp.'</div>';
+
+$temp=$_SESSION["utilisateur"]->getRole()>=3?'<a href="index.php?page=FormPlan_Actions&mode=Supprimer&id='.$unObjet->getIdAction().'"><button><i class="fas fa-trash-alt"></i></button></a>':"";
+echo '<div class="caseListe">'.$temp.'</div>';
 }
+echo '<div class="bigEspace grid-columns-span-14"></div>';
+echo '<div class="bigEspace grid-columns-span-14"></div>';
 //Derniere ligne du tableau (bouton retour)
 echo '<div class="caseListe grid-columns-span-14">
 	<div></div>

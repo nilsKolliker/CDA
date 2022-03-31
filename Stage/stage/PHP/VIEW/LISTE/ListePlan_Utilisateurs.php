@@ -15,12 +15,17 @@ foreach ($listeCentre as $centre) {
 //Création du template de la grid
 echo '<div class="grid-col-9 gridListe">';
 
+echo '<div class="bigEspace grid-columns-span-9"></div>';
 echo '<div class="caseListe titreListe grid-columns-span-9">Liste des Utilisateurs </div>';
+echo '<div class="bigEspace grid-columns-span-9"></div>';
+echo '<div class="bigEspace grid-columns-span-9"></div>';
+$temp=$_SESSION["utilisateur"]->getRole()>=3?'<a href="index.php?page=FormPlan_Utilisateurs&mode=Ajouter"><button><i class="fas fa-plus"></i></button></a>':"";
 echo '<div class="caseListe grid-columns-span-9">
 <div></div>
-<div class="caseListe"><a href="index.php?page=FormPlan_Utilisateurs&mode=Ajouter"><i class="fas fa-plus"></i></a></div>
+<div class="caseListe">'.$temp.'</div>
 <div></div>
 </div>';
+echo '<div class="bigEspace grid-columns-span-9"></div>';
 
 echo '<div class="caseListe labelListe">Matricule</div>';
 echo '<div class="caseListe labelListe">Nom</div>';
@@ -43,12 +48,16 @@ echo '<div class="caseListe donneeListe">'.$unObjet->getPrenom().'</div>';
 echo '<div class="caseListe donneeListe">'.$unObjet->getEmail().'</div>';
 echo '<div class="caseListe donneeListe">'.ROLES[$unObjet->getRole()].'</div>';
 echo '<div class="caseListe donneeListe">'.$listeCentreById[$unObjet->getIdCentre()]->getLibelle().'</div>';
-echo '<div class="caseListe"> <a href="index.php?page=FormPlan_Utilisateurs&mode=Afficher&id='.$unObjet->getIdUtilisateur().'"><i class="fas fa-file-contract"></i></a></div>';
-                                                    
-echo '<div class="caseListe"> <a href="index.php?page=FormPlan_Utilisateurs&mode=Modifier&id='.$unObjet->getIdUtilisateur().'"><i class="fas fa-pen"></i></a></div>';
-                                                    
-echo '<div class="caseListe"> <a href="index.php?page=FormPlan_Utilisateurs&mode=Supprimer&id='.$unObjet->getIdUtilisateur().'"><i class="fas fa-trash-alt"></i></a></div>';
+echo '<div class="caseListe"> <a href="index.php?page=FormPlan_Utilisateurs&mode=Afficher&id='.$unObjet->getIdUtilisateur().'"><button><i class="fas fa-file-contract"></i></button></a></div>';
+
+$temp=$_SESSION["utilisateur"]->getRole()>=3?'<a href="index.php?page=FormPlan_Utilisateurs&mode=Modifier&id='.$unObjet->getIdUtilisateur().'"><button><i class="fas fa-pen"></i></button></a>':"";
+echo '<div class="caseListe">'.$temp.'</div>';
+
+$temp=$_SESSION["utilisateur"]->getRole()>=3?'<a href="index.php?page=FormPlan_Utilisateurs&mode=Supprimer&id='.$unObjet->getIdUtilisateur().'"><button><i class="fas fa-trash-alt"></i></button></a>':"";
+echo '<div class="caseListe">'.$temp.'</div>';
 }
+echo '<div class="bigEspace grid-columns-span-9"></div>';
+echo '<div class="bigEspace grid-columns-span-9"></div>';
 //Derniere ligne du tableau (bouton retour)
 echo '<div class="caseListe grid-columns-span-9">
 	<div></div>

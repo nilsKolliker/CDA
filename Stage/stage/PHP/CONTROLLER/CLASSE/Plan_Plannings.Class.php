@@ -37,22 +37,32 @@ class Plan_Plannings
 
 	public function getNbrDHeureMatin()
 	{
-		return $this->_nbrDHeureMatin;
+		return is_null($this->_nbrDHeureMatin)?null:$this->_nbrDHeureMatin->format('%H:%I');
 	}
 
-	public function setNbrDHeureMatin(?int $nbrDHeureMatin)
+	public function setNbrDHeureMatin(?string $nbrDHeureMatin)
 	{
-		$this->_nbrDHeureMatin=$nbrDHeureMatin;
+		if(is_null($nbrDHeureMatin)){
+			$this->_nbrDHeureMatin=null;
+		}else{
+			list($hours, $minutes)= sscanf($nbrDHeureMatin,'%d:%d');
+			$this->_nbrDHeureMatin=new DateInterval(sprintf('PT%dH%dM',$hours,$minutes));
+		}
 	}
 
 	public function getNbrDHeureApresMidi()
 	{
-		return $this->_nbrDHeureApresMidi;
+		return is_null($this->_nbrDHeureApresMidi)?null:$this->_nbrDHeureApresMidi->format('%H:%I');
 	}
 
-	public function setNbrDHeureApresMidi(?int $nbrDHeureApresMidi)
+	public function setNbrDHeureApresMidi(?string $nbrDHeureApresMidi)
 	{
-		$this->_nbrDHeureApresMidi=$nbrDHeureApresMidi;
+		if(is_null($nbrDHeureApresMidi)){
+			$this->_nbrDHeureApresMidi=null;
+		}else{
+			list($hours, $minutes)= sscanf($nbrDHeureApresMidi,'%d:%d');
+			$this->_nbrDHeureApresMidi=new DateInterval(sprintf('PT%dH%dM',$hours,$minutes));
+		}
 	}
 
 	public function getIdAction()

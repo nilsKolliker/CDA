@@ -114,8 +114,8 @@ DROP TABLE IF EXISTS Plan_Plannings;
 CREATE TABLE Plan_Plannings(
    idPlanning INT AUTO_INCREMENT PRIMARY KEY,
    idJour TINYINT NOT NULL COMMENT '0 = lundi ; 1 = mardi ; ect',
-   nbrDHeureMatin INT,
-   nbrDHeureApresMidi INT,
+   nbrDHeureMatin VARCHAR(5),
+   nbrDHeureApresMidi VARCHAR(5),
    idAction INT,
    idUtilisateur INT
 )ENGINE=InnoDB;
@@ -152,6 +152,14 @@ CREATE TABLE Plan_Rattachements(
    idRattachement INT AUTO_INCREMENT PRIMARY KEY,
    idUtilisateur INT,
    idCentre INT
+)ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS Plan_Textes;
+CREATE TABLE Plan_Textes(
+   idTexte INT AUTO_INCREMENT PRIMARY KEY,
+   codeTexte VARCHAR(50) NOT NULL,
+   fr VARCHAR(50) NOT NULL,
+   en VARCHAR(50)
 )ENGINE=InnoDB;
 
 ALTER TABLE Plan_Utilisateurs

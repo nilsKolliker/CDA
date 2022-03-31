@@ -7,7 +7,7 @@
             <?php
 
             if (isset($_SESSION['utilisateur'])) {
-                echo '<div class="center">'. texte('Bonjour') ." ". $_SESSION['utilisateur']->getNom() . '</div>';
+                echo '<div><a class="center" href="index.php?page=FormPlan_Utilisateurs&mode=Afficher&id='.$_SESSION['utilisateur']->getIdUtilisateur().'">'. texte('Bonjour') ." ". $_SESSION['utilisateur']->getNom() . '</a></div>';
                 echo '<div><a href="index.php?page=ActionDeconnexion" class="center">'. texte("Deconnexion") .'</a></div>';
             } else {
                 echo '<a href="index.php?page=Default" class="center">'. texte("Connexion") .'</a>';

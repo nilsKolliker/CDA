@@ -41,6 +41,10 @@ section{
     background-color: var(--bgc2);
 }
 
-.menu:hover{
+.menu:hover, a:hover{
     background-color: var(--bgc1);
+}
+
+.flex{
+    display: flex;
 }

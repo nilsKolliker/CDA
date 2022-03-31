@@ -36,7 +36,7 @@ echo '<div class="caseForm infoForm"><i class="fas fa-question-circle"></i></div
 echo '<div class="caseForm checkForm"><i class="fas fa-check-circle"></i></div>';
 
 echo '<label for=IdUtilisateur class="caseForm labelForm">'.texte("Référent").'</label>';
-echo '<div class="caseForm donneeForm">'.creerSelect($elm->getIdUtilisateur(),"Plan_Utilisateurs",['matricule','nom','prenom'],$disabled).'</div>';
+echo '<div class="caseForm donneeForm">'.creerSelect($elm->getIdUtilisateur(),"Plan_Utilisateurs",['matricule','nom','prenom'],$disabled,null,"nom, prenom").'</div>';
 echo '<div class="caseForm infoForm"><i class="fas fa-question-circle"></i></div>';
 echo '<div class="caseForm checkForm"><i class="fas fa-check-circle"></i></div>';
 

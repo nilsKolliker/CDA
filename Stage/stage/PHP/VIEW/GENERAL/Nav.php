@@ -1,49 +1,49 @@
 <nav>
     <div class="demi"></div>
-    <div class="colonne menu">
+    <a href='?page=Accueil' class="colonne menu">
         <div class="espace"></div>
-        <a href='?page=Accueil'>Accueil</a>
+        <div>Accueil</div>
         <div class="espace"></div>
-    </div>
-    <!-- <div class="colonne menu">
+    </a>
+    <!-- <a href='?page=ListePlan_Absences' class="colonne menu">
         <div class="espace"></div>
-        <a href='?page=ListePlan_Absences'>Absences</a>
+        <div>Absences</div>
         <div class="espace"></div>
-    </div> -->
-    <div class="colonne menu">
+    </a> -->
+    <a href='?page=ListePlan_Actions' class="colonne menu">
         <div class="espace"></div>
-        <a href='?page=ListePlan_Actions'>Actions</a>
+        <div>Actions</div>
         <div class="espace"></div>
-    </div>
-    <div class="colonne menu">
+    </a>
+    <a href='?page=ListePlan_Centres' class="colonne menu">
         <div class="espace"></div>
-        <a href='?page=ListePlan_Centres'>Centres</a>
+        <div>Centres</div>
         <div class="espace"></div>
-    </div>
-    <div class="colonne menu">
+    </a>
+    <a href='?page=ListePlan_Formations' class="colonne menu">
         <div class="espace"></div>
-        <a href='?page=ListePlan_Formations'>Formations</a>
+        <div>Formations</div>
         <div class="espace"></div>
-    </div>
-    <!-- <div class="colonne menu">
+    </a>
+    <!-- <a href='?page=ListePlan_Organismes' class="colonne menu">
         <div class="espace"></div>
-        <a href='?page=ListePlan_Organismes'>Organismes</a>
+        <div>Organismes</div>
         <div class="espace"></div>
-    </div>
-    <div class="colonne menu">
+    </a>
+    <a href='?page=ListePlan_Presences' class="colonne menu">
         <div class="espace"></div>
-        <a href='?page=ListePlan_Presences'>Presences</a>
+        <div>Presences</div>
         <div class="espace"></div>
-    </div> -->
-    <div class="colonne menu">
+    </a> -->
+    <a href='?page=ListePlan_Salles' class="colonne menu">
         <div class="espace"></div>
-        <a href='?page=ListePlan_Salles'>Salles</a>
+        <div>Salles</div>
         <div class="espace"></div>
-    </div>
-    <div class="colonne menu">
+    </a>
+    <a href='?page=ListePlan_Utilisateurs' class="colonne menu">
         <div class="espace"></div>
-        <a href='?page=ListePlan_Utilisateurs'>Utilisateurs</a>
+        <div>Utilisateurs</div>
         <div class="espace"></div>
-    </div>
+    </a>
     <div class="demi"></div>
 </nav>

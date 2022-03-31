@@ -31,7 +31,7 @@ echo '<div class="caseForm infoForm"><i class="fas fa-question-circle"></i></div
 echo '<div class="caseForm checkForm"><i class="fas fa-check-circle"></i></div>';
 
 echo '<label for=IdCentre class="caseForm labelForm">'.texte("IdCentre").'</label>';
-echo '<div class="caseForm donneeForm">'.creerSelect($elm->getIdCentre(),"Plan_Centres",['libelle'],$disabled).'</div>';
+echo '<div class="caseForm donneeForm">'.creerSelect($elm->getIdCentre(),"Plan_Centres",['libelle'],$disabled,null, "libelle").'</div>';
 echo '<div class="caseForm infoForm"><i class="fas fa-question-circle"></i></div>';
 echo '<div class="caseForm checkForm"><i class="fas fa-check-circle"></i></div>';
 

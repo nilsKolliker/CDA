@@ -15,7 +15,7 @@ class DAO
 		for ($i = 1; $i < count($colonnes); $i++) 
 		{
 			$methode = "get" . ucfirst($colonnes[$i]);
-			if ($obj->$methode() != null)	{
+			if ($obj->$methode() !== null)	{
 				$requ .= $colonnes[$i] . ",";
 				$values .= ":" . $colonnes[$i] . ",";
 			}
@@ -29,7 +29,7 @@ class DAO
 		for ($i = 1; $i < count($colonnes); $i++)
 		{
 			$methode = "get" . ucfirst($colonnes[$i]);
-			if ($obj->$methode() != null)
+			if ($obj->$methode() !== null)
 			$q->bindValue(":" . $colonnes[$i], $obj->$methode());
 		}
 		return $q->execute();

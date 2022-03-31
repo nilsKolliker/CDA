@@ -10,7 +10,7 @@
     --linkColor : black;
 }
 
-html, main, body, div, a, header, footer, nav, article, section, aside, fieldset, label, input, select {
+html, main, body, div, a, header, footer, nav, article, section, aside, fieldset, label, input, select, button {
     display: flex;
     flex: 1;
     margin: 0;

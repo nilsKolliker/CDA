@@ -64,7 +64,7 @@ class Plan_Utilisateurs
 
 	public function setEmail(string $email)
 	{
-		$this->_email=$email;
+		$this->_email=strtolower($email);
 	}
 
 	public function getMdp()
