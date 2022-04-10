@@ -26,12 +26,12 @@ class Plan_Presences
 
 	public function getDateJour()
 	{
-		return is_null($this->_dateJour)?null:$this->_dateJour->format('Y-n-j');
+		return is_null($this->_dateJour)?null:$this->_dateJour->format('Y-m-d');
 	}
 
 	public function setDateJour(string $dateJour)
 	{
-		$this->_dateJour=DateTime::createFromFormat("Y-n-j",$dateJour);
+		$this->_dateJour=DateTime::createFromFormat('Y-m-d',$dateJour);
 	}
 
 	public function getNbrStagiaireMatin()

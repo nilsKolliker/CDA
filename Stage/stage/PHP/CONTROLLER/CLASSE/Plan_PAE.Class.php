@@ -25,12 +25,12 @@ class Plan_PAE
 
 	public function getDateDebut()
 	{
-		return is_null($this->_dateDebut)?null:$this->_dateDebut->format('Y-n-j');
+		return is_null($this->_dateDebut)?null:$this->_dateDebut->format('Y-m-d');
 	}
 
 	public function setDateDebut(string $dateDebut)
 	{
-		$this->_dateDebut=DateTime::createFromFormat("Y-n-j",$dateDebut);
+		$this->_dateDebut=DateTime::createFromFormat('Y-m-d',$dateDebut);
 	}
 
 	public function getNbrDHeure()

@@ -53,6 +53,13 @@ CREATE TABLE Plan_Absences(
    idUtilisateur INT
 )ENGINE=InnoDB;
 
+DROP TABLE IF EXISTS Plan_TypeMarches;
+CREATE TABLE Plan_TypeMarches(
+   idTypeMarche INT AUTO_INCREMENT PRIMARY KEY,
+   libelle VARCHAR(50) NOT NULL UNIQUE
+)ENGINE=InnoDB;
+
+
 DROP TABLE IF EXISTS Plan_Actions;
 CREATE TABLE Plan_Actions(
    idAction INT AUTO_INCREMENT PRIMARY KEY,
@@ -60,11 +67,11 @@ CREATE TABLE Plan_Actions(
    dateDebut DATE NOT NULL,
    nbrDHeure INT NOT NULL,
    nbrStagiaire INT NOT NULL,
-   typeMarche TINYINT NOT NULL,
    tauxHoraire DOUBLE NOT NULL,
    dateDebutCertif DATE,
    dateFinCertif DATE,
    active BOOLEAN NOT NULL COMMENT 'vrai si active, faux si non',
+   idTypeMarche INT NOT NULL,
    idCentre INT NOT NULL,
    idFormation INT NOT NULL
 )ENGINE=InnoDB;
@@ -114,8 +121,10 @@ DROP TABLE IF EXISTS Plan_Plannings;
 CREATE TABLE Plan_Plannings(
    idPlanning INT AUTO_INCREMENT PRIMARY KEY,
    idJour TINYINT NOT NULL COMMENT '0 = lundi ; 1 = mardi ; ect',
-   nbrDHeureMatin VARCHAR(5),
-   nbrDHeureApresMidi VARCHAR(5),
+   heureMatinDebut VARCHAR(5),
+   heureMatinFin VARCHAR(5),
+   heureApresMidiDebut VARCHAR(5),
+   heureApresMidiFin VARCHAR(5),
    idAction INT,
    idUtilisateur INT
 )ENGINE=InnoDB;
@@ -161,6 +170,9 @@ CREATE TABLE Plan_Textes(
    fr VARCHAR(50) NOT NULL,
    en VARCHAR(50)
 )ENGINE=InnoDB;
+
+ALTER TABLE Plan_Actions
+    ADD CONSTRAINT fk_Plan_Actions_Plan_TypeMarches FOREIGN KEY(idTypeMarche) REFERENCES Plan_TypeMarches(idTypeMarche);
 
 ALTER TABLE Plan_Utilisateurs
     ADD CONSTRAINT fk_Plan_Utilisateurs_Plan_Centres FOREIGN KEY(idCentre) REFERENCES Plan_Centres(idCentre);

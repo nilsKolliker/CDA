@@ -77,17 +77,9 @@ $routes=[
 	"FormPlan_PAE"=>["PHP/VIEW/FORM/","FormPlan_PAE","Formulaire Plan_PAE",1,false],
 	"ActionPlan_PAE"=>["PHP/CONTROLLER/ACTION/","ActionPlan_PAE","Action Plan_PAE",3,false],
 
-	"ListePlan_Plannings"=>["PHP/VIEW/LISTE/","ListePlan_Plannings","Liste Plan_Plannings",1,false],
-	"FormPlan_Plannings"=>["PHP/VIEW/FORM/","FormPlan_Plannings","Formulaire Plan_Plannings",1,false],
-	"ActionPlan_Plannings"=>["PHP/CONTROLLER/ACTION/","ActionPlan_Plannings","Action Plan_Plannings",3,false],
-
 	"ListePlan_Presences"=>["PHP/VIEW/LISTE/","ListePlan_Presences","Liste Plan_Presences",1,false],
 	"FormPlan_Presences"=>["PHP/VIEW/FORM/","FormPlan_Presences","Formulaire Plan_Presences",1,false],
 	"ActionPlan_Presences"=>["PHP/CONTROLLER/ACTION/","ActionPlan_Presences","Action Plan_Presences",3,false],
-
-	"ListePlan_Rattachements"=>["PHP/VIEW/LISTE/","ListePlan_Rattachements","Liste Plan_Rattachements",1,false],
-	"FormPlan_Rattachements"=>["PHP/VIEW/FORM/","FormPlan_Rattachements","Formulaire Plan_Rattachements",1,false],
-	"ActionPlan_Rattachements"=>["PHP/CONTROLLER/ACTION/","ActionPlan_Rattachements","Action Plan_Rattachements",3,false],
 
 	"ListePlan_Salles"=>["PHP/VIEW/LISTE/","ListePlan_Salles","Liste des Salles",1,false],
 	"FormPlan_Salles"=>["PHP/VIEW/FORM/","FormPlan_Salles","Formulaire Salles",1,false],

@@ -9,6 +9,18 @@
 
 $objets = Plan_ActionsManager::getList();
 //Création du template de la grid
+$listeCentre= Plan_CentresManager::getList();
+foreach ($listeCentre as $centre) {
+	$listeCentreById[$centre->getIdCentre()]=$centre;
+}
+$listeTypeMarche= Plan_TypeMarchesManager::getList();
+foreach ($listeTypeMarche as $typeMarche) {
+	$listeTypeMarcheById[$typeMarche->getIdTypeMarche()]=$typeMarche;
+}
+$listeFormation= Plan_FormationsManager::getList();
+foreach ($listeFormation as $formation) {
+	$listeFormationById[$formation->getIdFormation()]=$formation;
+}
 echo '<div class="grid-col-14 gridListe">';
 
 echo '<div class="bigEspace grid-columns-span-14"></div>';
@@ -27,13 +39,13 @@ echo '<div class="caseListe labelListe">NumOffre</div>';
 echo '<div class="caseListe labelListe">DateDebut</div>';
 echo '<div class="caseListe labelListe">NbrDHeure</div>';
 echo '<div class="caseListe labelListe">NbrStagiaire</div>';
-echo '<div class="caseListe labelListe">TypeMarche</div>';
+echo '<div class="caseListe labelListe">idTypeMarche</div>';
 echo '<div class="caseListe labelListe">TauxHoraire</div>';
 echo '<div class="caseListe labelListe">DateDebutCertif</div>';
 echo '<div class="caseListe labelListe">DateFinCertif</div>';
 echo '<div class="caseListe labelListe">Active</div>';
-echo '<div class="caseListe labelListe">IdCentre</div>';
-echo '<div class="caseListe labelListe">IdFormation</div>';
+echo '<div class="caseListe labelListe">Centre</div>';
+echo '<div class="caseListe labelListe">Formation</div>';
 
 //Remplissage de div vide pour la structure de la grid
 echo '<div class="caseListe"></div>';
@@ -47,13 +59,13 @@ echo '<div class="caseListe donneeListe">'.$unObjet->getNumOffre().'</div>';
 echo '<div class="caseListe donneeListe">'.$unObjet->getDateDebut().'</div>';
 echo '<div class="caseListe donneeListe">'.$unObjet->getNbrDHeure().'</div>';
 echo '<div class="caseListe donneeListe">'.$unObjet->getNbrStagiaire().'</div>';
-echo '<div class="caseListe donneeListe">'.$unObjet->getTypeMarche().'</div>';
+echo '<div class="caseListe donneeListe">'.$listeTypeMarcheById[$unObjet->getIdTypeMarche()]->getLibelle().'</div>';
 echo '<div class="caseListe donneeListe">'.$unObjet->getTauxHoraire().'</div>';
 echo '<div class="caseListe donneeListe">'.$unObjet->getDateDebutCertif().'</div>';
 echo '<div class="caseListe donneeListe">'.$unObjet->getDateFinCertif().'</div>';
 echo '<div class="caseListe donneeListe">'.$unObjet->getActive().'</div>';
-echo '<div class="caseListe donneeListe">'.$unObjet->getIdCentre().'</div>';
-echo '<div class="caseListe donneeListe">'.$unObjet->getIdFormation().'</div>';
+echo '<div class="caseListe donneeListe">'.$listeCentreById[$unObjet->getIdCentre()]->getLibelle().'</div>';
+echo '<div class="caseListe donneeListe">'.$listeFormationById[$unObjet->getIdFormation()]->getLibelleCourt().'</div>';
 echo '<div class="caseListe"> <a href="index.php?page=FormPlan_Actions&mode=Afficher&id='.$unObjet->getIdAction().'"><button><i class="fas fa-file-contract"></i></button></a></div>';
 
 $temp=$_SESSION["utilisateur"]->getRole()>=3? '<a href="index.php?page=FormPlan_Actions&mode=Modifier&id='.$unObjet->getIdAction().'"><button><i class="fas fa-pen"></i></button></a>':"";

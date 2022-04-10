@@ -18,11 +18,19 @@ if (isset($_GET['id'])) {
 	$elm = new Plan_Utilisateurs();
 	$listeRattachement=[];
 	$listeAbsence=[];
+	$listePlaning=[];
 }
-if (!isset($listePlaning)||count($listePlaning)==0) {
-	for ($i=0; $i < 5; $i++) { 
-		$listePlaning[$i]=new Plan_Plannings();
-	}
+for ($i=0; $i < 5; $i++) { 
+	$tabHoraire["matin"]["debut"][$i]=null;
+	$tabHoraire["matin"]["fin"][$i]=null;
+	$tabHoraire["apresMidi"]["debut"][$i]=null;
+	$tabHoraire["apresMidi"]["fin"][$i]=null;
+}
+foreach ($listePlaning as $planing) {
+	$tabHoraire["matin"]["debut"][$planing->getIdJour()]=$planing->getHeureMatinDebut();
+	$tabHoraire["matin"]["fin"][$planing->getIdJour()]=$planing->getHeureMatinFin();
+	$tabHoraire["apresMidi"]["debut"][$planing->getIdJour()]=$planing->getHeureApresMidiDebut();
+	$tabHoraire["apresMidi"]["fin"][$planing->getIdJour()]=$planing->getHeureApresMidiFin();
 }
 $listeCentre=Plan_CentresManager::getList();
 
@@ -128,21 +136,24 @@ echo'<div>
 <div>Vendredi</div>
 </div>';
 echo'<div>
-<div>Matin</div>
-<input type="time" name="matin0" value="'.$listePlaning[0]->getNbrDHeureMatin().'"'.$disabled.'>
-<input type="time" name="matin1" value="'.$listePlaning[1]->getNbrDHeureMatin().'"'.$disabled.'>
-<input type="time" name="matin2" value="'.$listePlaning[2]->getNbrDHeureMatin().'"'.$disabled.'>
-<input type="time" name="matin3" value="'.$listePlaning[3]->getNbrDHeureMatin().'"'.$disabled.'>
-<input type="time" name="matin4" value="'.$listePlaning[4]->getNbrDHeureMatin().'"'.$disabled.'>
-</div>';
-echo'<div>
-<div>Apres Midi</div>
-<input type="time" name="apresMidi0" value="'.$listePlaning[0]->getNbrDHeureApresMidi().'"'.$disabled.'>
-<input type="time" name="apresMidi1" value="'.$listePlaning[1]->getNbrDHeureApresMidi().'"'.$disabled.'>
-<input type="time" name="apresMidi2" value="'.$listePlaning[2]->getNbrDHeureApresMidi().'"'.$disabled.'>
-<input type="time" name="apresMidi3" value="'.$listePlaning[3]->getNbrDHeureApresMidi().'"'.$disabled.'>
-<input type="time" name="apresMidi4" value="'.$listePlaning[4]->getNbrDHeureApresMidi().'"'.$disabled.'>
-</div>';
+<div>Matin</div>';
+for ($i=0; $i < 5; $i++) { 
+	echo'<div class="colonne">
+	<input type="time" name="matinD'.$i.'" value="'.$tabHoraire["matin"]["debut"][$i].'"'.$disabled.'>
+	<input type="time" name="matinF'.$i.'" value="'.$tabHoraire["matin"]["fin"][$i].'"'.$disabled.'>
+	</div>';
+}
+echo'</div>
+<div class="bigEspace"></div>
+<div>
+<div>Apres Midi</div>';
+for ($i=0; $i < 5; $i++) { 
+	echo'<div class="colonne">
+	<input type="time" name="apresMidiD'.$i.'" value="'.$tabHoraire["apresMidi"]["debut"][$i].'"'.$disabled.'>
+	<input type="time" name="apresMidiF'.$i.'" value="'.$tabHoraire["apresMidi"]["fin"][$i].'"'.$disabled.'>
+	</div>';
+}
+echo'</div>';
 echo'</template>';
 
 echo'<template id="templateRattachement">';
@@ -161,11 +172,19 @@ $temp=$disabled==" "?'<button id="boutonAjouterAbsence" type=button><i class="fa
 echo '<div></div><div class="caseListe">'.$temp.'</div><div></div>';
 $temp=$disabled==" "?'<button class="boutonSupprimerAbsence" type=button><i class="fas fa-trash-alt"></i></button>':"";
 foreach ($listeAbsence as $Absence) {
-	echo '<div>';
+	echo '<div id="modifierAbsence '.$Absence->getIdAbsence().'">';
 	echo '<input type="date" name="modifierAbsenceDebut '.$Absence->getIdAbsence().'" value="'.$Absence->getDateDebut().'" '.$disabled.'>';
 	echo '<input type="date" name="modifierAbsenceFin '.$Absence->getIdAbsence().'" value="'.$Absence->getDateFin().'" '.$disabled.'>';
 	echo '</div>';
 	echo '<div></div><div class="caseListe">'.$temp.'</div><div></div>';
 }
+echo'</template>';
+
+echo '<template id="templateAjouterAbsence">';
+echo '<div id="divInput">';
+echo '<input id="debutAbsence" type="date">';
+echo '<input id= "finAbsence" type="date">';
+echo '</div>';
+echo '<div></div><div class="caseListe"><button class="boutonSupprimerAbsence" type=button><i class="fas fa-trash-alt"></i></button></div><div></div>';
 echo'</template>';
 echo '</main>';

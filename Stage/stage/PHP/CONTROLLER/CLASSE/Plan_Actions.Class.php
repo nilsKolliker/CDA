@@ -10,14 +10,14 @@ class Plan_Actions
 	private $_dateDebut;
 	private $_nbrDHeure;
 	private $_nbrStagiaire;
-	private $_typeMarche;
+	private $_idTypeMarche;
 	private $_tauxHoraire;
 	private $_dateDebutCertif;
 	private $_dateFinCertif;
 	private $_active;
 	private $_idCentre;
 	private $_idFormation;
-	private static $_attributes=["idAction","numOffre","dateDebut","nbrDHeure","nbrStagiaire","typeMarche","tauxHoraire","dateDebutCertif","dateFinCertif","active","idCentre","idFormation"];
+	private static $_attributes=["idAction","numOffre","dateDebut","nbrDHeure","nbrStagiaire","idTypeMarche","tauxHoraire","dateDebutCertif","dateFinCertif","active","idCentre","idFormation"];
 	/***************** Accesseurs ***************** */
 
 
@@ -43,12 +43,12 @@ class Plan_Actions
 
 	public function getDateDebut()
 	{
-		return is_null($this->_dateDebut)?null:$this->_dateDebut->format('Y-n-j');
+		return is_null($this->_dateDebut)?null:$this->_dateDebut->format('Y-m-d');
 	}
 
 	public function setDateDebut(string $dateDebut)
 	{
-		$this->_dateDebut=DateTime::createFromFormat("Y-n-j",$dateDebut);
+		$this->_dateDebut=DateTime::createFromFormat('Y-m-d',$dateDebut);
 	}
 
 	public function getNbrDHeure()
@@ -71,14 +71,14 @@ class Plan_Actions
 		$this->_nbrStagiaire=$nbrStagiaire;
 	}
 
-	public function getTypeMarche()
+	public function getIdTypeMarche()
 	{
-		return $this->_typeMarche;
+		return $this->_idTypeMarche;
 	}
 
-	public function setTypeMarche(int $typeMarche)
+	public function setIdTypeMarche(int $idTypeMarche)
 	{
-		$this->_typeMarche=$typeMarche;
+		$this->_idTypeMarche=$idTypeMarche;
 	}
 
 	public function getTauxHoraire()
@@ -93,22 +93,22 @@ class Plan_Actions
 
 	public function getDateDebutCertif()
 	{
-		return is_null($this->_dateDebutCertif)?null:$this->_dateDebutCertif->format('Y-n-j');
+		return is_null($this->_dateDebutCertif)?null:$this->_dateDebutCertif->format('Y-m-d');
 	}
 
 	public function setDateDebutCertif(?string $dateDebutCertif)
 	{
-		$this->_dateDebutCertif=is_null($dateDebutCertif)?null:DateTime::createFromFormat("Y-n-j",$dateDebutCertif);
+		$this->_dateDebutCertif=is_null($dateDebutCertif)?null:DateTime::createFromFormat('Y-m-d',$dateDebutCertif);
 	}
 
 	public function getDateFinCertif()
 	{
-		return is_null($this->_dateFinCertif)?null:$this->_dateFinCertif->format('Y-n-j');
+		return is_null($this->_dateFinCertif)?null:$this->_dateFinCertif->format('Y-m-d');
 	}
 
 	public function setDateFinCertif(?string $dateFinCertif)
 	{
-		$this->_dateFinCertif=is_null($dateFinCertif)?null:DateTime::createFromFormat("Y-n-j",$dateFinCertif);
+		$this->_dateFinCertif=is_null($dateFinCertif)?null:DateTime::createFromFormat('Y-m-d',$dateFinCertif);
 	}
 
 	public function getActive()
@@ -116,9 +116,9 @@ class Plan_Actions
 		return $this->_active;
 	}
 
-	public function setActive(int $active)
+	public function setActive($active)
 	{
-		$this->_active=$active;
+		$this->_active=$active!=0;
 	}
 
 	public function getIdCentre()
@@ -176,6 +176,6 @@ class Plan_Actions
 	*/
 	public function toString()
 	{
-		return "IdAction : ".$this->getIdAction()."NumOffre : ".$this->getNumOffre()."DateDebut : ".$this->getDateDebut()."NbrDHeure : ".$this->getNbrDHeure()."NbrStagiaire : ".$this->getNbrStagiaire()."TypeMarche : ".$this->getTypeMarche()."TauxHoraire : ".$this->getTauxHoraire()."DateDebutCertif : ".$this->getDateDebutCertif()."DateFinCertif : ".$this->getDateFinCertif()."Active : ".$this->getActive()."IdCentre : ".$this->getIdCentre()."IdFormation : ".$this->getIdFormation()."\n";
+		return "IdAction : ".$this->getIdAction()."NumOffre : ".$this->getNumOffre()."DateDebut : ".$this->getDateDebut()."NbrDHeure : ".$this->getNbrDHeure()."NbrStagiaire : ".$this->getNbrStagiaire()."idTypeMarche : ".$this->getIdTypeMarche()."TauxHoraire : ".$this->getTauxHoraire()."DateDebutCertif : ".$this->getDateDebutCertif()."DateFinCertif : ".$this->getDateFinCertif()."Active : ".$this->getActive()."IdCentre : ".$this->getIdCentre()."IdFormation : ".$this->getIdFormation()."\n";
 	}
 }

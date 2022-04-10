@@ -46,22 +46,22 @@ class Plan_Occupations
 
 	public function getDateDebut()
 	{
-		return is_null($this->_dateDebut)?null:$this->_dateDebut->format('Y-n-j');
+		return is_null($this->_dateDebut)?null:$this->_dateDebut->format('Y-m-d');
 	}
 
 	public function setDateDebut(string $dateDebut)
 	{
-		$this->_dateDebut=DateTime::createFromFormat("Y-n-j",$dateDebut);
+		$this->_dateDebut=DateTime::createFromFormat('Y-m-d',$dateDebut);
 	}
 
 	public function getDateFin()
 	{
-		return is_null($this->_dateFin)?null:$this->_dateFin->format('Y-n-j');
+		return is_null($this->_dateFin)?null:$this->_dateFin->format('Y-m-d');
 	}
 
 	public function setDateFin(string $dateFin)
 	{
-		$this->_dateFin=DateTime::createFromFormat("Y-n-j",$dateFin);
+		$this->_dateFin=DateTime::createFromFormat('Y-m-d',$dateFin);
 	}
 
 	public static function getAttributes()
